@@ -130,49 +130,42 @@ export default function About() {
             {/* Central Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[var(--primary-blue)] via-[var(--bright-coral)] to-[var(--primary-blue)] rounded-full"></div>
             
-            {/* Vision - Left Side */}
-            <div className="relative mb-16 lg:mb-24">
-              <div className="flex flex-col lg:flex-row items-center">
-                <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg border-l-4 border-[var(--primary-blue)] relative">
-                    <div className="absolute -right-4 top-8 w-8 h-8 bg-[var(--primary-blue)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
+            {/* Vision & Mission - Side by Side */}
+            <div className="relative mb-16">
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Vision */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg border-l-4 border-[var(--primary-blue)] relative">
+                    <div className="absolute -right-4 top-6 w-8 h-8 bg-[var(--primary-blue)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
                     <div className="flex items-center mb-4">
-                      <Target className="h-8 w-8 text-[var(--primary-blue)] mr-3" />
-                      <h3 className="text-2xl font-bold text-[var(--primary-dark)]">Our Vision</h3>
+                      <div className="text-4xl font-bold text-[var(--primary-blue)] mr-3">01</div>
+                      <div>
+                        <Target className="h-6 w-6 text-[var(--primary-blue)] mb-1" />
+                        <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Vision</h3>
+                      </div>
                     </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed">
                       To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
                     </p>
+                    <div className="text-sm text-gray-500 mt-3 font-semibold">Future Focused</div>
                   </div>
                 </div>
-                <div className="lg:w-1/2 lg:pl-12">
-                  <div className="text-center lg:text-left">
-                    <div className="text-6xl font-bold text-[var(--primary-blue)] mb-2">01</div>
-                    <h4 className="text-xl font-semibold text-gray-600">Future Focused</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Mission - Right Side */}
-            <div className="relative mb-16 lg:mb-24">
-              <div className="flex flex-col lg:flex-row-reverse items-center">
-                <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg border-r-4 border-[var(--bright-coral)] relative">
-                    <div className="absolute -left-4 top-8 w-8 h-8 bg-[var(--bright-coral)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
+                {/* Mission */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 shadow-lg border-r-4 border-[var(--bright-coral)] relative">
+                    <div className="absolute -left-4 top-6 w-8 h-8 bg-[var(--bright-coral)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
                     <div className="flex items-center mb-4">
-                      <Compass className="h-8 w-8 text-[var(--bright-coral)] mr-3" />
-                      <h3 className="text-2xl font-bold text-[var(--primary-dark)]">Our Mission</h3>
+                      <div className="text-4xl font-bold text-[var(--bright-coral)] mr-3">02</div>
+                      <div>
+                        <Compass className="h-6 w-6 text-[var(--bright-coral)] mb-1" />
+                        <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Mission</h3>
+                      </div>
                     </div>
-                    <p className="text-gray-700 text-lg leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed">
                       To provide solution-oriented services to our customers, shareholders and stakeholders.
                     </p>
-                  </div>
-                </div>
-                <div className="lg:w-1/2 lg:pr-12">
-                  <div className="text-center lg:text-right">
-                    <div className="text-6xl font-bold text-[var(--bright-coral)] mb-2">02</div>
-                    <h4 className="text-xl font-semibold text-gray-600">Service Driven</h4>
+                    <div className="text-sm text-gray-500 mt-3 font-semibold">Service Driven</div>
                   </div>
                 </div>
               </div>
