@@ -251,20 +251,13 @@ export default function ProductsServices() {
                   Contact our expert team for customized solutions tailored to your vessel's specific requirements. We provide comprehensive consultation and professional installation services.
                 </p>
                 
-                <div className="grid sm:grid-cols-2 gap-6 max-w-md mx-auto">
+                <div className="flex justify-center">
                   <Button 
                     onClick={handleRequestQuote}
-                    className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Get Quote
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                  <Button 
-                    onClick={() => setLocation("/contact")}
-                    variant="outline"
-                    className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300"
+                    className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Contact Us
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </div>
               </div>
