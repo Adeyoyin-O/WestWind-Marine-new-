@@ -29,8 +29,8 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-bold text-white mb-1">Phone</p>
-                <p>Tel: +234 703 250 9442</p>
-                <p>Mobile: +234 806 465 1345</p>
+                <p>Tel: 08060417377</p>
+                <p>Mobile: +234 8060417377, +2347032509442</p>
               </div>
               <div>
                 <p className="font-bold text-white mb-1">Email</p>
