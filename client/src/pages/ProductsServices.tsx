@@ -133,10 +133,10 @@ export default function ProductsServices() {
       </section>
 
       {/* Our Services */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Services</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -145,12 +145,12 @@ export default function ProductsServices() {
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
               {services.slice(0, -1).map((service, index) => (
-                <div key={index} className="border-b border-gray-200 pb-4">
+                <div key={index} className="border-b border-gray-200 pb-2">
                   <button
                     onClick={() => toggleService(index)}
-                    className="w-full flex items-center justify-between text-left py-3 hover:text-teal-600 transition-colors duration-200"
+                    className="w-full flex items-center justify-between text-left py-2 hover:text-teal-600 transition-colors duration-200"
                   >
                     <span className="text-lg font-medium text-slate-900">{service.name}</span>
                     {expandedServices.has(index) ? (
@@ -160,7 +160,7 @@ export default function ProductsServices() {
                     )}
                   </button>
                   {expandedServices.has(index) && (
-                    <div className="mt-2 pb-3">
+                    <div className="mt-1 pb-2">
                       <p className="text-slate-600 leading-relaxed text-sm">
                         {service.description}
                       </p>
@@ -171,11 +171,11 @@ export default function ProductsServices() {
             </div>
             
             {/* Last service centered */}
-            <div className="flex justify-center mt-4">
-              <div className="w-full max-w-md border-b border-gray-200 pb-4">
+            <div className="flex justify-center mt-2">
+              <div className="w-full max-w-md border-b border-gray-200 pb-2">
                 <button
                   onClick={() => toggleService(services.length - 1)}
-                  className="w-full flex items-center justify-between text-left py-3 hover:text-teal-600 transition-colors duration-200"
+                  className="w-full flex items-center justify-between text-left py-2 hover:text-teal-600 transition-colors duration-200"
                 >
                   <span className="text-lg font-medium text-slate-900">{services[services.length - 1].name}</span>
                   {expandedServices.has(services.length - 1) ? (
@@ -185,7 +185,7 @@ export default function ProductsServices() {
                   )}
                 </button>
                 {expandedServices.has(services.length - 1) && (
-                  <div className="mt-2 pb-3">
+                  <div className="mt-1 pb-2">
                     <p className="text-slate-600 leading-relaxed text-sm">
                       {services[services.length - 1].description}
                     </p>
