@@ -267,23 +267,6 @@ export default function ProductsServices() {
                     Contact Us
                   </Button>
                 </div>
-                
-                <div className="mt-8 pt-8 border-t border-teal-200">
-                  <div className="grid grid-cols-3 gap-8 text-center">
-                    <div>
-                      <div className="text-2xl font-bold text-teal-600 mb-1">15+</div>
-                      <div className="text-sm text-slate-600">Years Experience</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-cyan-600 mb-1">500+</div>
-                      <div className="text-sm text-slate-600">Projects Completed</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-teal-600 mb-1">24/7</div>
-                      <div className="text-sm text-slate-600">Technical Support</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
