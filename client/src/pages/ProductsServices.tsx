@@ -228,30 +228,63 @@ export default function ProductsServices() {
 
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
+      <section className="py-20 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Upgrade Your Marine Electronics?
-            </h2>
-            <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-              Contact our expert team for customized solutions tailored to your vessel's specific requirements
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={handleRequestQuote}
-                className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Get Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                onClick={() => setLocation("/contact")}
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
-              >
-                Contact Us
-              </Button>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-12 border border-teal-100 relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-teal-100/50 rounded-full -translate-y-20 translate-x-20"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-100/50 rounded-full translate-y-16 -translate-x-16"></div>
+              
+              <div className="relative text-center">
+                <div className="inline-flex items-center px-4 py-2 bg-teal-500 text-white rounded-full text-sm font-medium mb-6">
+                  <Anchor className="w-4 h-4 mr-2" />
+                  Get Started Today
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                  Ready to Upgrade Your <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">
+                    Marine Electronics?
+                  </span>
+                </h2>
+                <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                  Contact our expert team for customized solutions tailored to your vessel's specific requirements. We provide comprehensive consultation and professional installation services.
+                </p>
+                
+                <div className="grid sm:grid-cols-2 gap-6 max-w-md mx-auto">
+                  <Button 
+                    onClick={handleRequestQuote}
+                    className="bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                  <Button 
+                    onClick={() => setLocation("/contact")}
+                    variant="outline"
+                    className="border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300"
+                  >
+                    Contact Us
+                  </Button>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t border-teal-200">
+                  <div className="grid grid-cols-3 gap-8 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-teal-600 mb-1">15+</div>
+                      <div className="text-sm text-slate-600">Years Experience</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-cyan-600 mb-1">500+</div>
+                      <div className="text-sm text-slate-600">Projects Completed</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-teal-600 mb-1">24/7</div>
+                      <div className="text-sm text-slate-600">Technical Support</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
