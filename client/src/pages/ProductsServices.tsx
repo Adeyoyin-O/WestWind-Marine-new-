@@ -132,7 +132,7 @@ export default function ProductsServices() {
       title: "Navigation & Communication",
       description: "Advanced navigation systems and marine communication equipment",
       badge: "Navigation",
-      badgeColor: "bg-cyan-100 text-cyan-700",
+      badgeColor: "bg-blue-100 text-blue-700",
       solutions: ["Marine Navigation Systems", "Communication Equipment", "Sonar & Fish Finders", "Gyrocompass & Heading Systems"]
     },
     {
@@ -148,7 +148,7 @@ export default function ProductsServices() {
       title: "Automation & Control",
       description: "Advanced vessel automation and control systems for marine operations",
       badge: "Automation",
-      badgeColor: "bg-green-100 text-green-700", 
+      badgeColor: "bg-indigo-100 text-indigo-700", 
       solutions: ["Autopilot Systems", "Marine Instrumentation", "Engine Monitoring Systems", "Vessel Tracking & Fleet Management"]
     },
     {
@@ -156,7 +156,7 @@ export default function ProductsServices() {
       title: "Safety & Entertainment",
       description: "Safety systems and onboard entertainment solutions for crew and passengers",
       badge: "Safety Systems",
-      badgeColor: "bg-red-100 text-red-700",
+      badgeColor: "bg-slate-100 text-slate-700",
       solutions: ["Emergency & Safety Systems", "Satellite TV & Entertainment", "Marine Lighting Systems"]
     }
   ], []);
