@@ -107,27 +107,20 @@ export default function ProductsServices() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-800 via-slate-900 to-teal-900 text-white py-20">
+      {/* Header Section */}
+      <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-6 py-3 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm font-medium mb-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-teal-600/20 border border-teal-500/30 rounded-full text-teal-300 text-sm font-medium mb-6">
               <Anchor className="w-4 h-4 mr-2" />
               Marine Electronics Solutions
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Products & <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Services</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Products & Services
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed mb-10">
+            <p className="text-xl text-slate-300 leading-relaxed">
               Comprehensive marine electronics solutions from navigation systems to automation, designed for reliability in demanding maritime environments
             </p>
-            <Button 
-              onClick={handleRequestQuote}
-              className="bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Request Quote
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
           </div>
         </div>
       </section>
