@@ -72,13 +72,19 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
                 <p>
-                  <strong className="text-black">WEST WIND MARINE ELECTRONICS LTD</strong> is an independent service provider offering a comprehensive range of marine electronics, navigation systems, and instrumentation services.
+                  <strong className="text-black">West Wind Marine Electronics Ltd</strong>, is a company registered under the corporate affairs commission of Nigeria on the 5th Feb 2019 with RC number: 1558935.
                 </p>
                 <p>
-                  We are a company registered under the Corporate Affairs Commission of Nigeria on July 26th, 2011 with RC number 968009.
+                  West Wind Marine Electronics Ltd is a company borne out of Passion to provide top-notch services and solutions to customers in the areas of Navigation, communication, automation, and electrical solutions in the Maritime industry particularly in Nigeria and across Africa.
                 </p>
                 <p>
-                  We specialize in the engineering, procurement, installation, and commissioning (EPIC) of marine electronics, navigation systems, communication equipment, and vessel automation systems, aiming to establish ourselves as a leading force in the maritime electronics industry.
+                  We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of Navigation and communication equipment.
+                </p>
+                <p>
+                  We design, procure, install, commission, repair, and maintain Navigation, communication, instrumentation, automation, and electrical equipment.
+                </p>
+                <p>
+                  West Wind Marine Electronics Ltd is customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in the marine Navigation and communication around Gulf of Guinea.
                 </p>
               </div>
             </div>
