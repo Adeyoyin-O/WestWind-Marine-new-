@@ -38,11 +38,11 @@ export default function Partnerships() {
         <div className="absolute left-4 top-20 hidden lg:block z-10">
           <div className="space-y-8">
             <div className="w-1 h-16 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
-            <div className="w-8 h-8 border-2 border-orange-200 rounded-full opacity-30"></div>
+            <div className="w-8 h-8 border-2 border-teal-200 rounded-full opacity-30"></div>
             <div className="w-1 h-24 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
-            <div className="w-6 h-6 bg-orange-100 rounded-lg rotate-45 opacity-50"></div>
+            <div className="w-6 h-6 bg-teal-100 rounded-lg rotate-45 opacity-50"></div>
             <div className="w-1 h-20 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
-            <div className="w-4 h-4 border border-orange-200 rounded-full opacity-35"></div>
+            <div className="w-4 h-4 border border-cyan-200 rounded-full opacity-35"></div>
             <div className="w-1 h-12 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
           </div>
         </div>
@@ -50,22 +50,22 @@ export default function Partnerships() {
         {/* Right side decorative elements */}
         <div className="absolute right-4 top-32 hidden lg:block z-10">
           <div className="space-y-6">
-            <div className="w-10 h-10 border border-orange-200 rounded-full opacity-25"></div>
+            <div className="w-10 h-10 border border-cyan-200 rounded-full opacity-25"></div>
             <div className="w-1 h-20 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
-            <div className="w-5 h-5 bg-orange-100 rounded-full opacity-60"></div>
+            <div className="w-5 h-5 bg-cyan-100 rounded-full opacity-60"></div>
             <div className="w-1 h-16 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
-            <div className="w-7 h-7 border border-orange-200 rounded-lg rotate-12 opacity-30"></div>
+            <div className="w-7 h-7 border border-teal-200 rounded-lg rotate-12 opacity-30"></div>
             <div className="w-1 h-12 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
-            <div className="w-3 h-3 bg-orange-100 rounded-full opacity-45"></div>
+            <div className="w-3 h-3 bg-teal-100 rounded-full opacity-45"></div>
             <div className="w-1 h-8 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
           </div>
         </div>
         
         {/* Floating elements */}
-        <div className="absolute left-1/4 top-10 w-6 h-6 border border-orange-100 rounded-lg rotate-45 opacity-20 hidden xl:block"></div>
-        <div className="absolute right-1/4 top-24 w-4 h-4 bg-orange-100 rounded-full opacity-25 hidden xl:block"></div>
-        <div className="absolute left-1/3 bottom-20 w-8 h-8 border border-orange-100 rounded-full opacity-15 hidden xl:block"></div>
-        <div className="absolute right-1/3 bottom-32 w-5 h-5 bg-orange-100 rounded-lg rotate-12 opacity-20 hidden xl:block"></div>
+        <div className="absolute left-1/4 top-10 w-6 h-6 border border-teal-100 rounded-lg rotate-45 opacity-20 hidden xl:block"></div>
+        <div className="absolute right-1/4 top-24 w-4 h-4 bg-cyan-100 rounded-full opacity-25 hidden xl:block"></div>
+        <div className="absolute left-1/3 bottom-20 w-8 h-8 border border-cyan-100 rounded-full opacity-15 hidden xl:block"></div>
+        <div className="absolute right-1/3 bottom-32 w-5 h-5 bg-teal-100 rounded-lg rotate-12 opacity-20 hidden xl:block"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto">
@@ -80,8 +80,8 @@ export default function Partnerships() {
                 </div>
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-slate-900 mb-2">Voyage Data Recorders (VDR)</h2>
-                  <div className="inline-flex items-center px-3 py-1 bg-orange-50 text-orange-700 rounded-md text-sm font-medium mb-3 border border-orange-100">
-                    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>
+                  <div className="inline-flex items-center px-3 py-1 bg-teal-50 text-teal-700 rounded-md text-sm font-medium mb-3 border border-teal-100">
+                    <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2"></span>
                     A proactive incident prevention tool
                   </div>
                   <p className="text-gray-700 leading-relaxed">
@@ -98,8 +98,8 @@ export default function Partnerships() {
                 <p className="text-gray-700 leading-relaxed mb-4 text-sm">
                   Since the VDR records a lot of signals on the vessel, it is a very valuable data central. We provide options for real-time data streaming from the VDR to other systems for smooth integration and value-creating data usage and analysis.
                 </p>
-                <div className="bg-orange-50 p-3 rounded-lg border border-orange-100">
-                  <p className="text-orange-800 font-medium text-sm">
+                <div className="bg-teal-50 p-3 rounded-lg border border-teal-100">
+                  <p className="text-teal-800 font-medium text-sm">
                     The SAL VDR playback software is intuitive and requires no configuration by the user.
                   </p>
                 </div>
@@ -117,7 +117,7 @@ export default function Partnerships() {
 
             {/* TOTEMPLUS Section */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6 relative">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
               
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-slate-900 mb-2">TOTEMPLUS</h2>
@@ -139,23 +139,23 @@ export default function Partnerships() {
                   <h4 className="text-lg font-semibold text-slate-900 mb-3">Totem VDR 2014 Advantages</h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="text-sm">Remote Maintenance with Totem Cellular Router (TCR) will minimize onboard visits by technicians and will further reduce maintenance costs.</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="text-sm">Conning Display on the VDR monitor (making Conning display redundant).</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="text-sm">Automatic event log for owner's use (monthly check recommended).</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="text-sm">Means of extracting stored data from VDR: USB, DVD and LAN.</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-teal-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
                       <span className="text-sm">VDR 19 monitor for monitoring, replay and diagnosis: the monitor displays status of recorded items at all times; Facilitates easy APT and commissioning.</span>
                     </li>
                   </ul>
@@ -168,19 +168,19 @@ export default function Partnerships() {
               <h3 className="text-xl font-bold text-slate-900 mb-4">Totem VDR Technical Features</h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mt-1.5 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm">Replay capabilities on the VDR monitor itself.</span>
                 </div>
                 <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mt-1.5 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm">Replay module for both ship and office.</span>
                 </div>
                 <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mt-1.5 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm">High Quality Single channel recording of every Microphone and VHF (no mixing of channels). 10 independent channels are available as standard.</span>
                 </div>
                 <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-1.5 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-teal-500 rounded-full mt-1.5 flex-shrink-0"></span>
                   <span className="text-gray-700 text-sm">Built in Siemens S7 PLC makes easy interface to a large number of binary or analog inputs, allowing readout of Non NMEA systems.</span>
                 </div>
               </div>
