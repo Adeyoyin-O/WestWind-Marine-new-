@@ -22,7 +22,7 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
                 <p>
-                  <strong className="text-black">WEST WIND ELECTRIC POWER LTD</strong> is an independent service provider offering a wide range of Electrical, Electronics and instrumentation services.
+                  <strong className="text-black">WEST WIND MARINE ELECTRONICS LTD</strong> is an independent service provider offering a wide range of Electrical, Electronics and instrumentation services.
                 </p>
                 <p>
                   We are a company registered under the Corporate Affairs Commission of Nigeria on July 26th, 2011 with RC number 968009.
