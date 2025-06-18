@@ -92,22 +92,22 @@ export default function ProductsServices() {
   const capabilities = [
     {
       title: "System Design & Engineering",
-      description: "Custom marine electronics system design tailored to vessel specifications",
+      description: "Custom marine electronics system design and engineering solutions tailored to specific vessel specifications and operational requirements",
       icon: <Compass className="w-12 h-12" />
     },
     {
       title: "Installation & Commissioning",
-      description: "Professional installation with comprehensive testing and commissioning",
+      description: "Professional installation services with comprehensive testing, commissioning, and performance validation of all marine electronic systems",
       icon: <Ship className="w-12 h-12" />
     },
     {
       title: "Maintenance & Support",
-      description: "24/7 technical support and preventive maintenance programs",
+      description: "24/7 technical support services and preventive maintenance programs to ensure optimal system performance and reliability",
       icon: <Activity className="w-12 h-12" />
     },
     {
       title: "System Integration",
-      description: "Seamless integration of multiple marine electronic systems",
+      description: "Seamless integration and coordination of multiple marine electronic systems for enhanced operational efficiency and control",
       icon: <Gauge className="w-12 h-12" />
     }
   ];
