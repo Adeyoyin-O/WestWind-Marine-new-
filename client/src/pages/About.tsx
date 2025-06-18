@@ -10,7 +10,7 @@ export default function About() {
       {/* About Hero */}
       <Hero
         title="About Us"
-        subtitle="Excellence in Electrical, Electronics and Instrumentation Services since 2011"
+        subtitle="Excellence in Marine Electronics and Navigation Systems since 2011"
         backgroundImage={aboutHeroImage}
       />
 
@@ -22,13 +22,13 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
                 <p>
-                  <strong className="text-black">WEST WIND MARINE ELECTRONICS LTD</strong> is an independent service provider offering a wide range of Electrical, Electronics and instrumentation services.
+                  <strong className="text-black">WEST WIND MARINE ELECTRONICS LTD</strong> is an independent service provider offering a comprehensive range of marine electronics, navigation systems, and instrumentation services.
                 </p>
                 <p>
                   We are a company registered under the Corporate Affairs Commission of Nigeria on July 26th, 2011 with RC number 968009.
                 </p>
                 <p>
-                  We specialize in the engineering, procurement, installation, and commissioning (EPIC) of electrical, electronics, instrumentation, and control systems, aiming to establish ourselves as a leading force in the industry.
+                  We specialize in the engineering, procurement, installation, and commissioning (EPIC) of marine electronics, navigation systems, communication equipment, and vessel automation systems, aiming to establish ourselves as a leading force in the maritime electronics industry.
                 </p>
               </div>
             </div>

@@ -43,8 +43,8 @@ export default function Header() {
                 className={cn(
                   "px-5 py-3 font-semibold text-sm transition-all duration-300 rounded-xl",
                   location === item.href
-                    ? "text-[var(--primary-blue)] nav-link active bg-gradient-to-r from-blue-50 to-teal-50"
-                    : "text-[var(--medium-gray)] hover:text-[var(--primary-blue)] hover:bg-gray-50"
+                    ? "text-[var(--marine-blue)] nav-link active bg-gradient-to-r from-cyan-50 to-blue-50"
+                    : "text-[var(--medium-gray)] hover:text-[var(--marine-blue)] hover:bg-gray-50"
                 )}
               >
                 {item.name}
@@ -59,10 +59,10 @@ export default function Header() {
             </Link>
             <div className="flex items-center space-x-4 ml-4">
               <div className="w-px h-6 bg-gray-300"></div>
-              <a href="#" className="text-[var(--medium-gray)] hover:text-[var(--primary-blue)] transition-colors">
+              <a href="#" className="text-[var(--medium-gray)] hover:text-[var(--cyan-accent)] transition-colors">
                 <FaFacebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[var(--medium-gray)] hover:text-[var(--primary-blue)] transition-colors">
+              <a href="#" className="text-[var(--medium-gray)] hover:text-[var(--cyan-accent)] transition-colors">
                 <FaWhatsapp className="h-5 w-5" />
               </a>
             </div>
@@ -90,7 +90,7 @@ export default function Header() {
                   className={cn(
                     "block py-4 px-6 font-semibold rounded-xl transition-all duration-300",
                     location === item.href
-                      ? "text-[var(--primary-blue)] bg-gradient-to-r from-blue-50 to-teal-50"
+                      ? "text-[var(--marine-blue)] bg-gradient-to-r from-cyan-50 to-blue-50"
                       : "text-[var(--medium-gray)] hover:bg-gray-50"
                   )}
                   onClick={() => setMobileMenuOpen(false)}
