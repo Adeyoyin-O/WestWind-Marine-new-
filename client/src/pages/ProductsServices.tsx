@@ -97,7 +97,7 @@ export default function ProductsServices() {
     },
     {
       title: "Installation Services",
-      description: "Professional installation with comprehensive testing and commissioning of marine electronic systems",
+      description: "Professional installation with testing and commissioning of marine electronic systems",
       icon: <Ship className="w-12 h-12" />
     },
     {
