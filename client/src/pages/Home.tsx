@@ -231,7 +231,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
                 <span className="w-2 h-2 bg-orange-600 rounded-full mr-2"></span>
-                About West Wind
+                About West Wind Marine Electronics Ltd
               </div>
               
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">

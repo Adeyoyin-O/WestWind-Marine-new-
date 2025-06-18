@@ -37,7 +37,7 @@ export default function Partnerships() {
             <h1 className="text-4xl lg:text-6xl font-bold text-slate-900 leading-tight">
               A Mother Company of{" "}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
-                Westwind Marine Electronics Limited
+                West Wind Marine Electronics Ltd
               </span>
             </h1>
 

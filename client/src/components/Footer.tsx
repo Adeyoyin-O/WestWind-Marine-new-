@@ -12,12 +12,12 @@ export default function Footer() {
               <div className="w-12 h-12 flex items-center justify-center">
                 <img 
                   src={footerLogo} 
-                  alt="West Wind Electric Power Ltd Logo" 
+                  alt="West Wind Marine Electronics Ltd Logo" 
                   className="w-10 h-10 object-contain"
                 />
               </div>
               <div>
-                <h3 className="text-lg font-bold">West Wind Electric Power Ltd</h3>
+                <h3 className="text-lg font-bold">West Wind Marine Electronics Ltd</h3>
               </div>
             </div>
             
@@ -34,7 +34,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-bold text-white mb-1">Email</p>
-                <p>admin@westwindelectricpower.com</p>
+                <p>admin@westwindmarineelectronics.com</p>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0">
-            <p className="text-sm">&copy; 2024 West Wind Electric Power Ltd. All rights reserved.</p>
+            <p className="text-sm">&copy; 2024 West Wind Marine Electronics Ltd. All rights reserved.</p>
           </div>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-[#B7410E] transition-all duration-300 transform hover:scale-110">

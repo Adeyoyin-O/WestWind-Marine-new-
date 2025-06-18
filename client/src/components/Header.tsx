@@ -25,12 +25,12 @@ export default function Header() {
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
                 src={logoImage} 
-                alt="West Wind Electric Power Ltd Logo" 
+                alt="West Wind Marine Electronics Ltd Logo" 
                 className="w-10 h-10 object-contain"
               />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-[var(--primary-dark)] leading-tight tracking-tight">West Wind Electric Power Ltd</h1>
+              <h1 className="text-lg font-bold text-[var(--primary-dark)] leading-tight tracking-tight">West Wind Marine Electronics Ltd</h1>
             </div>
           </Link>
 
