@@ -237,10 +237,6 @@ export default function ProductsServices() {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-100/50 rounded-full translate-y-16 -translate-x-16"></div>
               
               <div className="relative text-center">
-                <div className="inline-flex items-center px-4 py-2 bg-teal-500 text-white rounded-full text-sm font-medium mb-6">
-                  <Anchor className="w-4 h-4 mr-2" />
-                  Get Started Today
-                </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   Ready to Upgrade Your <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">
