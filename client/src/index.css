@@ -24,32 +24,32 @@
   --ring: hsl(210, 100%, 45%);
   --radius: 0.5rem;
   
-  /* Marine Electronics theme colors - Navy & Steel */
-  --primary-dark: hsl(220, 40%, 12%);
-  --primary-blue: hsl(220, 85%, 30%);
-  --secondary-gray: hsl(220, 20%, 18%);
-  --accent-blue: hsl(210, 90%, 45%);
-  --accent-cyan: hsl(195, 80%, 50%);
-  --accent-slate: hsl(220, 25%, 40%);
-  --accent-neutral: hsl(220, 15%, 45%);
-  --light-gray: hsl(220, 30%, 98%);
-  --light-blue: hsl(210, 100%, 98%);
-  --medium-gray: hsl(220, 15%, 40%);
-  --dark-slate: hsl(220, 40%, 15%);
-  --gradient-start: hsl(220, 40%, 12%);
-  --gradient-end: hsl(220, 85%, 30%);
+  /* Marine Electronics theme colors - Ocean Teal */
+  --primary-dark: hsl(192, 35%, 15%);
+  --primary-blue: hsl(188, 75%, 32%);
+  --secondary-gray: hsl(192, 20%, 20%);
+  --accent-blue: hsl(184, 70%, 40%);
+  --accent-cyan: hsl(178, 65%, 45%);
+  --accent-slate: hsl(192, 25%, 35%);
+  --accent-neutral: hsl(192, 15%, 40%);
+  --light-gray: hsl(192, 25%, 98%);
+  --light-blue: hsl(184, 100%, 98%);
+  --medium-gray: hsl(192, 15%, 35%);
+  --dark-slate: hsl(192, 35%, 18%);
+  --gradient-start: hsl(192, 35%, 15%);
+  --gradient-end: hsl(188, 75%, 32%);
   
   /* Professional marine palette */
-  --marine-blue: hsl(220, 85%, 30%);
-  --ocean-blue: hsl(210, 90%, 45%);
-  --deep-blue: hsl(230, 95%, 25%);
-  --cyan-accent: hsl(195, 80%, 50%);
-  --light-marine: hsl(210, 85%, 90%);
+  --marine-blue: hsl(188, 75%, 32%);
+  --ocean-blue: hsl(184, 70%, 40%);
+  --deep-blue: hsl(192, 80%, 28%);
+  --cyan-accent: hsl(178, 65%, 45%);
+  --light-marine: hsl(184, 75%, 92%);
   
   /* Technology accent colors */
-  --tech-orange: hsl(25, 90%, 50%);
-  --tech-orange-light: hsl(30, 85%, 60%);
-  --tech-orange-bg: hsl(25, 100%, 97%);
+  --tech-orange: hsl(28, 85%, 50%);
+  --tech-orange-light: hsl(32, 80%, 60%);
+  --tech-orange-bg: hsl(28, 95%, 97%);
 }
 
 .dark {
@@ -92,13 +92,13 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background-image: 
-      /* Professional marine gradients */
-      radial-gradient(ellipse 1000px 700px at 15% 10%, rgba(37, 99, 235, 0.04) 0%, transparent 65%),
-      radial-gradient(ellipse 800px 600px at 85% 90%, rgba(59, 130, 246, 0.03) 0%, transparent 70%),
-      radial-gradient(ellipse 600px 800px at 60% 50%, rgba(30, 64, 175, 0.025) 0%, transparent 75%),
-      /* Clean grid lines */
-      linear-gradient(0deg, transparent 49%, rgba(71, 85, 105, 0.015) 49%, rgba(71, 85, 105, 0.015) 51%, transparent 51%),
-      linear-gradient(90deg, transparent 49%, rgba(51, 65, 85, 0.01) 49%, rgba(51, 65, 85, 0.01) 51%, transparent 51%),
+      /* Ocean teal marine gradients */
+      radial-gradient(ellipse 1000px 700px at 15% 10%, rgba(45, 125, 135, 0.04) 0%, transparent 65%),
+      radial-gradient(ellipse 800px 600px at 85% 90%, rgba(56, 142, 150, 0.03) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 800px at 60% 50%, rgba(34, 108, 118, 0.025) 0%, transparent 75%),
+      /* Subtle grid lines */
+      linear-gradient(0deg, transparent 49%, rgba(71, 95, 105, 0.015) 49%, rgba(71, 95, 105, 0.015) 51%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, rgba(61, 85, 95, 0.01) 49%, rgba(61, 85, 95, 0.01) 51%, transparent 51%),
       /* Light fade overlays */
       linear-gradient(180deg, rgba(248, 250, 252, 0.6) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(241, 245, 249, 0.3) 100%),
       linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, transparent 20%, transparent 80%, rgba(255, 255, 255, 0.02) 100%);

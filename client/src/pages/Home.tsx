@@ -229,14 +229,14 @@ export default function Home() {
             
             {/* Left Side - Company Intro */}
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100">
+                <span className="w-2 h-2 bg-teal-600 rounded-full mr-2"></span>
                 About West Wind Marine Electronics Ltd
               </div>
               
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
                 Marine Electronics
-                <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Excellence Since 2011</span>
+                <span className="block bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Excellence Since 2011</span>
               </h2>
               
               <p className="text-lg text-slate-700 leading-relaxed">
@@ -244,7 +244,7 @@ export default function Home() {
               </p>
               
               <div className="pt-4">
-                <Link href="/about" className="group inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-base transition-colors duration-300">
+                <Link href="/about" className="group inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold text-base transition-colors duration-300">
                   Learn More About Us
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
