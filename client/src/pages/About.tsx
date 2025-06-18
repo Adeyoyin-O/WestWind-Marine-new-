@@ -100,7 +100,7 @@ export default function About() {
                 </div>
                 <div className="group transform transition-transform duration-300 hover:scale-105">
                   <div className="w-16 h-1 bg-gradient-to-r from-[var(--bright-coral)] to-red-400 mx-auto mb-3 rounded-full"></div>
-                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">5+</div>
+                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">6+</div>
                   <div className="text-gray-600 text-sm font-medium uppercase tracking-wide">Years Experience</div>
                 </div>
                 <div className="group transform transition-transform duration-300 hover:scale-105">
