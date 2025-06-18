@@ -225,77 +225,7 @@ export default function ProductsServices() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Excellence</span>
-              </h2>
-              <p className="text-lg text-slate-600">
-                Our solutions meet international maritime standards and regulatory requirements
-              </p>
-            </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mr-4">
-                    <Shield className="w-6 h-6 text-teal-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Compliance & Standards</h3>
-                </div>
-                <ul className="space-y-3 text-slate-600">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    SOLAS (Safety of Life at Sea) compliant
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    IMO (International Maritime Organization) standards
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    IEC (International Electrotechnical Commission) certified
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
-                    Type approval certificates
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mr-4">
-                    <Radar className="w-6 h-6 text-cyan-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Quality Assurance</h3>
-                </div>
-                <ul className="space-y-3 text-slate-600">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    Rigorous testing and commissioning
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    Performance validation
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    Documentation and certification
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                    Ongoing support and maintenance
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-slate-900 text-white">
