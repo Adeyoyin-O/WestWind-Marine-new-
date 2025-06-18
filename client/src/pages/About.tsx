@@ -123,113 +123,107 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
-        {/* Dynamic background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-gradient-to-br from-cyan-400/20 to-transparent rounded-full blur-2xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto relative z-10 px-4">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl mb-6 shadow-lg">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Purpose</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-300 mx-auto rounded-full"></div>
-          </div>
-
-          {/* Vision & Mission Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-20">
-            {/* Vision Card */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-400/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500">
-                <div className="flex items-center mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Target className="h-7 w-7 text-white" />
+      <section className="py-16 bg-white relative">
+        <div className="container mx-auto px-4">
+          {/* Timeline Style Layout */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[var(--primary-blue)] via-[var(--bright-coral)] to-[var(--primary-blue)] rounded-full"></div>
+            
+            {/* Vision - Left Side */}
+            <div className="relative mb-16 lg:mb-24">
+              <div className="flex flex-col lg:flex-row items-center">
+                <div className="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg border-l-4 border-[var(--primary-blue)] relative">
+                    <div className="absolute -right-4 top-8 w-8 h-8 bg-[var(--primary-blue)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
+                    <div className="flex items-center mb-4">
+                      <Target className="h-8 w-8 text-[var(--primary-blue)] mr-3" />
+                      <h3 className="text-2xl font-bold text-[var(--primary-dark)]">Our Vision</h3>
+                    </div>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-white tracking-tight">Our Vision</h3>
                 </div>
-                <p className="text-blue-100 text-lg leading-relaxed">
-                  To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
-                </p>
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-b-3xl"></div>
+                <div className="lg:w-1/2 lg:pl-12">
+                  <div className="text-center lg:text-left">
+                    <div className="text-6xl font-bold text-[var(--primary-blue)] mb-2">01</div>
+                    <h4 className="text-xl font-semibold text-gray-600">Future Focused</h4>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Mission Card */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-500">
-                <div className="flex items-center mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-500 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Compass className="h-7 w-7 text-white" />
+            {/* Mission - Right Side */}
+            <div className="relative mb-16 lg:mb-24">
+              <div className="flex flex-col lg:flex-row-reverse items-center">
+                <div className="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg border-r-4 border-[var(--bright-coral)] relative">
+                    <div className="absolute -left-4 top-8 w-8 h-8 bg-[var(--bright-coral)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
+                    <div className="flex items-center mb-4">
+                      <Compass className="h-8 w-8 text-[var(--bright-coral)] mr-3" />
+                      <h3 className="text-2xl font-bold text-[var(--primary-dark)]">Our Mission</h3>
+                    </div>
+                    <p className="text-gray-700 text-lg leading-relaxed">
+                      To provide solution-oriented services to our customers, shareholders and stakeholders.
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-white tracking-tight">Our Mission</h3>
                 </div>
-                <p className="text-blue-100 text-lg leading-relaxed">
-                  To provide solution-oriented services to our customers, shareholders and stakeholders.
-                </p>
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-b-3xl"></div>
+                <div className="lg:w-1/2 lg:pr-12">
+                  <div className="text-center lg:text-right">
+                    <div className="text-6xl font-bold text-[var(--bright-coral)] mb-2">02</div>
+                    <h4 className="text-xl font-semibold text-gray-600">Service Driven</h4>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Core Values */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-blue-500/5 rounded-3xl blur-xl"></div>
-            <div className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-10">
+            {/* Core Values - Center */}
+            <div className="relative">
               <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl mb-6 shadow-lg">
-                  <Award className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary-blue)] to-[var(--bright-coral)] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <Award className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-4 tracking-tight">Our Core Values</h3>
-                <p className="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto">
+                <div className="text-6xl font-bold text-gradient bg-gradient-to-r from-[var(--primary-blue)] to-[var(--bright-coral)] bg-clip-text text-transparent mb-2">03</div>
+                <h3 className="text-3xl font-bold text-[var(--primary-dark)] mb-4">Our Core Values</h3>
+                <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                   Our core values are centered on understanding customers' needs, providing professional services beyond expectations and taking full responsibility for our actions.
                 </p>
-                <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mt-4 rounded-full"></div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                {/* Customer Focus */}
-                <div className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-br from-rose-400/30 to-pink-500/30 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                    <div className="relative w-16 h-16 bg-gradient-to-br from-rose-400 to-rose-500 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Heart className="w-8 h-8 text-white" />
+              {/* Values Cards */}
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                <div className="group text-center">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-rose-200 transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-400 to-pink-500"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-rose-50 to-rose-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Heart className="w-8 h-8 text-rose-500" />
                     </div>
+                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Customer Focus</h4>
+                    <p className="text-gray-600 leading-relaxed">Understanding and exceeding expectations through dedicated service and attention to detail</p>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-3">Customer Focus</h4>
-                  <p className="text-blue-100 leading-relaxed">Understanding and exceeding expectations through dedicated service and attention to detail</p>
                 </div>
-                
-                {/* Excellence */}
-                <div className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-orange-500/30 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                    <div className="relative w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Trophy className="w-8 h-8 text-white" />
+
+                <div className="group text-center">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-amber-50 to-amber-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Trophy className="w-8 h-8 text-amber-500" />
                     </div>
+                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Excellence</h4>
+                    <p className="text-gray-600 leading-relaxed">Delivering professional services beyond expectations with the highest quality standards</p>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-3">Excellence</h4>
-                  <p className="text-blue-100 leading-relaxed">Delivering professional services beyond expectations with the highest quality standards</p>
                 </div>
-                
-                {/* Responsibility */}
-                <div className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/30 to-green-500/30 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                    <div className="relative w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-2xl mx-auto flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <CheckCircle className="w-8 h-8 text-white" />
+
+                <div className="group text-center">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-green-500"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <CheckCircle className="w-8 h-8 text-emerald-500" />
                     </div>
+                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Responsibility</h4>
+                    <p className="text-gray-600 leading-relaxed">Taking full accountability for our actions and maintaining ethical business practices</p>
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-3">Responsibility</h4>
-                  <p className="text-blue-100 leading-relaxed">Taking full accountability for our actions and maintaining ethical business practices</p>
                 </div>
               </div>
             </div>
