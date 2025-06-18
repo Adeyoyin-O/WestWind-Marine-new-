@@ -40,21 +40,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white">Marine Electronics</h4>
+            <h4 className="text-lg font-bold mb-6 text-white">Our Services</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/products-services#service-0" className="hover:text-teal-400 transition-colors">Marine Navigation Systems</Link></li>
-              <li><Link href="/products-services#service-1" className="hover:text-teal-400 transition-colors">Communication Equipment</Link></li>
-              <li><Link href="/products-services#service-2" className="hover:text-teal-400 transition-colors">Sonar & Fish Finders</Link></li>
-              <li><Link href="/products-services#service-3" className="hover:text-teal-400 transition-colors">Autopilot Systems</Link></li>
-              <li><Link href="/products-services#service-4" className="hover:text-teal-400 transition-colors">Marine Electrical Panels</Link></li>
-              <li><Link href="/products-services#service-5" className="hover:text-teal-400 transition-colors">Power Management Systems</Link></li>
-              <li><Link href="/products-services#service-6" className="hover:text-teal-400 transition-colors">Marine Lighting Systems</Link></li>
-              <li><Link href="/products-services#service-7" className="hover:text-teal-400 transition-colors">Engine Monitoring Systems</Link></li>
-              <li><Link href="/products-services#service-8" className="hover:text-teal-400 transition-colors">Gyrocompass & Heading Systems</Link></li>
-              <li><Link href="/products-services#service-9" className="hover:text-teal-400 transition-colors">Marine Instrumentation</Link></li>
-              <li><Link href="/products-services#service-10" className="hover:text-teal-400 transition-colors">Satellite TV & Entertainment</Link></li>
-              <li><Link href="/products-services#service-11" className="hover:text-teal-400 transition-colors">Emergency & Safety Systems</Link></li>
-              <li><Link href="/products-services#service-12" className="hover:text-teal-400 transition-colors">Vessel Tracking & Fleet Management</Link></li>
+              <li><span className="hover:text-teal-400 transition-colors">Gyrocompass</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Autopilot</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Satellite and magnetic compasses</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Radar</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Consilium, AMI, Totemplus, Headway</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">EPIRB and SART</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Ballast Water Management System</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Electric Motors and Pumps</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Contactors and Circuit Breakers</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Low & Medium Voltage Switchgears / Switch Boards</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">GMDSS, VHF, MH/HF, Inmarsat C</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Marine Automation and Control</span></li>
+              <li><span className="hover:text-teal-400 transition-colors">Smoke and Gas Detection Systems</span></li>
             </ul>
           </div>
 
