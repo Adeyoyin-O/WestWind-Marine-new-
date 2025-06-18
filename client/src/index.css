@@ -24,31 +24,32 @@
   --ring: hsl(210, 100%, 45%);
   --radius: 0.5rem;
   
-  /* Modern professional theme colors */
-  --primary-dark: hsl(215, 25%, 12%);
-  --primary-blue: hsl(215, 85%, 35%);
-  --secondary-gray: hsl(215, 10%, 20%);
-  --accent-blue: hsl(215, 85%, 50%);
-  --accent-indigo: hsl(235, 85%, 60%);
-  --accent-slate: hsl(215, 15%, 40%);
-  --accent-neutral: hsl(215, 8%, 50%);
-  --light-gray: hsl(215, 20%, 98%);
-  --light-blue: hsl(215, 100%, 98%);
-  --medium-gray: hsl(215, 8%, 45%);
-  --dark-slate: hsl(215, 25%, 15%);
-  --gradient-start: hsl(215, 25%, 12%);
-  --gradient-end: hsl(215, 85%, 35%);
+  /* Marine Electronics theme colors */
+  --primary-dark: hsl(210, 30%, 8%);
+  --primary-blue: hsl(200, 95%, 25%);
+  --secondary-gray: hsl(210, 15%, 15%);
+  --accent-blue: hsl(195, 100%, 35%);
+  --accent-cyan: hsl(185, 85%, 40%);
+  --accent-slate: hsl(210, 20%, 35%);
+  --accent-neutral: hsl(210, 12%, 45%);
+  --light-gray: hsl(210, 25%, 98%);
+  --light-blue: hsl(195, 100%, 98%);
+  --medium-gray: hsl(210, 12%, 40%);
+  --dark-slate: hsl(210, 30%, 12%);
+  --gradient-start: hsl(210, 30%, 8%);
+  --gradient-end: hsl(200, 95%, 25%);
   
-  /* Secondary color palette */
-  --secondary-teal: hsl(175, 85%, 40%);
-  --burnt-teal: hsl(175, 85%, 40%);
-  --accent-teal: hsl(175, 100%, 45%);
-  --light-teal: hsl(175, 90%, 85%);
+  /* Marine color palette */
+  --marine-blue: hsl(200, 95%, 25%);
+  --ocean-blue: hsl(195, 100%, 35%);
+  --deep-blue: hsl(210, 100%, 20%);
+  --cyan-accent: hsl(185, 85%, 40%);
+  --light-marine: hsl(195, 90%, 85%);
   
-  /* Coral color palette */
-  --bright-coral: #B7410E;
-  --coral-accent: #C54A16;
-  --light-coral: #F4D1C1;
+  /* Technology accent colors */
+  --tech-orange: hsl(15, 95%, 45%);
+  --tech-orange-light: hsl(15, 85%, 55%);
+  --tech-orange-bg: hsl(15, 100%, 97%);
 }
 
 .dark {
@@ -91,13 +92,13 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     background-image: 
-      /* Soft organic shapes */
-      radial-gradient(ellipse 800px 600px at 20% 10%, rgba(59, 130, 246, 0.04) 0%, transparent 60%),
-      radial-gradient(ellipse 600px 800px at 80% 90%, rgba(251, 146, 60, 0.025) 0%, transparent 65%),
-      radial-gradient(ellipse 700px 500px at 60% 50%, rgba(99, 102, 241, 0.02) 0%, transparent 70%),
-      /* Thin geometric lines */
-      linear-gradient(45deg, transparent 49%, rgba(148, 163, 184, 0.02) 49%, rgba(148, 163, 184, 0.02) 51%, transparent 51%),
-      linear-gradient(135deg, transparent 49%, rgba(71, 85, 105, 0.015) 49%, rgba(71, 85, 105, 0.015) 51%, transparent 51%),
+      /* Marine-inspired gradients */
+      radial-gradient(ellipse 1000px 700px at 15% 10%, rgba(0, 119, 182, 0.04) 0%, transparent 65%),
+      radial-gradient(ellipse 800px 600px at 85% 90%, rgba(0, 172, 193, 0.03) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 800px at 60% 50%, rgba(15, 76, 117, 0.025) 0%, transparent 75%),
+      /* Precision grid lines */
+      linear-gradient(0deg, transparent 49%, rgba(100, 116, 139, 0.015) 49%, rgba(100, 116, 139, 0.015) 51%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, rgba(71, 85, 105, 0.01) 49%, rgba(71, 85, 105, 0.01) 51%, transparent 51%),
       /* Light fade overlays */
       linear-gradient(180deg, rgba(248, 250, 252, 0.6) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(241, 245, 249, 0.3) 100%),
       linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, transparent 20%, transparent 80%, rgba(255, 255, 255, 0.02) 100%);
@@ -139,31 +140,31 @@
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   }
   
-  .teal-gradient {
-    background: linear-gradient(135deg, var(--accent-teal), hsl(173, 80%, 50%));
+  .marine-gradient {
+    background: linear-gradient(135deg, var(--marine-blue), var(--ocean-blue));
   }
   
-  .purple-gradient {
-    background: linear-gradient(135deg, var(--accent-purple), hsl(250, 84%, 64%));
+  .cyan-gradient {
+    background: linear-gradient(135deg, var(--cyan-accent), var(--ocean-blue));
   }
   
   .hero-gradient {
-    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-gray), var(--primary-blue));
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary-gray), var(--marine-blue));
   }
   
   .blue-gradient {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, hsl(220, 85%, 40%) 100%);
+    background: linear-gradient(135deg, var(--marine-blue) 0%, var(--ocean-blue) 100%);
   }
   
-  .burnt-teal-gradient {
-    background: linear-gradient(135deg, var(--burnt-teal) 0%, hsl(170, 85%, 35%) 100%);
+  .tech-gradient {
+    background: linear-gradient(135deg, var(--tech-orange) 0%, var(--tech-orange-light) 100%);
   }
   
   .modern-glass {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 119, 182, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 84, 126, 0.08);
   }
   
   .modern-card {

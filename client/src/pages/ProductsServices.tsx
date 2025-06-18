@@ -72,19 +72,19 @@ export default function ProductsServices() {
   }, []);
 
   const services = useMemo(() => [
-    { name: "Pumps and Motors", description: "High-performance pumps and electric motors for industrial and marine applications, ensuring reliable fluid handling and mechanical drive solutions." },
-    { name: "Electrical and Lighting Fittings", description: "Comprehensive range of electrical components and LED lighting systems designed for harsh marine and industrial environments." },
-    { name: "Circuit Breakers", description: "Advanced circuit protection devices including MCBs, MCCBs, and ACBs for reliable electrical system safety and fault isolation." },
-    { name: "Transformers", description: "Power and distribution transformers engineered for marine and industrial applications with superior efficiency and durability." },
-    { name: "Medium and Low Voltage Panels", description: "Custom-designed switchgear panels for voltage distribution, control, and protection in complex electrical systems." },
-    { name: "DC Panels, Battery Chargers and Batteries", description: "Complete DC power solutions including marine-grade batteries, intelligent chargers, and distribution panels for critical systems." },
-    { name: "Starters (DOL, Star-Delta, Auto Transformer)", description: "Motor starting solutions including direct-on-line, star-delta, and soft-start systems for optimal motor performance and protection." },
-    { name: "Variable Frequency Drives (VFD)", description: "Advanced motor control systems providing precise speed control, energy efficiency, and enhanced motor protection capabilities." },
-    { name: "Control Consoles", description: "Ergonomic control stations and operator interfaces designed for marine bridge systems and industrial automation applications." },
-    { name: "Electric Installations", description: "Complete electrical installation services including design, implementation, testing, and commissioning of electrical systems." },
-    { name: "Rewinding of Motors and Generator Spare Parts", description: "Professional motor and generator refurbishment services including rewinding, balancing, and supply of genuine spare parts." },
-    { name: "Inverters and UPS Systems", description: "Uninterruptible power supplies and power inverters ensuring continuous operation of critical systems and equipment." },
-    { name: "Motor Control Centers (MCC)", description: "Centralized motor control solutions with intelligent protection, monitoring, and remote operation capabilities for industrial applications." }
+    { name: "Marine Navigation Systems", description: "Advanced GPS, radar, and electronic chart systems for precise vessel positioning and safe navigation in all weather conditions." },
+    { name: "Communication Equipment", description: "Marine VHF radios, satellite communication systems, and emergency beacons for reliable ship-to-shore and vessel-to-vessel communication." },
+    { name: "Sonar & Fish Finders", description: "High-resolution sonar systems and fish finders for commercial fishing, surveying, and underwater navigation applications." },
+    { name: "Autopilot Systems", description: "Sophisticated autopilot and steering control systems for enhanced vessel operation and fuel efficiency." },
+    { name: "Marine Electrical Panels", description: "Waterproof electrical distribution panels and switchgear designed specifically for marine environments with corrosion resistance." },
+    { name: "Power Management Systems", description: "Intelligent power distribution and battery management systems for optimal energy efficiency aboard vessels." },
+    { name: "Marine Lighting Systems", description: "LED navigation lights, searchlights, and emergency lighting systems compliant with international maritime regulations." },
+    { name: "Engine Monitoring Systems", description: "Real-time engine parameter monitoring, alarm systems, and diagnostic tools for optimal vessel performance." },
+    { name: "Gyrocompass & Heading Systems", description: "Precision gyrocompass and magnetic compass systems for accurate vessel heading and navigation reference." },
+    { name: "Marine Instrumentation", description: "Complete suite of marine gauges, sensors, and monitoring equipment for engine room and bridge applications." },
+    { name: "Satellite TV & Entertainment", description: "Marine satellite television systems and entertainment solutions for crew comfort and passenger amenities." },
+    { name: "Emergency & Safety Systems", description: "Fire detection, emergency lighting, and safety communication systems meeting international maritime safety standards." },
+    { name: "Vessel Tracking & Fleet Management", description: "GPS tracking, fleet monitoring, and vessel management systems for operational efficiency and security." }
   ], []);
 
   const epicServices = useMemo(() => [

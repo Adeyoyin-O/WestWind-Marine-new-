@@ -229,22 +229,22 @@ export default function Home() {
             
             {/* Left Side - Company Intro */}
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
-                <span className="w-2 h-2 bg-orange-600 rounded-full mr-2"></span>
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-50 text-cyan-700 rounded-full text-sm font-medium border border-cyan-100">
+                <span className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
                 About West Wind Marine Electronics Ltd
               </div>
               
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                Engineering Excellence
-                <span className="block text-blue-700">Since 2011</span>
+                Marine Electronics
+                <span className="block bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Excellence Since 2011</span>
               </h2>
               
               <p className="text-lg text-slate-700 leading-relaxed">
-                West Wind Electric Power Ltd is a leading Nigerian engineering company specializing in comprehensive EPIC services. We deliver cutting-edge electrical, electronics, instrumentation, and maritime control systems that power industries across land and sea...
+                West Wind Marine Electronics Ltd is a leading Nigerian engineering company specializing in comprehensive marine electronics and instrumentation services. We deliver cutting-edge electrical systems, navigation equipment, and maritime control solutions that power vessels and offshore operations...
               </p>
               
               <div className="pt-4">
-                <Link href="/about" className="group inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-base transition-colors duration-300">
+                <Link href="/about" className="group inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold text-base transition-colors duration-300">
                   Learn More About Us
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -277,7 +277,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 rounded-full text-sm font-semibold mb-4 border border-orange-100">
               <span className="w-2 h-2 bg-orange-600 rounded-full mr-2"></span>
               Our Solutions
             </div>
