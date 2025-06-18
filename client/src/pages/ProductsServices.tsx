@@ -3,82 +3,89 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { 
   Compass, 
-  Radio, 
-  Zap, 
   Ship,
-  Cpu,
   Activity,
-  Settings,
   Shield,
   Anchor,
   Gauge,
   Radar,
-  Navigation,
-  ArrowRight
+  ArrowRight,
+  ChevronDown,
+  ChevronRight
 } from "lucide-react";
 
 export default function ProductsServices() {
   const [, setLocation] = useLocation();
+  const [expandedServices, setExpandedServices] = useState<Set<number>>(new Set());
 
   const handleRequestQuote = () => {
     setLocation("/contact");
   };
 
+  const toggleService = (index: number) => {
+    setExpandedServices(prev => {
+      const newExpanded = new Set(prev);
+      if (newExpanded.has(index)) {
+        newExpanded.delete(index);
+      } else {
+        newExpanded.add(index);
+      }
+      return newExpanded;
+    });
+  };
+
   const services = [
     {
-      category: "Navigation Systems",
-      icon: <Navigation className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      services: [
-        "Gyrocompass",
-        "Autopilot", 
-        "Satellite and magnetic compasses",
-        "Radar"
-      ]
+      name: "Gyrocompass",
+      description: "Precision navigation instrument providing accurate heading reference independent of magnetic interference, essential for maritime navigation."
     },
     {
-      category: "Safety & Emergency",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-orange-500",
-      services: [
-        "EPIRB and SART",
-        "Smoke and Gas Detection Systems"
-      ]
+      name: "Autopilot",
+      description: "Automated steering system that maintains vessel course and heading, reducing crew workload and improving navigation accuracy."
     },
     {
-      category: "Communication Systems",
-      icon: <Radio className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      services: [
-        "GMDSS, VHF, MH/HF, Inmarsat C"
-      ]
+      name: "Satellite and magnetic compasses",
+      description: "Advanced compass systems combining satellite technology with traditional magnetic sensing for reliable directional reference."
     },
     {
-      category: "Power & Electrical",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-amber-500",
-      services: [
-        "Electric Motors and Pumps",
-        "Contactors and Circuit Breakers",
-        "Low & Medium Voltage Switchgears / Switch Boards"
-      ]
+      name: "Radar",
+      description: "Marine radar systems for collision avoidance, navigation, and weather detection with advanced target tracking capabilities."
     },
     {
-      category: "Automation & Control",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-purple-500 to-violet-500",
-      services: [
-        "Marine Automation and Control",
-        "Ballast Water Management System"
-      ]
+      name: "Consilium, AMI, Totemplus, Headway",
+      description: "Premium marine electronics brands offering voyage data recorders, navigation equipment, and integrated bridge systems."
     },
     {
-      category: "Specialized Equipment",
-      icon: <Cpu className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500",
-      services: [
-        "Consilium, AMI, Totemplus, Headway"
-      ]
+      name: "EPIRB and SART",
+      description: "Emergency Position Indicating Radio Beacon and Search and Rescue Transponder for distress signaling and location identification."
+    },
+    {
+      name: "Ballast Water Management System",
+      description: "IMO-compliant systems for treating ballast water to prevent invasive species transfer between marine environments."
+    },
+    {
+      name: "Electric Motors and Pumps",
+      description: "Marine-grade electric motors and pumping systems for various shipboard applications including bilge, ballast, and cargo operations."
+    },
+    {
+      name: "Contactors and Circuit Breakers",
+      description: "Electrical protection and switching devices designed for marine environments, ensuring safe power distribution and circuit protection."
+    },
+    {
+      name: "Low & Medium Voltage Switchgears / Switch Boards",
+      description: "Complete electrical distribution panels and switchgear assemblies for marine power management and control systems."
+    },
+    {
+      name: "GMDSS, VHF, MH/HF, Inmarsat C",
+      description: "Global Maritime Distress and Safety System communication equipment including VHF, MF/HF radios, and satellite communication systems."
+    },
+    {
+      name: "Marine Automation and Control",
+      description: "Integrated automation systems for engine room monitoring, alarm management, and remote control of shipboard systems."
+    },
+    {
+      name: "Smoke and Gas Detection Systems",
+      description: "Advanced fire and gas detection systems with early warning capabilities for enhanced vessel safety and crew protection."
     }
   ];
 
@@ -125,7 +132,7 @@ export default function ProductsServices() {
         </div>
       </section>
 
-      {/* Services Categories */}
+      {/* Our Services */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -133,33 +140,35 @@ export default function ProductsServices() {
               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">Services</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              West Wind Marine Electronics provides specialized marine equipment and systems across multiple categories
+              West Wind Marine Electronics provides specialized marine equipment and systems
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((category, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
-                      {category.icon}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
+              {services.map((service, index) => (
+                <div key={index} className="border-b border-gray-200 pb-4">
+                  <button
+                    onClick={() => toggleService(index)}
+                    className="w-full flex items-center justify-between text-left py-3 hover:text-teal-600 transition-colors duration-200"
+                  >
+                    <span className="text-lg font-medium text-slate-900">{service.name}</span>
+                    {expandedServices.has(index) ? (
+                      <ChevronDown className="w-5 h-5 text-teal-500 flex-shrink-0" />
+                    ) : (
+                      <ChevronRight className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    )}
+                  </button>
+                  {expandedServices.has(index) && (
+                    <div className="mt-2 pb-3">
+                      <p className="text-slate-600 leading-relaxed text-sm">
+                        {service.description}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-bold">{category.category}</h3>
-                  </div>
+                  )}
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-3">
-                    {category.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-teal-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-slate-700 leading-relaxed">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
