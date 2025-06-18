@@ -95,13 +95,18 @@ export default function About() {
               <div className="grid grid-cols-2 gap-10 text-center relative z-10">
                 <div className="group transform transition-transform duration-300 hover:scale-105">
                   <div className="w-16 h-1 bg-gradient-to-r from-[var(--bright-coral)] to-red-400 mx-auto mb-3 rounded-full"></div>
-                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">2011</div>
+                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">2019</div>
                   <div className="text-gray-600 text-sm font-medium uppercase tracking-wide">Established</div>
                 </div>
                 <div className="group transform transition-transform duration-300 hover:scale-105">
                   <div className="w-16 h-1 bg-gradient-to-r from-[var(--bright-coral)] to-red-400 mx-auto mb-3 rounded-full"></div>
-                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">13+</div>
+                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">5+</div>
                   <div className="text-gray-600 text-sm font-medium uppercase tracking-wide">Years Experience</div>
+                </div>
+                <div className="group transform transition-transform duration-300 hover:scale-105">
+                  <div className="w-16 h-1 bg-gradient-to-r from-[var(--bright-coral)] to-red-400 mx-auto mb-3 rounded-full"></div>
+                  <div className="text-4xl font-bold text-[var(--bright-coral)] mb-2">100%</div>
+                  <div className="text-gray-600 text-sm font-medium uppercase tracking-wide">Customer Focused</div>
                 </div>
                 <div className="group transform transition-transform duration-300 hover:scale-105">
                   <div className="w-16 h-1 bg-gradient-to-r from-[var(--bright-coral)] to-red-400 mx-auto mb-3 rounded-full"></div>
