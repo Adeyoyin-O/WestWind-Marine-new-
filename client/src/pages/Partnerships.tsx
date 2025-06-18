@@ -24,8 +24,50 @@ export default function Partnerships() {
       </section>
 
       {/* Main Content */}
-      <section className="py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 20px 20px, rgba(20, 184, 166, 0.4) 1px, transparent 0),
+                             radial-gradient(circle at 60px 60px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
+            backgroundSize: '80px 80px'
+          }}></div>
+        </div>
+        
+        {/* Left side decorative elements */}
+        <div className="absolute left-4 top-20 hidden lg:block z-10">
+          <div className="space-y-8">
+            <div className="w-1 h-16 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
+            <div className="w-8 h-8 border-2 border-teal-200 rounded-full opacity-30"></div>
+            <div className="w-1 h-24 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
+            <div className="w-6 h-6 bg-teal-100 rounded-lg rotate-45 opacity-50"></div>
+            <div className="w-1 h-20 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
+            <div className="w-4 h-4 border border-cyan-200 rounded-full opacity-35"></div>
+            <div className="w-1 h-12 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
+          </div>
+        </div>
+        
+        {/* Right side decorative elements */}
+        <div className="absolute right-4 top-32 hidden lg:block z-10">
+          <div className="space-y-6">
+            <div className="w-10 h-10 border border-cyan-200 rounded-full opacity-25"></div>
+            <div className="w-1 h-20 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
+            <div className="w-5 h-5 bg-cyan-100 rounded-full opacity-60"></div>
+            <div className="w-1 h-16 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
+            <div className="w-7 h-7 border border-teal-200 rounded-lg rotate-12 opacity-30"></div>
+            <div className="w-1 h-12 bg-gradient-to-b from-cyan-200 to-teal-200 rounded-full opacity-40"></div>
+            <div className="w-3 h-3 bg-teal-100 rounded-full opacity-45"></div>
+            <div className="w-1 h-8 bg-gradient-to-b from-teal-200 to-cyan-200 rounded-full opacity-40"></div>
+          </div>
+        </div>
+        
+        {/* Floating elements */}
+        <div className="absolute left-1/4 top-10 w-6 h-6 border border-teal-100 rounded-lg rotate-45 opacity-20 hidden xl:block"></div>
+        <div className="absolute right-1/4 top-24 w-4 h-4 bg-cyan-100 rounded-full opacity-25 hidden xl:block"></div>
+        <div className="absolute left-1/3 bottom-20 w-8 h-8 border border-cyan-100 rounded-full opacity-15 hidden xl:block"></div>
+        <div className="absolute right-1/3 bottom-32 w-5 h-5 bg-teal-100 rounded-lg rotate-12 opacity-20 hidden xl:block"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto">
             
             {/* VDR Overview */}
