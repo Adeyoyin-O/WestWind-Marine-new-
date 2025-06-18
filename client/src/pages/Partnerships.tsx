@@ -1,249 +1,326 @@
 export default function Partnerships() {
   return (
-    <div className="page-transition bg-slate-900 min-h-screen text-white">
-      {/* Hero Section with Split Design */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Dynamic background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900"></div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-cyan-400 rounded-full blur-3xl"></div>
-          </div>
-          {/* Animated lines */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,300 Q500,100 1000,400" stroke="rgba(20,184,166,0.1)" strokeWidth="2" fill="none" />
-            <path d="M0,600 Q500,400 1000,700" stroke="rgba(6,182,212,0.1)" strokeWidth="2" fill="none" />
-          </svg>
-        </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left column - Text content */}
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm font-medium backdrop-blur-sm">
-                <div className="w-2 h-2 bg-teal-400 rounded-full mr-3 animate-pulse"></div>
-                Strategic Partnership
-              </div>
-              
-              <div>
-                <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                  <span className="text-white">SAL</span>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400"> Navigation</span>
-                </h1>
-                <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                  Consilium Navigation Equipment Manufacturers
-                </p>
-              </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-sm font-medium">IMO Compliant</span>
-                </div>
-                <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-sm font-medium">VDR Technology</span>
-                </div>
-              </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-teal-600/20 border border-teal-500/30 rounded-full text-teal-300 text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              Strategic Partnerships
             </div>
-            
-            {/* Right column - Visual element */}
-            <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px]">
-                {/* Main circle */}
-                <div className="absolute inset-0 border-2 border-teal-400/30 rounded-full"></div>
-                <div className="absolute inset-8 border border-cyan-400/20 rounded-full"></div>
-                <div className="absolute inset-16 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full backdrop-blur-sm"></div>
-                
-                {/* Floating tech elements */}
-                <div className="absolute top-10 right-10 w-16 h-16 bg-teal-500/20 border border-teal-400/30 rounded-xl backdrop-blur-sm flex items-center justify-center">
-                  <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <div className="absolute bottom-10 left-10 w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-full backdrop-blur-sm flex items-center justify-center">
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-                </div>
-                <div className="absolute top-1/2 left-4 w-8 h-20 bg-gradient-to-b from-teal-400/30 to-cyan-400/30 rounded-full"></div>
-                <div className="absolute top-1/3 right-4 w-6 h-16 bg-gradient-to-b from-cyan-400/30 to-teal-400/30 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Trusted Technology Partners
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              West Wind Marine Electronics collaborates with industry-leading technology partners to deliver comprehensive marine electronics solutions
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content - Diagonal Split Design */}
-      <section className="relative bg-white">
-        {/* Diagonal separator */}
-        <div className="absolute inset-0">
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,0 L1000,100 L1000,1000 L0,900 Z" fill="rgb(15,23,42)" />
-          </svg>
-        </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="py-20 grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left side - Dark section */}
-            <div className="text-white space-y-8">
-              <div className="space-y-6">
-                <h2 className="text-4xl font-bold">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
-                    Voyage Data Recorders
-                  </span>
-                </h2>
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-8 h-8 bg-teal-500/20 border border-teal-400/30 rounded-lg flex items-center justify-center">
-                    <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <span className="text-teal-300 font-medium">Proactive incident prevention tool</span>
+      {/* Partners Overview */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
                 </div>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  SAL VDR and S-VDR not only fulfill SOLAS requirements, they also meet our customer's high demands on reliability and incident follow-up possibilities, such as outstanding voyage data playback options.
-                </p>
+                <h3 className="text-2xl font-bold text-slate-900">SAL NAVIGATION LTD</h3>
               </div>
-              
-              {/* Feature highlights */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-teal-400 mb-2">24/7</div>
-                  <div className="text-sm text-slate-300">Remote Monitoring</div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Consilium Navigation Equipment Manufacturers specializing in advanced Voyage Data Recorders (VDR) and maritime safety systems.
+              </p>
+              <div className="flex items-center text-teal-600 font-medium">
+                <span>Voyage Data Recording Technology</span>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">48hrs</div>
-                  <div className="text-sm text-slate-300">Data Storage</div>
+                <h3 className="text-2xl font-bold text-slate-900">TOTEMPLUS</h3>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Advanced VDR 2014 technology provider complying with new International Maritime Organization (IMO) standards and requirements.
+              </p>
+              <div className="flex items-center text-green-600 font-medium">
+                <span>IMO Compliant VDR Systems</span>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SAL NAVIGATION LTD Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-6 py-3 bg-teal-50 text-teal-700 rounded-full text-sm font-medium mb-4 border border-teal-200">
+                <div className="w-3 h-3 bg-teal-500 rounded-full mr-3"></div>
+                SAL NAVIGATION LTD
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Consilium Navigation Equipment
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                Advanced Voyage Data Recorders (VDR) technology for proactive incident prevention and maritime safety compliance
+              </p>
+            </div>
+
+            {/* Main VDR Content */}
+            <div className="grid lg:grid-cols-3 gap-8 mb-12">
+              <div className="lg:col-span-2">
+                <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-2xl p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-16 h-16 bg-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-4">Voyage Data Recorders (VDR)</h3>
+                      <div className="bg-teal-600 text-white px-4 py-2 rounded-lg inline-block text-sm font-medium mb-4">
+                        Proactive Incident Prevention Tool
+                      </div>
+                      <p className="text-slate-700 leading-relaxed">
+                        SAL VDR and S-VDR not only fulfill SOLAS requirements, they also meet our customer's high demands on reliability and incident follow-up possibilities, such as outstanding voyage data playback options. We offer a broad range of voyage data-based cloud applications for safety management and proactive incident prevention, as well as remote diagnostics for cost-efficient maintenance and APT.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-teal-600 mb-2">24/7</div>
+                    <div className="text-sm text-slate-600">Remote Monitoring</div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-cyan-600 mb-2">SOLAS</div>
+                    <div className="text-sm text-slate-600">Compliant Systems</div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            {/* Right side - Light section */}
-            <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            {/* Value Propositions */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900">Key Applications</h3>
+                  <h4 className="text-xl font-bold text-slate-900">Discover Voyage Data Value</h4>
                 </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-slate-900">Safety Management</h4>
-                      <p className="text-slate-600 text-sm">Cloud applications for proactive incident prevention</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-slate-900">Remote Diagnostics</h4>
-                      <p className="text-slate-600 text-sm">Cost-efficient maintenance and APT solutions</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-slate-900">Data Integration</h4>
-                      <p className="text-slate-600 text-sm">Real-time streaming for value-creating analysis</p>
-                    </div>
-                  </div>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  Since the VDR records a lot of signals on the vessel, it is a very valuable data central. We provide options for real-time data streaming from the VDR to other systems for smooth integration and value-creating data usage and analysis.
+                </p>
+                <div className="bg-teal-50 border border-teal-200 rounded-lg p-4">
+                  <p className="text-teal-800 font-medium text-sm">
+                    The SAL VDR playback software is intuitive and requires no configuration by the user.
+                  </p>
                 </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
+                <div className="flex items-center mb-6">
+                  <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                    <svg className="w-5 h-5 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900">Universal Vessel Compatibility</h4>
+                </div>
+                <p className="text-slate-600 leading-relaxed">
+                  Based on experience from thousands of installations throughout the years, our VDRs have been designed to allow for quick and efficient installation. Regardless of the age of the vessels and their equipment, our interface units make it possible to connect and record the necessary signals as well as additional signals if desired on any vessel in any segment that requires a VDR or S-VDR.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      {/* TOTEMPLUS Section - Modern Grid Layout */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+
+      {/* TOTEMPLUS Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 rounded-full text-sm font-medium mb-6 border border-green-200">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-              IMO Compliant Technology
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-6 py-3 bg-green-50 text-green-700 rounded-full text-sm font-medium mb-4 border border-green-200">
+                <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                TOTEMPLUS
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Advanced VDR 2014 Technology
+              </h2>
+              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+                Fully compliant with new International Maritime Organization (IMO) VDR standards, effective July 1, 2014
+              </p>
             </div>
-            <h2 className="text-5xl font-bold text-slate-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700">TOTEM</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500">PLUS</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Advanced VDR 2014 technology meeting all new International Maritime Organization requirements
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* General Features */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">VDR 2014 Compliance</h3>
+
+            {/* Main TOTEMPLUS Content */}
+            <div className="grid lg:grid-cols-2 gap-12 mb-12">
+              <div className="bg-white rounded-2xl shadow-lg p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">IMO Compliance Overview</h3>
+                </div>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   The new Totem VDR 2014 fully complies with the new International Maritime Organization (IMO) VDR standard, which comes into effect July 1, 2014, and meets all the new VDR requirements as defined in MSC.333(90) and IEC 61996-1 Ed. 2.
                 </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Float-free capsule</span>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-slate-700 text-sm">Float-free capsule technology</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">48-hour data storage</span>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-slate-700 text-sm">48-hour data storage capability</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Separate audio track</span>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-slate-700 text-sm">Separate audio track for outdoor microphones</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">ECDIS & radar recording</span>
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                    <span className="text-slate-700 text-sm">ECDIS, radar, AIS and inclinometer recording</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-6">Totem VDR 2014 Advantages</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-sm leading-relaxed">
+                      Remote Maintenance with Totem Cellular Router (TCR) will minimize onboard visits by technicians and will further reduce maintenance costs.
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-sm leading-relaxed">
+                      Conning Display on the VDR monitor (making Conning display redundant).
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-sm leading-relaxed">
+                      Automatic event log for owner's use (monthly check recommended).
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-sm leading-relaxed">
+                      Means of extracting stored data from VDR: USB, DVD and LAN.
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <p className="text-sm leading-relaxed">
+                      VDR 19 monitor for monitoring, replay and diagnosis: the monitor displays status of recorded items at all times; Facilitates easy APT and commissioning.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* Advantages Sidebar */}
-            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -translate-x-12 translate-y-12"></div>
-              <div className="relative">
-                <h3 className="text-xl font-bold mb-6">Key Advantages</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Remote Maintenance with TCR reduces onboard visits</span>
+
+            {/* Technical Features */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">Technical Features</h3>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-2">Replay Capabilities</h4>
+                      <p className="text-slate-600 text-sm">Replay capabilities on the VDR monitor itself with comprehensive playback options for both ship and office environments.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Conning Display on VDR monitor</span>
+                </div>
+
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-2">Audio Recording</h4>
+                      <p className="text-slate-600 text-sm">High Quality Single channel recording of every Microphone and VHF (no mixing of channels). 10 independent channels are available as standard.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Automatic event log for owners</span>
+                </div>
+
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-2">System Integration</h4>
+                      <p className="text-slate-600 text-sm">Built in Siemens S7 PLC makes easy interface to a large number of binary or analog inputs, allowing readout of Non NMEA systems.</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Multiple data extraction: USB, DVD, LAN</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">VDR 19 monitor for real-time status</span>
+                </div>
+
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900 mb-2">Dual Environment Support</h4>
+                      <p className="text-slate-600 text-sm">Replay module designed for both ship and office environments with seamless integration and user-friendly interface.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -251,80 +328,47 @@ export default function Partnerships() {
           </div>
         </div>
       </section>
-      
-      {/* Technical Features - Modern Card Grid */}
-      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-20 w-40 h-40 border border-teal-400 rounded-full"></div>
-          <div className="absolute bottom-20 right-20 w-32 h-32 border border-cyan-400 rounded-full"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
-                Technical Features
-              </span>
+
+      {/* Partnership Benefits */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+              Partnership Benefits
             </h2>
-            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-              Advanced capabilities engineered for modern maritime operations
+            <p className="text-lg text-slate-600 mb-12">
+              Through our strategic partnerships, West Wind Marine Electronics delivers comprehensive solutions that combine cutting-edge technology with proven reliability
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-teal-500/20 border border-teal-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Replay Capabilities</h4>
-                  <p className="text-slate-300 text-sm">Direct replay functionality on the VDR monitor itself with comprehensive playback options.</p>
-                </div>
-              </div>
-            </div>
             
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Dual Environment</h4>
-                  <p className="text-slate-300 text-sm">Replay module designed for both ship and office environments with seamless integration.</p>
-                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Certified Quality</h3>
+                <p className="text-slate-600">All solutions meet international maritime standards and regulatory requirements</p>
               </div>
-            </div>
-            
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-teal-500/20 border border-teal-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">Audio Recording</h4>
-                  <p className="text-slate-300 text-sm">High quality single channel recording of every microphone and VHF with 10 independent channels.</p>
-                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Advanced Technology</h3>
+                <p className="text-slate-600">Latest innovations in marine electronics and navigation systems</p>
               </div>
-            </div>
-            
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-2">System Integration</h4>
-                  <p className="text-slate-300 text-sm">Built-in Siemens S7 PLC enables easy interface to binary or analog inputs for Non-NMEA systems.</p>
-                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Complete Support</h3>
+                <p className="text-slate-600">Comprehensive installation, maintenance, and technical support services</p>
               </div>
             </div>
           </div>
