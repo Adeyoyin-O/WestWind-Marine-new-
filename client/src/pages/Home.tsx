@@ -1,374 +1,333 @@
-import { useLocation, Link } from "wouter";
-import Hero from "@/components/Hero";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Trophy, Workflow, Ship, Cpu, ArrowRight, Zap, Settings, ChevronLeft, ChevronRight } from "lucide-react";
-import heroBackground from "@assets/rob-lambert-9Q_pLLP_jmA-unsplash_1750155822053.jpg";
-import serviceImage1 from "@assets/service11_1749934695026.jpg";
-import serviceImage2 from "@assets/service10_1749934751504.jpg";
-import serviceImage3 from "@assets/service7_1749934776068.jpg";
-import serviceImage4 from "@assets/service8_1749934789632.jpg";
-import serviceImage5 from "@assets/service9_1749934761978.jpg";
-import serviceImage6 from "@assets/service18_1749934858577.jpg";
-import serviceImage7 from "@assets/service14_1749934710232.jpg";
-import serviceImage8 from "@assets/service23_1749934808291.jpg";
-import serviceImage9 from "@assets/service20_1749934817170.jpg";
-import serviceImage10 from "@assets/service19_1749934843078.jpg";
-import serviceImage11 from "@assets/service17_1749934870522.jpg";
-import serviceImage12 from "@assets/service15_1749934878839.jpg";
-import controlPanelImage from "@assets/staff-woman-worker-work-operate-cutting-machine-lathe-cnc-engineer-modern-factory-working-woman-smart-women-worker-industry-workplace-photo_1749941219517.jpg";
-import electricalPanelImage from "@assets/electricity-electrical-maintenance-service-electrician-260nw-2251896605_1749941607977.jpg";
-import marineControlImage from "@assets/image_1749942411532.png";
-import { useState, useEffect } from "react";
-
-// Service Carousel Component
-function ServiceCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const slides = [
-    {
-      image: serviceImage1,
-      title: "Power Distribution Systems",
-      description: "High-voltage electrical switchgear and distribution panels"
-    },
-    {
-      image: serviceImage2,
-      title: "Industrial Control Systems",
-      description: "Advanced automation and process control solutions"
-    },
-    {
-      image: serviceImage3,
-      title: "Electrical Installations",
-      description: "Complete electrical switchboard and control panel systems"
-    },
-    {
-      image: serviceImage4,
-      title: "Marine Power Systems",
-      description: "Specialized electrical systems for maritime applications"
-    },
-    {
-      image: serviceImage5,
-      title: "Testing & Commissioning",
-      description: "Professional testing and system commissioning services"
-    },
-    {
-      image: serviceImage6,
-      title: "Control Panel Design",
-      description: "Custom electrical control and monitoring systems"
-    },
-    {
-      image: serviceImage7,
-      title: "Infrastructure Cabling",
-      description: "Structured cabling and electrical infrastructure systems"
-    },
-    {
-      image: serviceImage8,
-      title: "Generator Systems",
-      description: "Industrial power generation and backup systems"
-    },
-    {
-      image: serviceImage9,
-      title: "Civil Engineering",
-      description: "Foundation and structural work for electrical installations"
-    },
-    {
-      image: serviceImage10,
-      title: "Cable Installation",
-      description: "Underground and overhead cable installation services"
-    },
-    {
-      image: serviceImage11,
-      title: "Industrial Equipment",
-      description: "Heavy-duty industrial electrical equipment and installations"
-    },
-    {
-      image: serviceImage12,
-      title: "Project Construction",
-      description: "Complete project execution from design to commissioning"
-    }
-  ];
-
-  // Auto-slide functionality
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 4000); // Change slide every 4 seconds
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
-
+export default function Home() {
   return (
-    <div className="relative w-full h-96 bg-white rounded-2xl overflow-hidden shadow-xl">
-      {/* Slides Container */}
-      <div 
-        className="flex transition-transform duration-700 ease-in-out h-full"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="min-w-full h-full relative">
-            <img 
-              src={slide.image} 
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
+    <div className="page-transition bg-slate-900 min-h-screen text-white">
+      {/* Hero Section with Split Design */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Dynamic background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900"></div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-cyan-400 rounded-full blur-3xl"></div>
+          </div>
+          {/* Animated lines */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path d="M0,300 Q500,100 1000,400" stroke="rgba(20,184,166,0.1)" strokeWidth="2" fill="none" />
+            <path d="M0,600 Q500,400 1000,700" stroke="rgba(6,182,212,0.1)" strokeWidth="2" fill="none" />
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left column - Text content */}
+            <div className="space-y-8">
+              <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm font-medium backdrop-blur-sm">
+                <div className="w-2 h-2 bg-teal-400 rounded-full mr-3 animate-pulse"></div>
+                Marine Electronics Engineering
+              </div>
+              
+              <div>
+                <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                  <span className="text-white">West Wind</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400"> Marine</span>
+                </h1>
+                <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                  Advanced Marine Electronics & Engineering Solutions
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <span className="text-sm font-medium">Marine Certified</span>
+                </div>
+                <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span className="text-sm font-medium">Expert Engineering</span>
+                </div>
+              </div>
+            </div>
             
-            {/* Overlay with gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-            
-            {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
-              <p className="text-sm opacity-90">{slide.description}</p>
+            {/* Right column - Visual element */}
+            <div className="relative">
+              <div className="relative w-full h-96 lg:h-[500px]">
+                {/* Main circle */}
+                <div className="absolute inset-0 border-2 border-teal-400/30 rounded-full"></div>
+                <div className="absolute inset-8 border border-cyan-400/20 rounded-full"></div>
+                <div className="absolute inset-16 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full backdrop-blur-sm"></div>
+                
+                {/* Floating tech elements */}
+                <div className="absolute top-10 right-10 w-16 h-16 bg-teal-500/20 border border-teal-400/30 rounded-xl backdrop-blur-sm flex items-center justify-center">
+                  <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="absolute bottom-10 left-10 w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-full backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+                </div>
+                <div className="absolute top-1/2 left-4 w-8 h-20 bg-gradient-to-b from-teal-400/30 to-cyan-400/30 rounded-full"></div>
+                <div className="absolute top-1/3 right-4 w-6 h-16 bg-gradient-to-b from-cyan-400/30 to-teal-400/30 rounded-full"></div>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
-
-      {/* Side Arrow Navigation */}
-      <button
-        onClick={() => goToSlide(currentIndex === 0 ? slides.length - 1 : currentIndex - 1)}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/50 text-white rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
-      
-      <button
-        onClick={() => goToSlide(currentIndex === slides.length - 1 ? 0 : currentIndex + 1)}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/50 text-white rounded-full flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
-
-
-    </div>
-  );
-}
-
-export default function Home() {
-  const [, setLocation] = useLocation();
-
-  const handleExploreServices = () => {
-    setLocation("/products-services");
-  };
-
-  const handleGetQuote = () => {
-    setLocation("/contact");
-  };
-
-  return (
-    <div className="page-transition">
-      {/* Hero Section */}
-      <Hero
-        title="Your EPIC Partner in Engineering Excellence"
-        subtitle="From electrical systems to control infrastructure, we bring precision, expertise, and reliability to every stage of your project lifecycle."
-        backgroundImage={heroBackground}
-        showButtons
-        onPrimaryClick={handleExploreServices}
-        onSecondaryClick={handleGetQuote}
-        primaryButtonText="Explore"
-        secondaryButtonText="Get a Quote"
-      />
-
-      {/* Stats Highlight Strip */}
-      <section className="bg-gradient-to-r from-gray-50 to-slate-100 py-16 border-b border-slate-200">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-            <div className="text-center group p-6 rounded-lg bg-white/60 shadow-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/80 hover:shadow-2xl hover:scale-105 border border-white/20">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                <Trophy className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-slate-700 transition-colors duration-300">13+ Years of Proven Delivery</h3>
-              <p className="text-sm text-slate-700 group-hover:text-slate-600 transition-colors duration-300">Trusted expertise in<br />complex engineering projects</p>
-            </div>
-            
-            <div className="text-center group p-6 rounded-lg bg-white/60 shadow-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/80 hover:shadow-2xl hover:scale-105 border border-white/20">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                <Workflow className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-slate-700 transition-colors duration-300">EPIC Services, All in One Place</h3>
-              <p className="text-sm text-slate-700 group-hover:text-slate-600 transition-colors duration-300">Complete engineering, procurement, installation & commissioning</p>
-            </div>
-            
-            <div className="text-center group p-6 rounded-lg bg-white/60 shadow-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/80 hover:shadow-2xl hover:scale-105 border border-white/20">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                <Ship className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-slate-700 transition-colors duration-300">Powering Land & Sea</h3>
-              <p className="text-sm text-slate-700 group-hover:text-slate-600 transition-colors duration-300">Specialized solutions for<br />power and maritime industries</p>
-            </div>
-            
-            <div className="text-center group p-6 rounded-lg bg-white/60 shadow-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/80 hover:shadow-2xl hover:scale-105 border border-white/20">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                <Cpu className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-slate-700 transition-colors duration-300">Smart Systems Integration</h3>
-              <p className="text-sm text-slate-700 group-hover:text-slate-600 transition-colors duration-300">Advanced automation and<br />control system solutions</p>
-            </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
-        {/* Background Pattern */}
+      {/* Main Content - Diagonal Split Design */}
+      <section className="relative bg-white">
+        {/* Diagonal separator */}
+        <div className="absolute inset-0">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path d="M0,0 L1000,100 L1000,1000 L0,900 Z" fill="rgb(15,23,42)" />
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="py-20 grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Dark section */}
+            <div className="text-white space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                    Marine Electronics Excellence
+                  </span>
+                </h2>
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-8 h-8 bg-teal-500/20 border border-teal-400/30 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                  </div>
+                  <span className="text-teal-300 font-medium">Precision engineering for marine environments</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed text-lg">
+                  We specialize in advanced marine electronics, navigation systems, and electrical engineering solutions designed to meet the demanding requirements of maritime operations.
+                </p>
+              </div>
+              
+              {/* Feature highlights */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-teal-400 mb-2">15+</div>
+                  <div className="text-sm text-slate-300">Years Experience</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">500+</div>
+                  <div className="text-sm text-slate-300">Projects Completed</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side - Light section */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Core Services</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Navigation Systems</h4>
+                      <p className="text-slate-600 text-sm">Advanced GPS, radar, and communication equipment</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Power Systems</h4>
+                      <p className="text-slate-600 text-sm">Marine electrical distribution and control panels</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Automation</h4>
+                      <p className="text-slate-600 text-sm">Integrated control systems and IoT solutions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Services Section - Modern Grid Layout */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 rounded-full text-sm font-medium mb-6 border border-teal-200">
+              <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
+              Professional Services
+            </div>
+            <h2 className="text-5xl font-bold text-slate-900 mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700">Marine</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500"> Solutions</span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Comprehensive marine electronics services from design to implementation and maintenance
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Navigation Systems */}
+            <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative">
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">Navigation & Communication</h3>
+                <p className="text-slate-600 leading-relaxed mb-6">
+                  State-of-the-art navigation systems including GPS, AIS, radar installations, and VHF communication equipment designed for optimal maritime safety and efficiency.
+                </p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">GPS Navigation</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Radar Systems</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">VHF Communication</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">AIS Transponders</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Specialties Sidebar */}
+            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -translate-x-12 translate-y-12"></div>
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-6">Specializations</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Marine electrical installations</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Control panel manufacturing</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">System integration services</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Equipment maintenance</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Technical consulting</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Capabilities - Modern Card Grid */}
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-32 h-32 border-2 border-slate-300 rounded-full"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 border-2 border-blue-300 rounded-full"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-slate-200 rounded-lg rotate-45"></div>
-          <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-blue-200 rounded-lg rotate-12"></div>
+          <div className="absolute top-20 left-20 w-40 h-40 border border-teal-400 rounded-full"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 border border-cyan-400 rounded-full"></div>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
-            {/* Left Side - Company Intro */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100">
-                <span className="w-2 h-2 bg-teal-600 rounded-full mr-2"></span>
-                About West Wind Marine Electronics Ltd
-              </div>
-              
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                Marine Electronics
-                <span className="block bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Excellence Since 2011</span>
-              </h2>
-              
-              <p className="text-lg text-slate-700 leading-relaxed">
-                West Wind Marine Electronics Ltd is a leading Nigerian engineering company specializing in comprehensive marine electronics and instrumentation services. We deliver cutting-edge electrical systems, navigation equipment, and maritime control solutions that power vessels and offshore operations...
-              </p>
-              
-              <div className="pt-4">
-                <Link href="/about" className="group inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold text-base transition-colors duration-300">
-                  Learn More About Us
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </div>
-            </div>
-            
-            {/* Right Side - Services Carousel */}
-            <div className="relative">
-              <ServiceCarousel />
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
-      {/* Our Solutions Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-blue-50 relative overflow-hidden">
-        {/* Background Texture */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
-              radial-gradient(circle at 75% 75%, rgba(251, 146, 60, 0.04) 0%, transparent 40%),
-              linear-gradient(45deg, transparent 49%, rgba(148, 163, 184, 0.02) 49%, rgba(148, 163, 184, 0.02) 51%, transparent 51%)
-            `,
-            backgroundSize: '800px 800px, 600px 600px, 60px 60px'
-          }}></div>
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-orange-50 to-red-50 text-orange-700 rounded-full text-sm font-semibold mb-4 border border-orange-100">
-              <span className="w-2 h-2 bg-orange-600 rounded-full mr-2"></span>
-              Our Solutions
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Tailored Expertise for Every Project
+            <h2 className="text-4xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                Engineering Capabilities
+              </span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Discover our comprehensive range of specialized services designed to power your success
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              Advanced technical expertise across all aspects of marine electronics and electrical systems
             </p>
           </div>
-
-          {/* Creative Uneven Layout */}
-          <div className="grid grid-cols-12 gap-6 mb-12">
-            {/* Large Service Card - Spans 7 columns */}
-            <div className="col-span-12 lg:col-span-7 group">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-3xl">
-                <img 
-                  src={electricalPanelImage}
-                  alt="Technician working on electrical distribution panel"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/80"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white transform transition-transform duration-500 group-hover:translate-y-[-4px]">
-                  <div className="inline-flex items-center justify-center px-3 py-1 bg-orange-600/80 backdrop-blur-sm rounded-full text-xs font-medium mb-3">
-                    Power Systems
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">Power Distribution & Control</h3>
-                  <p className="text-sm opacity-90 leading-relaxed">
-                    Advanced electrical switchgear, distribution panels, and high-voltage power systems engineered for industrial and maritime applications
-                  </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-teal-500/20 border border-teal-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">System Design</h4>
+                  <p className="text-slate-300 text-sm">Custom electrical and electronics system design tailored to vessel specifications and operational requirements.</p>
                 </div>
               </div>
             </div>
-
-            {/* Two Smaller Cards - Each spans 5 columns, stacked vertically */}
-            <div className="col-span-12 lg:col-span-5 space-y-6">
-              <div className="group">
-                <div className="relative h-44 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                  <img 
-                    src={controlPanelImage}
-                    alt="Female engineer operating CNC machinery in modern factory"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/80"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-transform duration-500 group-hover:translate-y-[-2px]">
-                    <div className="inline-flex items-center justify-center px-3 py-1 bg-purple-600/80 backdrop-blur-sm rounded-full text-xs font-medium mb-2">
-                      Automation
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">Industrial Control Systems</h3>
-                    <p className="text-xs opacity-90">
-                      Cutting-edge automation and process control solutions
-                    </p>
-                  </div>
+            
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </div>
-              </div>
-
-              <div className="group">
-                <div className="relative h-44 rounded-2xl overflow-hidden shadow-xl transform transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
-                  <img 
-                    src={marineControlImage}
-                    alt="Marine control room with navigation and monitoring systems"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-500 group-hover:from-black/80"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform transition-transform duration-500 group-hover:translate-y-[-2px]">
-                    <div className="inline-flex items-center justify-center px-3 py-1 bg-cyan-600/80 backdrop-blur-sm rounded-full text-xs font-medium mb-2">
-                      Maritime
-                    </div>
-                    <h3 className="text-lg font-bold mb-2">Marine Electronics</h3>
-                    <p className="text-xs opacity-90">
-                      Specialized electronic systems for maritime vessels
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Installation & Commissioning</h4>
+                  <p className="text-slate-300 text-sm">Professional installation services with comprehensive testing and commissioning of all marine electronic systems.</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Stylish Explore Button */}
-          <div className="text-center">
-            <Link href="/products-services">
-              <Button 
-                className="group relative px-8 py-4 bg-white border-2 border-blue-600 hover:border-blue-700 text-blue-600 hover:text-blue-700 font-semibold rounded-full shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:scale-105 overflow-hidden"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                <span className="relative flex items-center">
-                  Explore Full Services
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </Button>
-            </Link>
+            
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-teal-500/20 border border-teal-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Maintenance & Support</h4>
+                  <p className="text-slate-300 text-sm">Ongoing maintenance programs and 24/7 technical support to ensure optimal system performance and reliability.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">Upgrade & Modernization</h4>
+                  <p className="text-slate-300 text-sm">System upgrades and modernization services to keep marine electronics current with latest technology standards.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
