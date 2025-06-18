@@ -228,10 +228,10 @@ export default function ProductsServices() {
 
 
       {/* Call to Action */}
-      <section className="py-20 bg-white border-t border-gray-200">
+      <section className="py-16 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-12 border border-teal-100 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-3xl p-8 border border-teal-100 relative overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-teal-100/50 rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-100/50 rounded-full translate-y-16 -translate-x-16"></div>
