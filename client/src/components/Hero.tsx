@@ -34,12 +34,7 @@ export default function Hero({
         {/* Primary gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-teal-900"></div>
         
-        {backgroundImage && (
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-        )}
+
         
         {/* Floating geometric shapes */}
         <div className="absolute top-10 left-10 w-32 h-32 border border-teal-400/20 rounded-lg rotate-12 animate-pulse"></div>
