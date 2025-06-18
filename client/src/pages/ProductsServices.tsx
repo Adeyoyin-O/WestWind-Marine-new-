@@ -91,81 +91,73 @@ export default function ProductsServices() {
     {
       letter: "E",
       title: "Engineering",
-      description: "Advanced system design and technical engineering solutions",
+      description: "Marine electronics system design and naval architecture integration",
       icon: Settings,
-      color: "from-blue-600 to-blue-700",
-      features: ["System Architecture", "Technical Specifications", "Custom Solutions", "Performance Analysis"],
+      color: "from-cyan-600 to-blue-700",
+      features: ["Bridge System Design", "Navigation Integration", "Marine Compliance", "Performance Optimization"],
       image: engineeringImg
     },
     {
       letter: "P",
       title: "Procurement",
-      description: "Strategic sourcing and equipment acquisition services",
+      description: "Specialized marine equipment sourcing and vendor partnerships",
       icon: Target,
-      color: "from-green-600 to-green-700",
-      features: ["Equipment Sourcing", "Vendor Management", "Quality Assurance", "Cost Optimization"],
+      color: "from-teal-600 to-cyan-700",
+      features: ["Marine Equipment Sourcing", "Certified Suppliers", "Quality Assurance", "Maritime Standards"],
       image: procurementImg
     },
     {
       letter: "I",
       title: "Installation",
-      description: "Expert professional installation and seamless system integration",
+      description: "Professional marine electronics installation and system integration",
       icon: Wrench,
-      color: "from-orange-600 to-orange-700",
-      features: ["Expert Installation", "System Integration", "Testing & Validation", "Documentation"],
+      color: "from-orange-600 to-red-600",
+      features: ["Onboard Installation", "System Integration", "Sea Trial Testing", "Certification"],
       image: installationImg
     },
     {
       letter: "C",
       title: "Commissioning",
-      description: "Complete system commissioning and operational validation",
+      description: "Marine system commissioning and crew training services",
       icon: Activity,
-      color: "from-purple-600 to-purple-700",
-      features: ["System Commissioning", "Performance Testing", "Crew Training", "Operational Handover"],
+      color: "from-indigo-600 to-purple-700",
+      features: ["System Commissioning", "Sea Trial Testing", "Crew Training", "Certification & Handover"],
       image: commissioningImg
     }
   ], []);
 
   const serviceCategories = useMemo(() => [
     {
-      icon: Zap,
-      title: "Electrical Equipment",
-      description: "Complete range of electrical components and systems for industrial applications",
-      badge: "Electrical",
-      badgeColor: "bg-blue-100 text-blue-700",
-      solutions: ["Pumps and Motors", "Electrical and Lighting Fittings", "Circuit Breakers", "Transformers"]
+      icon: Compass,
+      title: "Navigation & Communication",
+      description: "Advanced navigation systems and marine communication equipment",
+      badge: "Navigation",
+      badgeColor: "bg-cyan-100 text-cyan-700",
+      solutions: ["Marine Navigation Systems", "Communication Equipment", "Sonar & Fish Finders", "Gyrocompass & Heading Systems"]
     },
     {
-      icon: ServerCog,
-      title: "Control Panels & Systems", 
-      description: "Advanced control solutions for industrial automation and power management",
-      badge: "Control Systems",
-      badgeColor: "bg-green-100 text-green-700",
-      solutions: ["Medium and Low Voltage Panels", "DC Panels, Battery Chargers and Batteries", "Control Consoles", "Motor Control Centers (MCC)"]
+      icon: Zap,
+      title: "Marine Electrical Systems", 
+      description: "Power distribution and electrical control solutions for marine vessels",
+      badge: "Electrical",
+      badgeColor: "bg-blue-100 text-blue-700",
+      solutions: ["Marine Electrical Panels", "Power Management Systems", "Marine Lighting Systems", "Engine Monitoring Systems"]
     },
     {
       icon: Settings,
-      title: "Motor Controls & Drives",
-      description: "Comprehensive motor control solutions for optimal performance and efficiency",
-      badge: "Motor Control",
-      badgeColor: "bg-orange-100 text-orange-700", 
-      solutions: ["Starters (DOL, Star-Delta, Auto Transformer)", "Variable Frequency Drives (VFD)", "Rewinding of Motors and Generator Spare Parts"]
+      title: "Automation & Control",
+      description: "Advanced vessel automation and control systems for marine operations",
+      badge: "Automation",
+      badgeColor: "bg-green-100 text-green-700", 
+      solutions: ["Autopilot Systems", "Marine Instrumentation", "Engine Monitoring Systems", "Vessel Tracking & Fleet Management"]
     },
     {
       icon: Activity,
-      title: "Power & Backup Systems",
-      description: "Reliable power solutions and backup systems for continuous operations",
-      badge: "Power Systems",
-      badgeColor: "bg-purple-100 text-purple-700",
-      solutions: ["Inverters and UPS Systems", "DC Panels, Battery Chargers and Batteries"]
-    },
-    {
-      icon: Wrench,
-      title: "Installation Services",
-      description: "Professional installation and maintenance services for all electrical systems",
-      badge: "Installation",
-      badgeColor: "bg-cyan-100 text-cyan-700",
-      solutions: ["Electric Installations", "System Integration", "Maintenance Services", "Technical Support"]
+      title: "Safety & Entertainment",
+      description: "Safety systems and onboard entertainment solutions for crew and passengers",
+      badge: "Safety Systems",
+      badgeColor: "bg-red-100 text-red-700",
+      solutions: ["Emergency & Safety Systems", "Satellite TV & Entertainment", "Marine Lighting Systems"]
     }
   ], []);
 
