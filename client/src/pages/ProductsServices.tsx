@@ -248,15 +248,15 @@ export default function ProductsServices() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 max-w-7xl mx-auto">
             {capabilities.map((capability, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group px-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <div className="text-teal-600">
                     {capability.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{capability.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">{capability.title}</h3>
                 <p className="text-slate-600 leading-relaxed">{capability.description}</p>
               </div>
             ))}
