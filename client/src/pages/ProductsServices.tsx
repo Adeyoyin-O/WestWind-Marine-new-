@@ -107,7 +107,7 @@ export default function ProductsServices() {
     },
     {
       title: "Class Approvals",
-      description: "As a growing company, we currently have certified class approval for LR, DNV, and BV classification societies. We still await KR class audit approval.",
+      description: "As a growing company, we currently have certified class approval for LR, DNV, and BV classification societies, demonstrating our commitment to industry standards and quality assurance.",
       icon: <Shield className="w-12 h-12" />
     }
   ];
