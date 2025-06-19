@@ -67,7 +67,7 @@ export default function About() {
       {/* Who We Are */}
       <section className="section-spacing bg-gradient-to-br from-gray-50 to-gray-100/50">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 mx-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16 mx-4">
             <div className="px-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
