@@ -253,7 +253,7 @@ export default function Home() {
       </section>
       
       {/* Capabilities - Modern Card Grid */}
-      <section className="py-20 bg-[var(--primary-dark)] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-[var(--primary-dark)] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-40 h-40 border border-teal-400 rounded-full"></div>
           <div className="absolute bottom-20 right-20 w-32 h-32 border border-cyan-400 rounded-full"></div>
