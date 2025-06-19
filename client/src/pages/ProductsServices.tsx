@@ -107,7 +107,7 @@ export default function ProductsServices() {
     },
     {
       title: "Class Approvals",
-      description: "As a new company, we currently have class approval for LR, DNV, and BV. We still await KR class audit approval.",
+      description: "As a new company, we currently have class approval for LR (Lloyd's Register), DNV (Det Norske Veritas), and BV (Bureau Veritas). We still await KR (Korean Register) class audit approval and continue expanding our certification portfolio.",
       icon: <Shield className="w-12 h-12" />
     }
   ];
