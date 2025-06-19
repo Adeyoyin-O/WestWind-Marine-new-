@@ -91,24 +91,24 @@ export default function ProductsServices() {
 
   const capabilities = [
     {
-      title: "System Design",
-      description: "Custom marine electronics design tailored to vessel specifications and operational requirements",
+      title: "VDR Expertise",
+      description: "We have trained Engineers to carry out Installations, Repairs, and Annual Performance Tests on Voyage Data Recorder (VDR) and Simplified Voyage Data Recorder (SVDR).",
       icon: <Compass className="w-12 h-12" />
     },
     {
-      title: "Installation Services",
-      description: "Professional installation with testing and commissioning of marine electronic systems",
+      title: "OEM Partnerships",
+      description: "We are OEM representative for Consilium and SAL VDR, Totemplus, Headway and AMI Marine. While seeking partnerships with other OEMs, we have experienced engineers on repairs, maintenance, retrofit, and installation of navigation and communication equipment.",
       icon: <Ship className="w-12 h-12" />
     },
     {
-      title: "Technical Support",
-      description: "24/7 support services and preventive maintenance programs for optimal system performance",
+      title: "Flag Change & Surveys",
+      description: "We are specialists in flag change and radio surveys, providing comprehensive compliance services for vessel certification and regulatory requirements.",
       icon: <Activity className="w-12 h-12" />
     },
     {
-      title: "System Integration",
-      description: "Seamless integration of multiple marine electronic systems for enhanced operational efficiency",
-      icon: <Gauge className="w-12 h-12" />
+      title: "Class Approvals",
+      description: "As a new company, we currently have class approval for LR, DNV, and BV. We still await KR class audit approval.",
+      icon: <Shield className="w-12 h-12" />
     }
   ];
 
