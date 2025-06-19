@@ -119,8 +119,8 @@ export default function Home() {
                   <div className="text-sm text-slate-300">Years Experience</div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">500+</div>
-                  <div className="text-sm text-slate-300">Projects Completed</div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-sm text-slate-300">Technical Support</div>
                 </div>
               </div>
             </div>
