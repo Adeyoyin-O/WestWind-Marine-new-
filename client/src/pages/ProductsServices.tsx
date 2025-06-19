@@ -97,7 +97,7 @@ export default function ProductsServices() {
     },
     {
       title: "OEM Partnerships",
-      description: "We are OEM representative for Consilium and SAL VDR, Totemplus, Headway and AMI Marine. While seeking partnerships with other OEMs, we have experienced engineers on repairs, maintenance, retrofit, and installation of navigation and communication equipment.",
+      description: "We are OEM representative for Consilium and SAL VDR, Totemplus, Headway and AMI Marine with experienced engineers for repairs, maintenance, and installation.",
       icon: <Ship className="w-12 h-12" />
     },
     {
