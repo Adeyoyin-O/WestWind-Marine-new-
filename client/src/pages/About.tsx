@@ -67,7 +67,7 @@ export default function About() {
       {/* Who We Are */}
       <section className="section-spacing bg-gradient-to-br from-gray-50 to-gray-100/50">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16 mx-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12 mx-4">
             <div className="px-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
@@ -79,12 +79,6 @@ export default function About() {
                 </p>
                 <p>
                   We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of Navigation and communication equipment.
-                </p>
-                <p>
-                  We design, procure, install, commission, repair, and maintain Navigation, communication, instrumentation, automation, and electrical equipment.
-                </p>
-                <p>
-                  West Wind Marine Electronics Ltd is customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in the marine Navigation and communication around Gulf of Guinea.
                 </p>
               </div>
             </div>
@@ -115,6 +109,18 @@ export default function About() {
                 </div>
 
               </div>
+            </div>
+          </div>
+
+          {/* Extended paragraphs */}
+          <div className="mx-4 px-4">
+            <div className="space-y-6 text-lg text-black leading-relaxed">
+              <p>
+                We design, procure, install, commission, repair, and maintain Navigation, communication, instrumentation, automation, and electrical equipment.
+              </p>
+              <p>
+                West Wind Marine Electronics Ltd is customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in the marine Navigation and communication around Gulf of Guinea.
+              </p>
             </div>
           </div>
 
