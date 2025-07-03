@@ -128,6 +128,94 @@ export default function About() {
         </div>
       </section>
 
+      {/* Marine Equipment Gallery */}
+      <section className="py-12 bg-slate-50 border-t border-slate-200">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">Our Marine Technology</h3>
+            <p className="text-slate-600 max-w-2xl mx-auto">Advanced navigation, communication, and safety systems we deploy for maritime operations</p>
+          </div>
+          
+          {/* Horizontal Gallery Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {/* Communication Station */}
+            <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/attached_assets/picture1 (1)_1751545685776.png" 
+                  alt="Marine Communication Station"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3">
+                <h4 className="text-sm font-semibold text-slate-900 mb-1">Communication Station</h4>
+                <p className="text-xs text-slate-600">Bridge communication systems</p>
+              </div>
+            </div>
+
+            {/* VDR Equipment */}
+            <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/attached_assets/picture4_1751545786694.png" 
+                  alt="VDR Equipment"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3">
+                <h4 className="text-sm font-semibold text-slate-900 mb-1">VDR Systems</h4>
+                <p className="text-xs text-slate-600">Voyage data recorders</p>
+              </div>
+            </div>
+
+            {/* Ship Bridge */}
+            <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/attached_assets/picture5_1751545770506.png" 
+                  alt="Ship Bridge Systems"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3">
+                <h4 className="text-sm font-semibold text-slate-900 mb-1">Bridge Systems</h4>
+                <p className="text-xs text-slate-600">Navigation bridge setup</p>
+              </div>
+            </div>
+
+            {/* Marine Safety Equipment */}
+            <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/attached_assets/picture2_1751545792279.png" 
+                  alt="Marine Safety Equipment"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3">
+                <h4 className="text-sm font-semibold text-slate-900 mb-1">Safety Systems</h4>
+                <p className="text-xs text-slate-600">Emergency equipment</p>
+              </div>
+            </div>
+
+            {/* Port Operations */}
+            <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 col-span-2 md:col-span-1">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src="/attached_assets/picture3 (1)_1751545692156.png" 
+                  alt="Port Operations"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-3">
+                <h4 className="text-sm font-semibold text-slate-900 mb-1">Port Operations</h4>
+                <p className="text-xs text-slate-600">Marine vessel services</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Vision & Mission */}
       <section className="py-16 bg-white relative">
         <div className="container mx-auto px-4">
