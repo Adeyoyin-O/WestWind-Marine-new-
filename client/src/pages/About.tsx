@@ -136,7 +136,7 @@ export default function About() {
       {/* Marine Equipment Gallery */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
         <div className="w-full">
-          <div className="flex w-full">
+          <div className="flex w-full gap-1">
             <div className="flex-1">
               <img 
                 src={communicationStation} 
