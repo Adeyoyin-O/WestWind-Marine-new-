@@ -133,43 +133,43 @@ export default function About() {
         </div>
       </section>
 
-      {/* Marine Equipment Carousel */}
+      {/* Marine Equipment Gallery */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
-        <div className="container mx-auto px-4">
-          <div className="flex gap-4 max-w-6xl mx-auto overflow-x-auto">
-            <div className="flex-1 min-w-0">
+        <div className="w-full">
+          <div className="flex w-full">
+            <div className="flex-1">
               <img 
                 src={communicationStation} 
                 alt="Marine Communication Station"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
+                className="w-full h-64 object-cover"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1">
               <img 
                 src={vdrEquipment} 
                 alt="VDR Equipment"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
+                className="w-full h-64 object-cover"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1">
               <img 
                 src={shipBridge} 
                 alt="Ship Bridge Systems"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
+                className="w-full h-64 object-cover"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1">
               <img 
                 src={safetyEquipment} 
                 alt="Marine Safety Equipment"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
+                className="w-full h-64 object-cover"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1">
               <img 
                 src={portOperations} 
                 alt="Port Operations"
-                className="w-full h-48 object-cover rounded-lg shadow-md"
+                className="w-full h-64 object-cover"
               />
             </div>
           </div>
