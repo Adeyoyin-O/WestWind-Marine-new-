@@ -352,3 +352,23 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--corporate-gray);
 }
+
+/* Marine Equipment Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  animation: slide 12s infinite;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); }
+  33.33% { transform: translateX(-100%); }
+  58.33% { transform: translateX(-100%); }
+  66.66% { transform: translateX(-200%); }
+  91.66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}

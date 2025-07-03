@@ -3,6 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Compass, Award, MonitorSpeaker, Zap, Building, Factory, Globe, Settings, Heart, Trophy, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import aboutHeroImage from "@assets/alexander-kovalev-mIG_NqkYBoI-unsplash_1749906855750.jpg";
+import communicationStation from "@assets/picture1 (1)_1751545685776.png";
+import vdrEquipment from "@assets/picture4_1751545786694.png";
+import shipBridge from "@assets/picture5_1751545770506.png";
+import safetyEquipment from "@assets/picture2_1751545792279.png";
+import portOperations from "@assets/picture3 (1)_1751545692156.png";
 
 export default function About() {
   return (
@@ -138,14 +143,14 @@ export default function About() {
                 <div className="carousel-slide flex-shrink-0 w-full flex gap-4">
                   <div className="w-1/2">
                     <img 
-                      src="/attached_assets/picture1 (1)_1751545685776.png" 
+                      src={communicationStation} 
                       alt="Marine Communication Station"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
                   </div>
                   <div className="w-1/2">
                     <img 
-                      src="/attached_assets/picture4_1751545786694.png" 
+                      src={vdrEquipment} 
                       alt="VDR Equipment"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
@@ -156,14 +161,14 @@ export default function About() {
                 <div className="carousel-slide flex-shrink-0 w-full flex gap-4">
                   <div className="w-1/2">
                     <img 
-                      src="/attached_assets/picture5_1751545770506.png" 
+                      src={shipBridge} 
                       alt="Ship Bridge Systems"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
                   </div>
                   <div className="w-1/2">
                     <img 
-                      src="/attached_assets/picture2_1751545792279.png" 
+                      src={safetyEquipment} 
                       alt="Marine Safety Equipment"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
@@ -174,7 +179,7 @@ export default function About() {
                 <div className="carousel-slide flex-shrink-0 w-full flex justify-center">
                   <div className="w-3/4">
                     <img 
-                      src="/attached_assets/picture3 (1)_1751545692156.png" 
+                      src={portOperations} 
                       alt="Port Operations"
                       className="w-full h-64 object-cover rounded-lg shadow-md"
                     />
@@ -185,26 +190,7 @@ export default function About() {
           </div>
         </div>
 
-        <style jsx>{`
-          .carousel-container {
-            position: relative;
-            overflow: hidden;
-          }
-          
-          .carousel-track {
-            animation: slide 12s infinite;
-          }
-          
-          @keyframes slide {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(0); }
-            33.33% { transform: translateX(-100%); }
-            58.33% { transform: translateX(-100%); }
-            66.66% { transform: translateX(-200%); }
-            91.66% { transform: translateX(-200%); }
-            100% { transform: translateX(0); }
-          }
-        `}</style>
+
       </section>
 
       {/* Vision & Mission */}
