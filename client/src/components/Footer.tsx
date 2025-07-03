@@ -23,9 +23,15 @@ export default function Footer() {
             
             <div className="space-y-4 text-sm text-gray-300">
               <div>
-                <p className="font-bold text-white mb-1">Office Address</p>
-                <p className="leading-relaxed">Plot 8, The Providence Street</p>
-                <p>Lekki Phase 1, Lagos</p>
+                <p className="font-bold text-white mb-1">Office Addresses</p>
+                <div className="mb-3">
+                  <p className="leading-relaxed">Plot 8, The Providence Street</p>
+                  <p>Lekki Phase 1, Lagos</p>
+                </div>
+                <div>
+                  <p className="leading-relaxed">No 7, Rue 6, Cite Keur Damel</p>
+                  <p>Dakar, Senegal</p>
+                </div>
               </div>
               <div>
                 <p className="font-bold text-white mb-1">Phone</p>
