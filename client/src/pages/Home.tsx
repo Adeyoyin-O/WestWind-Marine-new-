@@ -3,18 +3,73 @@ export default function Home() {
     <div className="page-transition bg-slate-900 min-h-screen text-white">
       {/* Hero Section with Split Design */}
       <section className="relative h-[70vh] flex items-center overflow-hidden">
-        {/* Dynamic background */}
+        {/* Moving Ships Animation Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900"></div>
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-cyan-400 rounded-full blur-3xl"></div>
+          
+          {/* Ocean waves */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+              <path d="M0,700 Q250,650 500,700 T1000,700 L1000,1000 L0,1000 Z" fill="rgba(20,184,166,0.1)" className="animate-pulse" />
+              <path d="M0,750 Q250,700 500,750 T1000,750 L1000,1000 L0,1000 Z" fill="rgba(6,182,212,0.1)" className="animate-pulse" style={{animationDelay: '1s'}} />
+              <path d="M0,800 Q250,750 500,800 T1000,800 L1000,1000 L0,1000 Z" fill="rgba(20,184,166,0.05)" className="animate-pulse" style={{animationDelay: '2s'}} />
+            </svg>
           </div>
-          {/* Animated lines */}
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path d="M0,300 Q500,100 1000,400" stroke="rgba(20,184,166,0.1)" strokeWidth="2" fill="none" />
-            <path d="M0,600 Q500,400 1000,700" stroke="rgba(6,182,212,0.1)" strokeWidth="2" fill="none" />
-          </svg>
+          
+          {/* Moving ships */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Ship 1 - Large container ship */}
+            <div className="absolute top-[60%] left-0 w-32 h-8 animate-[moveShip1_20s_linear_infinite]">
+              <svg viewBox="0 0 128 32" className="w-full h-full">
+                <rect x="10" y="16" width="100" height="8" rx="2" fill="rgba(20,184,166,0.6)" />
+                <rect x="20" y="8" width="8" height="8" fill="rgba(20,184,166,0.4)" />
+                <rect x="40" y="10" width="6" height="6" fill="rgba(20,184,166,0.4)" />
+                <rect x="60" y="12" width="4" height="4" fill="rgba(20,184,166,0.4)" />
+                <rect x="80" y="10" width="6" height="6" fill="rgba(20,184,166,0.4)" />
+                <polygon points="10,16 5,20 10,24" fill="rgba(20,184,166,0.8)" />
+                <circle cx="25" cy="26" r="1" fill="rgba(255,255,255,0.8)" />
+                <circle cx="95" cy="26" r="1" fill="rgba(255,255,255,0.8)" />
+              </svg>
+            </div>
+            
+            {/* Ship 2 - Smaller vessel */}
+            <div className="absolute top-[45%] right-0 w-20 h-6 animate-[moveShip2_15s_linear_infinite]">
+              <svg viewBox="0 0 80 24" className="w-full h-full">
+                <rect x="8" y="12" width="60" height="6" rx="2" fill="rgba(6,182,212,0.6)" />
+                <rect x="15" y="6" width="4" height="6" fill="rgba(6,182,212,0.4)" />
+                <rect x="30" y="8" width="3" height="4" fill="rgba(6,182,212,0.4)" />
+                <rect x="50" y="7" width="4" height="5" fill="rgba(6,182,212,0.4)" />
+                <polygon points="68,12 73,15 68,18" fill="rgba(6,182,212,0.8)" />
+                <circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.8)" />
+                <circle cx="55" cy="20" r="0.5" fill="rgba(255,255,255,0.8)" />
+              </svg>
+            </div>
+            
+            {/* Ship 3 - Cargo ship */}
+            <div className="absolute top-[70%] left-0 w-24 h-6 animate-[moveShip3_25s_linear_infinite]">
+              <svg viewBox="0 0 96 24" className="w-full h-full">
+                <rect x="8" y="14" width="75" height="6" rx="2" fill="rgba(20,184,166,0.5)" />
+                <rect x="15" y="8" width="5" height="6" fill="rgba(20,184,166,0.3)" />
+                <rect x="35" y="10" width="4" height="4" fill="rgba(20,184,166,0.3)" />
+                <rect x="55" y="9" width="5" height="5" fill="rgba(20,184,166,0.3)" />
+                <polygon points="8,14 3,17 8,20" fill="rgba(20,184,166,0.7)" />
+                <circle cx="22" cy="22" r="0.8" fill="rgba(255,255,255,0.8)" />
+                <circle cx="70" cy="22" r="0.8" fill="rgba(255,255,255,0.8)" />
+              </svg>
+            </div>
+            
+            {/* Ship 4 - Small yacht */}
+            <div className="absolute top-[35%] right-0 w-16 h-5 animate-[moveShip4_12s_linear_infinite]">
+              <svg viewBox="0 0 64 20" className="w-full h-full">
+                <rect x="10" y="10" width="40" height="4" rx="2" fill="rgba(6,182,212,0.7)" />
+                <rect x="20" y="6" width="2" height="4" fill="rgba(6,182,212,0.5)" />
+                <rect x="35" y="7" width="2" height="3" fill="rgba(6,182,212,0.5)" />
+                <polygon points="50,10 55,12 50,14" fill="rgba(6,182,212,0.9)" />
+                <circle cx="25" cy="16" r="0.5" fill="rgba(255,255,255,0.9)" />
+                <circle cx="40" cy="16" r="0.5" fill="rgba(255,255,255,0.9)" />
+              </svg>
+            </div>
+          </div>
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
