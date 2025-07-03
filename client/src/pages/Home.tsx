@@ -208,24 +208,40 @@ export default function Home() {
               <div className="relative">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Navigation & Communication</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">
-                  State-of-the-art navigation systems including GPS, AIS, radar installations, and VHF communication equipment designed for optimal maritime safety and efficiency.
+                  Comprehensive navigation and communication systems including voyage data recorders, gyrocompass, radar installations, and advanced communication equipment for optimal maritime safety and efficiency.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">GPS Navigation</span>
+                    <span className="text-sm text-slate-700">Voyage Data Recorders</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Radar Systems</span>
+                    <span className="text-sm text-slate-700">Gyrocompass</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">VHF Communication</span>
+                    <span className="text-sm text-slate-700">VHF and MF/HF Communication</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">AIS Transponders</span>
+                    <span className="text-sm text-slate-700">Ship Steering Systems</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Retrofit Navigation & Communication</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">SAT-C Satellite Communication</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Speed Log</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Echo Sounder</span>
                   </div>
                 </div>
               </div>
