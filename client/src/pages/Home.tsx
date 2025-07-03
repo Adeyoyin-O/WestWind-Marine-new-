@@ -227,23 +227,27 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Retrofits of navigation and communication equipment</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">System installation and integration</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-sm leading-relaxed">Marine electrical installations</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Control panel manufacturing</span>
+                    <span className="text-sm leading-relaxed">Periodical surveys</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">System integration services</span>
+                    <span className="text-sm leading-relaxed">Flag and name change</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Equipment maintenance</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Technical consulting</span>
+                    <span className="text-sm leading-relaxed">Annual services of navigation equipment</span>
                   </div>
                 </div>
               </div>
