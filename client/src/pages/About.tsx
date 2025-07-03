@@ -77,13 +77,16 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary-dark)] mb-6 tracking-tight">Who We Are</h2>
               <div className="space-y-6 text-lg text-black leading-relaxed">
                 <p>
-                  <strong className="text-black">West Wind Marine Electronics Ltd</strong>, is a company registered under the corporate affairs commission of Nigeria on the 5th Feb 2019 with RC number: 1558935.
+                  <strong className="text-black">West Wind Marine Electronics Ltd</strong> is a company registered under the corporate affairs commission of Nigeria on the 5th Feb 2019 with RC number: 1558935.
+                </p>
+                <p>
+                  Recently, we opened another branch in Dakar Senegal, West wind Marine Electronics Sarl, on the 21st February 2025 with company registration number SN DKR 2025 B 882.
                 </p>
                 <p>
                   West Wind Marine Electronics Ltd is a company borne out of Passion to provide top-notch services and solutions to customers in the areas of Navigation, communication, automation, and electrical solutions in the Maritime industry particularly in Nigeria and across Africa.
                 </p>
                 <p>
-                  We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of Navigation and communication equipment.
+                  We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of navigation and communication equipment.
                 </p>
               </div>
             </div>
@@ -121,10 +124,16 @@ export default function About() {
           <div className="mx-4 px-4">
             <div className="space-y-6 text-lg text-black leading-relaxed">
               <p>
-                We design, procure, install, commission, repair, and maintain Navigation, communication, instrumentation, automation, and electrical equipment.
+                We design, procure, install, commission, repair, and maintain navigation, communication, instrumentation, automation, and electrical equipment.
               </p>
               <p>
-                West Wind Marine Electronics Ltd is customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in the marine Navigation and communication around Gulf of Guinea.
+                West Wind Marine Electronics Ltd is a customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in marine navigation and communication around the Gulf of Guinea.
+              </p>
+              <p>
+                West Wind Marine Electronics, as a progressive company, we have just concluded our ABS service supplier audit and now an approved ABS service supplier in radio communication and Voyage Data Recorders.
+              </p>
+              <p>
+                With the just gotten approval, our service supplier approval under IACS has risen to four, namely ABS, DNV, LR, and BV.
               </p>
             </div>
           </div>
