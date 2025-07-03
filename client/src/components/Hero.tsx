@@ -47,33 +47,78 @@ export default function Hero({
     
     if (!currentVideo || !nextVideo) return;
     
-    const handleVideoEnd = () => {
+    let transitionScheduled = false;
+    
+    const handleVideoTransition = () => {
+      if (transitionScheduled) return;
+      transitionScheduled = true;
+      
       const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
       
-      // Preload next video
-      nextVideo.src = videoSources[nextIndex];
-      nextVideo.load();
+      // Prepare next video for immediate playback
+      if (nextVideo.src !== videoSources[nextIndex]) {
+        nextVideo.src = videoSources[nextIndex];
+        nextVideo.load();
+      }
       
-      // Switch to next video immediately
-      setCurrentVideoIndex(nextIndex);
-      setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
-      
-      // Start next video
       nextVideo.currentTime = 0;
-      nextVideo.play().catch(console.error);
-    };
-    
-    // Use 'timeupdate' event to switch slightly before the video ends for seamless transition
-    const handleTimeUpdate = () => {
-      if (currentVideo.duration - currentVideo.currentTime < 0.1) {
-        handleVideoEnd();
+      
+      // Start next video immediately and switch visibility
+      const playPromise = nextVideo.play();
+      
+      if (playPromise) {
+        playPromise.then(() => {
+          // Switch active video element after next video starts
+          setCurrentVideoIndex(nextIndex);
+          setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+        }).catch(console.error);
+      } else {
+        // Fallback for browsers that don't return a promise
+        setCurrentVideoIndex(nextIndex);
+        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
       }
     };
     
+    // Preload next video when current video is halfway through
+    const handlePreload = () => {
+      if (currentVideo.duration && currentVideo.currentTime) {
+        const progress = currentVideo.currentTime / currentVideo.duration;
+        const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
+        
+        // Preload next video when current is 50% complete
+        if (progress >= 0.5 && nextVideo.src !== videoSources[nextIndex]) {
+          nextVideo.src = videoSources[nextIndex];
+          nextVideo.load();
+        }
+      }
+    };
+    
+    // Multiple event listeners for maximum reliability
+    const handleTimeUpdate = () => {
+      if (currentVideo.duration && currentVideo.currentTime) {
+        handlePreload();
+        
+        const timeRemaining = currentVideo.duration - currentVideo.currentTime;
+        // Switch 0.03 seconds before end for maximum smoothness
+        if (timeRemaining <= 0.03 && !transitionScheduled) {
+          handleVideoTransition();
+        }
+      }
+    };
+    
+    const handleEnded = () => {
+      if (!transitionScheduled) {
+        handleVideoTransition();
+      }
+    };
+    
+    // Add multiple event listeners for reliability
     currentVideo.addEventListener('timeupdate', handleTimeUpdate);
+    currentVideo.addEventListener('ended', handleEnded);
     
     return () => {
       currentVideo.removeEventListener('timeupdate', handleTimeUpdate);
+      currentVideo.removeEventListener('ended', handleEnded);
     };
   }, [currentVideoIndex, activeVideoElement, videoSources]);
   
@@ -85,16 +130,35 @@ export default function Hero({
     
     if (!video1 || !video2) return;
     
+    // Configure video properties for seamless playback
+    [video1, video2].forEach(video => {
+      video.preload = 'auto';
+      video.playsInline = true;
+      video.muted = true;
+      video.loop = false;
+    });
+    
     // Initialize first video
     video1.src = videoSources[0];
     video1.load();
-    video1.play().catch(console.error);
+    
+    // Wait for first video to be ready then start playing
+    const handleCanPlay = () => {
+      video1.play().catch(console.error);
+      video1.removeEventListener('canplaythrough', handleCanPlay);
+    };
+    
+    video1.addEventListener('canplaythrough', handleCanPlay);
     
     // Preload second video if available
     if (videoSources.length > 1) {
       video2.src = videoSources[1];
       video2.load();
     }
+    
+    return () => {
+      video1.removeEventListener('canplaythrough', handleCanPlay);
+    };
   }, [videoSources]);
   return (
     <section className="relative bg-slate-900 text-white py-24 lg:py-40 overflow-hidden">
@@ -105,7 +169,7 @@ export default function Hero({
             {/* Video background - dual video elements for seamless transitions */}
             <video 
               ref={video1Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-100 ${
                 activeVideoElement === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               autoPlay
@@ -115,7 +179,7 @@ export default function Hero({
             />
             <video 
               ref={video2Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-100 ${
                 activeVideoElement === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               muted
