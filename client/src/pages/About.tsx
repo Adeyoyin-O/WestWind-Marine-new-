@@ -86,7 +86,7 @@ export default function About() {
                   West Wind Marine Electronics Ltd is a company borne out of Passion to provide top-notch services and solutions to customers in the areas of Navigation, communication, automation, and electrical solutions in the Maritime industry particularly in Nigeria and across Africa.
                 </p>
                 <p>
-                  We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of navigation and communication equipment. Our expertise spans across diverse marine electronic systems, ensuring comprehensive technical support and innovative solutions tailored to meet the specific requirements of our clients in the maritime industry.
+                  We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of navigation and communication equipment.
                 </p>
               </div>
             </div>
