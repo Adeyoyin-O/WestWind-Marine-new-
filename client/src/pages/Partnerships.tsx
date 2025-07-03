@@ -114,7 +114,7 @@ export default function Partnerships() {
                 <h3 className="text-xl font-bold text-slate-900">Headway Technology Co. LTD</h3>
               </div>
               <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-                A leading provider of marine intelligent systems, Headway specializes in solutions like ballast water management systems (BWMS), voyage data recorders (VDR), and marine communication and navigation technologies—supporting safe, sustainable, and compliant marine operations.
+                Headway provides advanced marine systems like BWMS, VDRs, and navigation solutions to support safe and compliant operations.
               </p>
               <div className="flex items-center text-blue-600 font-medium text-sm">
                 <span>Marine Intelligent Systems</span>
@@ -134,7 +134,7 @@ export default function Partnerships() {
                 <h3 className="text-xl font-bold text-slate-900">AMI Marine</h3>
               </div>
               <p className="text-slate-600 leading-relaxed mb-4 text-sm">
-                AMI Marine is known for advanced maritime electronics, including high-performance Voyage Data Recorders (VDR), Electronic Chart Display and Information Systems (ECDIS), and bridge navigation systems—enhancing vessel safety, compliance, and operational efficiency.
+                AMI Marine delivers cutting-edge maritime electronics, including VDRs, ECDIS, and bridge systems for safer, more efficient navigation.
               </p>
               <div className="flex items-center text-purple-600 font-medium text-sm">
                 <span>Advanced Maritime Electronics</span>
