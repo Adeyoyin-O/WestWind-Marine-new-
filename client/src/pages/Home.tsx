@@ -1,21 +1,21 @@
+import VideoCarousel from '@/components/VideoCarousel';
+
 export default function Home() {
+  const heroVideos = [
+    "/attached_assets/13271718_1920_1080_50fps_1751555037169.mp4",
+    "/attached_assets/13924839-uhd_3840_2160_30fps_1751555052250.mp4",
+    "/attached_assets/11329381-hd_1920_1080_60fps_1751555057591.mp4"
+  ];
+
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
-      {/* Hero Section with Split Design */}
+      {/* Hero Section with Video Background */}
       <section className="relative h-[70vh] flex items-center overflow-hidden">
-        {/* Moving Ships Animation Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900"></div>
-          
-          {/* Ocean waves */}
-          <div className="absolute inset-0 opacity-20">
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
-              <path d="M0,700 Q250,650 500,700 T1000,700 L1000,1000 L0,1000 Z" fill="rgba(20,184,166,0.1)" className="animate-pulse" />
-              <path d="M0,750 Q250,700 500,750 T1000,750 L1000,1000 L0,1000 Z" fill="rgba(6,182,212,0.1)" className="animate-pulse" style={{animationDelay: '1s'}} />
-              <path d="M0,800 Q250,750 500,800 T1000,800 L1000,1000 L0,1000 Z" fill="rgba(20,184,166,0.05)" className="animate-pulse" style={{animationDelay: '2s'}} />
-            </svg>
-          </div>
-          
+        {/* Video Background */}
+        <VideoCarousel videos={heroVideos} className="absolute inset-0" />
+        
+        {/* Animated Ships Overlay (reduced opacity to complement video) */}
+        <div className="absolute inset-0 z-10 opacity-30">
           {/* Moving ships */}
           <div className="absolute inset-0 overflow-hidden">
             {/* Ship 1 - Large container ship */}
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm font-medium backdrop-blur-sm">
