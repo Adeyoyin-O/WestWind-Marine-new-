@@ -144,7 +144,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">Navigation Systems</h4>
-                      <p className="text-slate-600 text-sm">Advanced GPS, radar, and communication equipment</p>
+                      <p className="text-slate-600 text-sm">Voyage Data Recorders, Gyrocompass, VHF and MFHF, Ship steering systems, Retrofit of Nav&Com, Radars, AIS, SAT C</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
