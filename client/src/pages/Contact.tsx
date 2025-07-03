@@ -89,12 +89,27 @@ export default function Contact() {
                   <Building2 className="text-slate-600 h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900 mb-1">Office Address</h3>
-                  <p className="text-slate-600">
-                    Plot 8, The Providence Street<br />
-                    Lekki Phase 1, Lagos<br />
-                    Nigeria
-                  </p>
+                  <h3 className="font-semibold text-slate-900 mb-1">Office Addresses</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-slate-700 font-medium">Nigeria Office:</p>
+                      <p className="text-slate-600">
+                        Plot 8, The Providence Street<br />
+                        Lekki Phase 1, Lagos<br />
+                        Nigeria
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-slate-700 font-medium">Senegal Office:</p>
+                      <p className="text-slate-600">
+                        West Wind Marine Electronics Sarl<br />
+                        Cité Keur Gorgui<br />
+                        Immeuble UNIPAX<br />
+                        BP: 25 916 Dakar<br />
+                        Senegal
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
