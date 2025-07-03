@@ -115,7 +115,7 @@ export default function Home() {
               {/* Feature highlights */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
-                  <div className="text-2xl font-bold text-teal-400 mb-2">15+</div>
+                  <div className="text-2xl font-bold text-teal-400 mb-2">6+</div>
                   <div className="text-sm text-slate-300">Years Experience</div>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
