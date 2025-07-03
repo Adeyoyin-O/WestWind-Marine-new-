@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
       {/* Hero Section with Split Design */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center overflow-hidden">
         {/* Dynamic background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900"></div>
