@@ -39,7 +39,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-sm font-medium">Marine Certified</span>
+                  <span className="text-sm font-medium">Marine Certification and Approvals</span>
                 </div>
                 <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
