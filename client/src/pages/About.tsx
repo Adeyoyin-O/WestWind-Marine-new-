@@ -136,56 +136,41 @@ export default function About() {
       {/* Marine Equipment Carousel */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="relative max-w-4xl mx-auto overflow-hidden">
-            <div className="carousel-container">
-              <div className="carousel-track flex transition-transform duration-1000 ease-in-out">
-                {/* Slide 1: Communication Station + VDR Equipment */}
-                <div className="carousel-slide flex-shrink-0 w-full flex gap-4">
-                  <div className="w-1/2">
-                    <img 
-                      src={communicationStation} 
-                      alt="Marine Communication Station"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                  <div className="w-1/2">
-                    <img 
-                      src={vdrEquipment} 
-                      alt="VDR Equipment"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-
-                {/* Slide 2: Ship Bridge + Marine Safety Equipment */}
-                <div className="carousel-slide flex-shrink-0 w-full flex gap-4">
-                  <div className="w-1/2">
-                    <img 
-                      src={shipBridge} 
-                      alt="Ship Bridge Systems"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                  <div className="w-1/2">
-                    <img 
-                      src={safetyEquipment} 
-                      alt="Marine Safety Equipment"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-
-                {/* Slide 3: Port Operations (single image centered) */}
-                <div className="carousel-slide flex-shrink-0 w-full flex justify-center">
-                  <div className="w-3/4">
-                    <img 
-                      src={portOperations} 
-                      alt="Port Operations"
-                      className="w-full h-64 object-cover rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-              </div>
+          <div className="flex gap-4 max-w-6xl mx-auto overflow-x-auto">
+            <div className="flex-1 min-w-0">
+              <img 
+                src={communicationStation} 
+                alt="Marine Communication Station"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <img 
+                src={vdrEquipment} 
+                alt="VDR Equipment"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <img 
+                src={shipBridge} 
+                alt="Ship Bridge Systems"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <img 
+                src={safetyEquipment} 
+                alt="Marine Safety Equipment"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+            <div className="flex-1 min-w-0">
+              <img 
+                src={portOperations} 
+                alt="Port Operations"
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
             </div>
           </div>
         </div>
