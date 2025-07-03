@@ -179,101 +179,69 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-16 bg-white relative">
+      <section className="py-8 bg-white relative">
         <div className="container mx-auto px-4">
-          {/* Timeline Style Layout */}
-          <div className="relative max-w-4xl mx-auto">
-            {/* Central Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[var(--primary-blue)] via-[var(--bright-coral)] to-[var(--primary-blue)] rounded-full"></div>
-            
+          <div className="max-w-5xl mx-auto">
             {/* Vision & Mission - Side by Side */}
-            <div className="relative mb-16">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Vision */}
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg border-l-4 border-[var(--primary-blue)] relative">
-                    <div className="absolute -right-4 top-6 w-8 h-8 bg-[var(--primary-blue)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl font-bold text-[var(--primary-blue)] mr-3">01</div>
-                      <div>
-                        <Target className="h-6 w-6 text-[var(--primary-blue)] mb-1" />
-                        <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Vision</h3>
-                      </div>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
-                    </p>
-                    <div className="text-sm text-gray-500 mt-3 font-semibold">Future Focused</div>
-                  </div>
+            <div className="grid lg:grid-cols-2 gap-6 mb-8">
+              {/* Vision */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 shadow-md border-l-4 border-[var(--primary-blue)]">
+                <div className="flex items-center mb-3">
+                  <Target className="h-5 w-5 text-[var(--primary-blue)] mr-2" />
+                  <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Vision</h3>
                 </div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
+                </p>
+              </div>
 
-                {/* Mission */}
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 shadow-lg border-r-4 border-[var(--bright-coral)] relative">
-                    <div className="absolute -left-4 top-6 w-8 h-8 bg-[var(--bright-coral)] rounded-full border-4 border-white shadow-lg lg:block hidden"></div>
-                    <div className="flex items-center mb-4">
-                      <div className="text-4xl font-bold text-[var(--bright-coral)] mr-3">02</div>
-                      <div>
-                        <Compass className="h-6 w-6 text-[var(--bright-coral)] mb-1" />
-                        <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Mission</h3>
-                      </div>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      To provide solution-oriented services to our customers, shareholders and stakeholders.
-                    </p>
-                    <div className="text-sm text-gray-500 mt-3 font-semibold">Service Driven</div>
-                  </div>
+              {/* Mission */}
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 shadow-md border-l-4 border-[var(--bright-coral)]">
+                <div className="flex items-center mb-3">
+                  <Compass className="h-5 w-5 text-[var(--bright-coral)] mr-2" />
+                  <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Mission</h3>
                 </div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  To provide solution-oriented services to our customers, shareholders and stakeholders.
+                </p>
               </div>
             </div>
 
             {/* Core Values - Center */}
-            <div className="relative">
-              <div className="text-center mb-12">
-                <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary-blue)] to-[var(--bright-coral)] rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <Award className="h-6 w-6 text-white" />
+            <div className="text-center mb-6">
+              <div className="flex items-center justify-center mb-3">
+                <Award className="h-5 w-5 text-[var(--primary-blue)] mr-2" />
+                <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Core Values</h3>
+              </div>
+              <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-4">
+                Our core values are centered on understanding customers' needs, providing professional services beyond expectations and taking full responsibility for our actions.
+              </p>
+            </div>
+
+            {/* Values Cards */}
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <Heart className="w-5 h-5 text-rose-500 mr-2" />
+                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Customer Focus</h4>
                 </div>
-                <div className="text-6xl font-bold text-gradient bg-gradient-to-r from-[var(--primary-blue)] to-[var(--bright-coral)] bg-clip-text text-transparent mb-2">03</div>
-                <h3 className="text-3xl font-bold text-[var(--primary-dark)] mb-4">Our Core Values</h3>
-                <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-                  Our core values are centered on understanding customers' needs, providing professional services beyond expectations and taking full responsibility for our actions.
-                </p>
+                <p className="text-gray-600 text-xs leading-relaxed">Understanding and exceeding expectations through dedicated service</p>
               </div>
 
-              {/* Values Cards */}
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="group text-center">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-rose-200 transition-all duration-300 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-400 to-pink-500"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-rose-50 to-rose-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Heart className="w-8 h-8 text-rose-500" />
-                    </div>
-                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Customer Focus</h4>
-                    <p className="text-gray-600 leading-relaxed">Understanding and exceeding expectations through dedicated service and attention to detail</p>
-                  </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <Trophy className="w-5 h-5 text-amber-500 mr-2" />
+                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Excellence</h4>
                 </div>
+                <p className="text-gray-600 text-xs leading-relaxed">Delivering professional services beyond expectations with highest quality</p>
+              </div>
 
-                <div className="group text-center">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-amber-200 transition-all duration-300 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-amber-50 to-amber-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Trophy className="w-8 h-8 text-amber-500" />
-                    </div>
-                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Excellence</h4>
-                    <p className="text-gray-600 leading-relaxed">Delivering professional services beyond expectations with the highest quality standards</p>
-                  </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 mr-2" />
+                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Responsibility</h4>
                 </div>
-
-                <div className="group text-center">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-green-500"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <CheckCircle className="w-8 h-8 text-emerald-500" />
-                    </div>
-                    <h4 className="text-xl font-bold text-[var(--primary-dark)] mb-3">Responsibility</h4>
-                    <p className="text-gray-600 leading-relaxed">Taking full accountability for our actions and maintaining ethical business practices</p>
-                  </div>
-                </div>
+                <p className="text-gray-600 text-xs leading-relaxed">Taking full accountability for our actions and maintaining ethical practices</p>
               </div>
             </div>
           </div>
