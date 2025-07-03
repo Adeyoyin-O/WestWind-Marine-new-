@@ -179,69 +179,69 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-8 bg-white relative">
+      <section className="py-12 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Vision & Mission - Side by Side */}
-            <div className="grid lg:grid-cols-2 gap-6 mb-8">
+            <div className="grid lg:grid-cols-2 gap-8 mb-10">
               {/* Vision */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 shadow-md border-l-4 border-[var(--primary-blue)]">
-                <div className="flex items-center mb-3">
-                  <Target className="h-5 w-5 text-[var(--primary-blue)] mr-2" />
-                  <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Vision</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 shadow-md border-l-4 border-[var(--primary-blue)]">
+                <div className="flex items-center mb-4">
+                  <Target className="h-6 w-6 text-[var(--primary-blue)] mr-3" />
+                  <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Vision</h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   To be a World Class Solutions Provider and Systems Integrator in the Power and Maritime Industries.
                 </p>
               </div>
 
               {/* Mission */}
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-4 shadow-md border-l-4 border-[var(--bright-coral)]">
-                <div className="flex items-center mb-3">
-                  <Compass className="h-5 w-5 text-[var(--bright-coral)] mr-2" />
-                  <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Mission</h3>
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 shadow-md border-l-4 border-[var(--bright-coral)]">
+                <div className="flex items-center mb-4">
+                  <Compass className="h-6 w-6 text-[var(--bright-coral)] mr-3" />
+                  <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Mission</h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   To provide solution-oriented services to our customers, shareholders and stakeholders.
                 </p>
               </div>
             </div>
 
             {/* Core Values - Center */}
-            <div className="text-center mb-6">
-              <div className="flex items-center justify-center mb-3">
-                <Award className="h-5 w-5 text-[var(--primary-blue)] mr-2" />
-                <h3 className="text-lg font-bold text-[var(--primary-dark)]">Our Core Values</h3>
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-[var(--primary-blue)] mr-3" />
+                <h3 className="text-xl font-bold text-[var(--primary-dark)]">Our Core Values</h3>
               </div>
-              <p className="text-gray-600 max-w-2xl mx-auto text-sm mb-4">
+              <p className="text-gray-600 max-w-2xl mx-auto mb-6">
                 Our core values are centered on understanding customers' needs, providing professional services beyond expectations and taking full responsibility for our actions.
               </p>
             </div>
 
             {/* Values Cards */}
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <Heart className="w-5 h-5 text-rose-500 mr-2" />
-                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Customer Focus</h4>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Heart className="w-6 h-6 text-rose-500 mr-3" />
+                  <h4 className="font-bold text-[var(--primary-dark)]">Customer Focus</h4>
                 </div>
-                <p className="text-gray-600 text-xs leading-relaxed">Understanding and exceeding expectations through dedicated service</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Understanding and exceeding expectations through dedicated service and attention to detail</p>
               </div>
 
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <Trophy className="w-5 h-5 text-amber-500 mr-2" />
-                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Excellence</h4>
+              <div className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <Trophy className="w-6 h-6 text-amber-500 mr-3" />
+                  <h4 className="font-bold text-[var(--primary-dark)]">Excellence</h4>
                 </div>
-                <p className="text-gray-600 text-xs leading-relaxed">Delivering professional services beyond expectations with highest quality</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Delivering professional services beyond expectations with the highest quality standards</p>
               </div>
 
-              <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-2">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 mr-2" />
-                  <h4 className="text-sm font-bold text-[var(--primary-dark)]">Responsibility</h4>
+              <div className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center mb-3">
+                  <CheckCircle className="w-6 h-6 text-emerald-500 mr-3" />
+                  <h4 className="font-bold text-[var(--primary-dark)]">Responsibility</h4>
                 </div>
-                <p className="text-gray-600 text-xs leading-relaxed">Taking full accountability for our actions and maintaining ethical practices</p>
+                <p className="text-gray-600 text-sm leading-relaxed">Taking full accountability for our actions and maintaining ethical business practices</p>
               </div>
             </div>
           </div>
