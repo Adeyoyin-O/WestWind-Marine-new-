@@ -103,6 +103,46 @@ export default function Partnerships() {
                 </svg>
               </div>
             </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">Headway Technology Co. LTD</h3>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                A leading provider of marine intelligent systems, Headway specializes in solutions like ballast water management systems (BWMS), voyage data recorders (VDR), and marine communication and navigation technologies—supporting safe, sustainable, and compliant marine operations.
+              </p>
+              <div className="flex items-center text-blue-600 font-medium">
+                <span>Marine Intelligent Systems</span>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">AMI Marine</h3>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                AMI Marine is known for advanced maritime electronics, including high-performance Voyage Data Recorders (VDR), Electronic Chart Display and Information Systems (ECDIS), and bridge navigation systems—enhancing vessel safety, compliance, and operational efficiency.
+              </p>
+              <div className="flex items-center text-purple-600 font-medium">
+                <span>Advanced Maritime Electronics</span>
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </section>
