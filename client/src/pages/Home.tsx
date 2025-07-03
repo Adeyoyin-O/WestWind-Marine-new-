@@ -36,10 +36,20 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="space-y-4">
                 <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                   <span className="text-sm font-medium">Marine Certification and Approvals</span>
+                </div>
+                <div className="space-y-2 px-2">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
+                    <span className="text-xs text-slate-300">LAGOS OFFICE: DNV, LR AND BV</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                    <span className="text-xs text-slate-300">DAKAR OFFICE: ABS</span>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-3 px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
