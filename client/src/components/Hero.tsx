@@ -31,53 +31,99 @@ export default function Hero({
   primaryButtonText = "Explore Our Services",
   secondaryButtonText = "Get a Quote"
 }: HeroProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [activeVideoElement, setActiveVideoElement] = useState<1 | 2>(1);
   
   // Use backgroundVideos if provided, otherwise fallback to single backgroundVideo
   const videoSources = backgroundVideos || (backgroundVideo ? [backgroundVideo] : []);
   
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video || videoSources.length === 0) return;
+    if (videoSources.length === 0) return;
+    
+    const currentVideo = activeVideoElement === 1 ? video1Ref.current : video2Ref.current;
+    const nextVideo = activeVideoElement === 1 ? video2Ref.current : video1Ref.current;
+    
+    if (!currentVideo || !nextVideo) return;
     
     const handleVideoEnd = () => {
-      setCurrentVideoIndex((prevIndex) => 
-        prevIndex === videoSources.length - 1 ? 0 : prevIndex + 1
-      );
+      const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
+      
+      // Preload next video
+      nextVideo.src = videoSources[nextIndex];
+      nextVideo.load();
+      
+      // Switch to next video immediately
+      setCurrentVideoIndex(nextIndex);
+      setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+      
+      // Start next video
+      nextVideo.currentTime = 0;
+      nextVideo.play().catch(console.error);
     };
     
-    video.addEventListener('ended', handleVideoEnd);
+    // Use 'timeupdate' event to switch slightly before the video ends for seamless transition
+    const handleTimeUpdate = () => {
+      if (currentVideo.duration - currentVideo.currentTime < 0.1) {
+        handleVideoEnd();
+      }
+    };
+    
+    currentVideo.addEventListener('timeupdate', handleTimeUpdate);
     
     return () => {
-      video.removeEventListener('ended', handleVideoEnd);
+      currentVideo.removeEventListener('timeupdate', handleTimeUpdate);
     };
-  }, [videoSources.length]);
+  }, [currentVideoIndex, activeVideoElement, videoSources]);
   
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video || videoSources.length === 0) return;
+    if (videoSources.length === 0) return;
     
-    video.src = videoSources[currentVideoIndex];
-    video.load();
-    video.play().catch(console.error);
-  }, [currentVideoIndex, videoSources]);
+    const video1 = video1Ref.current;
+    const video2 = video2Ref.current;
+    
+    if (!video1 || !video2) return;
+    
+    // Initialize first video
+    video1.src = videoSources[0];
+    video1.load();
+    video1.play().catch(console.error);
+    
+    // Preload second video if available
+    if (videoSources.length > 1) {
+      video2.src = videoSources[1];
+      video2.load();
+    }
+  }, [videoSources]);
   return (
     <section className="relative bg-slate-900 text-white py-24 lg:py-40 overflow-hidden">
       {/* Background - Video or Animated geometric background */}
       <div className="absolute inset-0">
         {videoSources.length > 0 ? (
           <>
-            {/* Video background */}
+            {/* Video background - dual video elements for seamless transitions */}
             <video 
-              ref={videoRef}
-              className="absolute inset-0 w-full h-full object-cover"
+              ref={video1Ref}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                activeVideoElement === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
               autoPlay
               muted
               playsInline
+              preload="auto"
+            />
+            <video 
+              ref={video2Ref}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                activeVideoElement === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
+              muted
+              playsInline
+              preload="auto"
             />
             {/* Video overlay for better text readability */}
-            <div className="absolute inset-0 bg-slate-900/70"></div>
+            <div className="absolute inset-0 bg-slate-900/70 z-20"></div>
           </>
         ) : (
           <>
@@ -120,7 +166,7 @@ export default function Hero({
         )}
       </div>
       
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-30">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
             {title}
