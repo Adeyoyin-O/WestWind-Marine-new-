@@ -63,82 +63,82 @@ export default function Partnerships() {
       {/* Partners Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-teal-500">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-teal-500">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">SAL NAVIGATION LTD</h3>
+                <h3 className="text-xl font-bold text-slate-900">SAL NAVIGATION LTD</h3>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                 Consilium Navigation Equipment Manufacturers specializing in advanced Voyage Data Recorders (VDR) and maritime safety systems.
               </p>
-              <div className="flex items-center text-teal-600 font-medium">
+              <div className="flex items-center text-teal-600 font-medium text-sm">
                 <span>Voyage Data Recording Technology</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-green-500">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">TOTEMPLUS</h3>
+                <h3 className="text-xl font-bold text-slate-900">TOTEMPLUS</h3>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                 Advanced VDR 2014 technology provider complying with new International Maritime Organization (IMO) standards and requirements.
               </p>
-              <div className="flex items-center text-green-600 font-medium">
+              <div className="flex items-center text-green-600 font-medium text-sm">
                 <span>IMO Compliant VDR Systems</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-blue-500">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Headway Technology Co. LTD</h3>
+                <h3 className="text-xl font-bold text-slate-900">Headway Technology Co. LTD</h3>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                 A leading provider of marine intelligent systems, Headway specializes in solutions like ballast water management systems (BWMS), voyage data recorders (VDR), and marine communication and navigation technologies—supporting safe, sustainable, and compliant marine operations.
               </p>
-              <div className="flex items-center text-blue-600 font-medium">
+              <div className="flex items-center text-blue-600 font-medium text-sm">
                 <span>Marine Intelligent Systems</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-purple-500">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">AMI Marine</h3>
+                <h3 className="text-xl font-bold text-slate-900">AMI Marine</h3>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed mb-4 text-sm">
                 AMI Marine is known for advanced maritime electronics, including high-performance Voyage Data Recorders (VDR), Electronic Chart Display and Information Systems (ECDIS), and bridge navigation systems—enhancing vessel safety, compliance, and operational efficiency.
               </p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <div className="flex items-center text-purple-600 font-medium text-sm">
                 <span>Advanced Maritime Electronics</span>
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>
