@@ -18,8 +18,7 @@ export default function Home() {
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left column - Text content */}
+          <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 border border-teal-400/30 rounded-full text-teal-300 text-sm font-medium backdrop-blur-sm">
                 <div className="w-2 h-2 bg-teal-400 rounded-full mr-3 animate-pulse"></div>
@@ -36,7 +35,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-3 h-3 bg-green-400 rounded-full"></div>
@@ -57,28 +56,6 @@ export default function Home() {
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                   <span className="text-sm font-medium">Expert Engineering</span>
                 </div>
-              </div>
-            </div>
-            
-            {/* Right column - Visual element */}
-            <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px]">
-                {/* Main circle */}
-                <div className="absolute inset-0 border-2 border-teal-400/30 rounded-full"></div>
-                <div className="absolute inset-8 border border-cyan-400/20 rounded-full"></div>
-                <div className="absolute inset-16 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-full backdrop-blur-sm"></div>
-                
-                {/* Floating tech elements */}
-                <div className="absolute top-10 right-10 w-16 h-16 bg-teal-500/20 border border-teal-400/30 rounded-xl backdrop-blur-sm flex items-center justify-center">
-                  <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div className="absolute bottom-10 left-10 w-12 h-12 bg-cyan-500/20 border border-cyan-400/30 rounded-full backdrop-blur-sm flex items-center justify-center">
-                  <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
-                </div>
-                <div className="absolute top-1/2 left-4 w-8 h-20 bg-gradient-to-b from-teal-400/30 to-cyan-400/30 rounded-full"></div>
-                <div className="absolute top-1/3 right-4 w-6 h-16 bg-gradient-to-b from-cyan-400/30 to-teal-400/30 rounded-full"></div>
               </div>
             </div>
           </div>
