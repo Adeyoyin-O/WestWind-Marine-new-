@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
@@ -9,6 +9,7 @@ interface HeroProps {
   children?: ReactNode;
   backgroundImage?: string;
   backgroundVideo?: string;
+  backgroundVideos?: string[];
   showButtons?: boolean;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
@@ -23,28 +24,58 @@ export default function Hero({
   children,
   backgroundImage,
   backgroundVideo,
+  backgroundVideos,
   showButtons = false,
   onPrimaryClick,
   onSecondaryClick,
   primaryButtonText = "Explore Our Services",
   secondaryButtonText = "Get a Quote"
 }: HeroProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  
+  // Use backgroundVideos if provided, otherwise fallback to single backgroundVideo
+  const videoSources = backgroundVideos || (backgroundVideo ? [backgroundVideo] : []);
+  
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoSources.length === 0) return;
+    
+    const handleVideoEnd = () => {
+      setCurrentVideoIndex((prevIndex) => 
+        prevIndex === videoSources.length - 1 ? 0 : prevIndex + 1
+      );
+    };
+    
+    video.addEventListener('ended', handleVideoEnd);
+    
+    return () => {
+      video.removeEventListener('ended', handleVideoEnd);
+    };
+  }, [videoSources.length]);
+  
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || videoSources.length === 0) return;
+    
+    video.src = videoSources[currentVideoIndex];
+    video.load();
+    video.play().catch(console.error);
+  }, [currentVideoIndex, videoSources]);
   return (
     <section className="relative bg-slate-900 text-white py-24 lg:py-40 overflow-hidden">
       {/* Background - Video or Animated geometric background */}
       <div className="absolute inset-0">
-        {backgroundVideo ? (
+        {videoSources.length > 0 ? (
           <>
             {/* Video background */}
             <video 
+              ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
               autoPlay
-              loop
               muted
               playsInline
-            >
-              <source src={backgroundVideo} type="video/mp4" />
-            </video>
+            />
             {/* Video overlay for better text readability */}
             <div className="absolute inset-0 bg-slate-900/70"></div>
           </>

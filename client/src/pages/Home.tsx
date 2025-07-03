@@ -1,7 +1,13 @@
 import Hero from "@/components/Hero";
-import videoBackground from "@assets/13924839-uhd_3840_2160_30fps_1751555429107.mp4";
+import video1 from "@assets/8824662-uhd_3840_2160_30fps_1751555874347.mp4";
+import video2 from "@assets/3577963-uhd_3840_2160_30fps_1751555879614.mp4";
+import video3 from "@assets/2248686-uhd_3840_2160_24fps_1751555884549.mp4";
+import video4 from "@assets/13271718_1920_1080_50fps_1751555890920.mp4";
+import video5 from "@assets/13924839-uhd_3840_2160_30fps_1751555899613.mp4";
 
 export default function Home() {
+  const videoPlaylist = [video1, video2, video3, video4, video5];
+  
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
       {/* Hero Section with Video Background */}
@@ -13,7 +19,7 @@ export default function Home() {
           </span>
         }
         subtitle="Advanced Marine Electronics & Engineering Solutions"
-        backgroundVideo={videoBackground}
+        backgroundVideos={videoPlaylist}
       >
         <div className="flex flex-wrap gap-4 justify-center mt-8">
           <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm">
