@@ -68,7 +68,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Who We Are */}
       <section className="section-spacing bg-gradient-to-br from-gray-50 to-gray-100/50">
         <div className="container mx-auto">
@@ -82,9 +81,7 @@ export default function About() {
                 <p>
                   Recently, we opened another branch in Dakar Senegal, West wind Marine Electronics Sarl, on the 21st February 2025 with company registration number SN DKR 2025 B 882.
                 </p>
-                <p>
-                  West Wind Marine Electronics Ltd is a company borne out of Passion to provide top-notch services and solutions to customers in the areas of Navigation, communication, automation, and electrical solutions in the Maritime industry particularly in Nigeria and across Africa.
-                </p>
+                <p>West Wind Marine Electronics Ltd is a company borne out of Passion to provide top-notch services and solutions to customers in the areas of Navigation, communication, automation, and electrical solutions in the Maritime industry across Gulf of Guinea and Africa.</p>
                 <p>
                   We are unique in the services we render by providing customers with quality service and competitive solutions. We are a solution provider and integrator of navigation and communication equipment.
                 </p>
@@ -141,7 +138,6 @@ export default function About() {
 
         </div>
       </section>
-
       {/* Marine Equipment Gallery */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
         <div className="w-full">
@@ -186,7 +182,6 @@ export default function About() {
 
 
       </section>
-
       {/* Vision & Mission */}
       <section className="py-12 bg-white relative">
         <div className="container mx-auto px-4">
