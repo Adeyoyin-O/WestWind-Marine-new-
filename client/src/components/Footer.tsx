@@ -17,7 +17,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-bold">West Wind Marine Electronics Ltd</h3>
+                <h3 className="text-lg font-bold">West Wind Marine Electronics</h3>
               </div>
             </div>
             
