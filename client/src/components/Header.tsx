@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import logoImage from "@assets/2-removebg-preview_1749920119128.png";
 
+import Image_Marine___Edited from "@assets/Image Marine - Edited.png";
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -24,7 +26,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-12 h-12 flex items-center justify-center">
               <img 
-                src={logoImage} 
+                src={Image_Marine___Edited} 
                 alt="West Wind Marine Electronics Ltd Logo" 
                 className="w-10 h-10 object-contain"
               />
