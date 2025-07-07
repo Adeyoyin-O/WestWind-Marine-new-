@@ -30,6 +30,24 @@ export default function Contact() {
       return;
     }
 
+    if (name.trim().length < 2) {
+      setSubmitStatus("error");
+      setStatusMessage("Name must be at least 2 characters");
+      return;
+    }
+
+    if (subject.trim().length < 3) {
+      setSubmitStatus("error");
+      setStatusMessage("Subject must be at least 3 characters");
+      return;
+    }
+
+    if (message.trim().length < 10) {
+      setSubmitStatus("error");
+      setStatusMessage("Message must be at least 10 characters");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus("idle");
     

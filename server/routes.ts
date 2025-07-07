@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { emailService, type EmailData } from "./email.js";
@@ -31,8 +31,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Contact form submission endpoint
-  app.post('/api/contact', async (req, res) => {
+  // Contact form submission endpoint (both /api/contact and /contact)
+  const handleContactSubmission = async (req: Request, res: Response) => {
     try {
       // Validate the request body
       const validatedData = contactFormSchema.parse(req.body);
@@ -83,7 +83,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: "Failed to submit form. Please try again."
       });
     }
-  });
+  };
+
+  // Register both endpoints
+  app.post('/api/contact', handleContactSubmission);
+  app.post('/contact', handleContactSubmission);
 
   const httpServer = createServer(app);
 
