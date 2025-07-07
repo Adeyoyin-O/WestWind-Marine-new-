@@ -1,11 +1,10 @@
 import Hero from "@/components/Hero";
-import video2 from "@assets/3577963-uhd_3840_2160_30fps_1751555879614.mp4";
-import video3 from "@assets/2248686-uhd_3840_2160_24fps_1751555884549.mp4";
-import video4 from "@assets/13271718_1920_1080_50fps_1751555890920.mp4";
-import video5 from "@assets/13924839-uhd_3840_2160_30fps_1751555899613.mp4";
+import video1 from "@assets/2_1751881462663.mp4";
+import video2 from "@assets/3_1751881468957.mp4";
+import video3 from "@assets/4_1751881474134.mp4";
 
 export default function Home() {
-  const videoPlaylist = [video2, video3, video4, video5];
+  const videoPlaylist = [video1, video2, video3];
   
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
