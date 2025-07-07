@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
-import video1 from "@assets/2_1751881462663.mp4";
 import video2 from "@assets/3_1751881468957.mp4";
 import video3 from "@assets/4_1751881474134.mp4";
 
 export default function Home() {
-  const videoPlaylist = [video1, video2, video3];
+  const videoPlaylist = [video2, video3];
   
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
