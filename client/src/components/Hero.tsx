@@ -55,40 +55,37 @@ export default function Hero({
       
       const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
       
-      // Prepare next video for immediate playback
+      // Ensure next video is fully prepared
       if (nextVideo.src !== videoSources[nextIndex]) {
         nextVideo.src = videoSources[nextIndex];
         nextVideo.load();
       }
       
+      // Reset to beginning and start immediately
       nextVideo.currentTime = 0;
       
-      // Start next video immediately and switch visibility
-      const playPromise = nextVideo.play();
+      // Switch visibility immediately for instant transition
+      setCurrentVideoIndex(nextIndex);
+      setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
       
+      // Start next video
+      const playPromise = nextVideo.play();
       if (playPromise) {
-        playPromise.then(() => {
-          // Switch active video element after next video starts
-          setCurrentVideoIndex(nextIndex);
-          setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
-        }).catch(console.error);
-      } else {
-        // Fallback for browsers that don't return a promise
-        setCurrentVideoIndex(nextIndex);
-        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+        playPromise.catch(console.error);
       }
     };
     
-    // Preload next video when current video is halfway through
+    // Preload next video when current video is 30% through for better preparation
     const handlePreload = () => {
       if (currentVideo.duration && currentVideo.currentTime) {
         const progress = currentVideo.currentTime / currentVideo.duration;
         const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
         
-        // Preload next video when current is 50% complete
-        if (progress >= 0.5 && nextVideo.src !== videoSources[nextIndex]) {
+        // Preload next video when current is 30% complete for better preparation
+        if (progress >= 0.3 && nextVideo.src !== videoSources[nextIndex]) {
           nextVideo.src = videoSources[nextIndex];
           nextVideo.load();
+          nextVideo.currentTime = 0;
         }
       }
     };
@@ -99,8 +96,8 @@ export default function Hero({
         handlePreload();
         
         const timeRemaining = currentVideo.duration - currentVideo.currentTime;
-        // Switch 0.03 seconds before end for maximum smoothness
-        if (timeRemaining <= 0.03 && !transitionScheduled) {
+        // Switch 0.01 seconds before end for maximum smoothness
+        if (timeRemaining <= 0.01 && !transitionScheduled) {
           handleVideoTransition();
         }
       }
@@ -136,6 +133,9 @@ export default function Hero({
       video.playsInline = true;
       video.muted = true;
       video.loop = false;
+      // Disable buffering delay
+      video.setAttribute('webkit-playsinline', 'true');
+      video.setAttribute('playsinline', 'true');
     });
     
     // Initialize first video
@@ -144,16 +144,18 @@ export default function Hero({
     
     // Wait for first video to be ready then start playing
     const handleCanPlay = () => {
+      video1.currentTime = 0;
       video1.play().catch(console.error);
       video1.removeEventListener('canplaythrough', handleCanPlay);
     };
     
     video1.addEventListener('canplaythrough', handleCanPlay);
     
-    // Preload second video if available
+    // Preload second video immediately if available
     if (videoSources.length > 1) {
       video2.src = videoSources[1];
       video2.load();
+      video2.currentTime = 0;
     }
     
     return () => {
@@ -169,7 +171,7 @@ export default function Hero({
             {/* Video background - dual video elements for seamless transitions */}
             <video 
               ref={video1Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-100 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ${
                 activeVideoElement === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               autoPlay
@@ -179,7 +181,7 @@ export default function Hero({
             />
             <video 
               ref={video2Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-100 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ${
                 activeVideoElement === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               muted
