@@ -48,8 +48,11 @@ This is a modern, professional website for West Wind Marine Electronics Ltd, a N
 ### Contact Form System
 - **Frontend Validation**: Real-time form validation with error messages
 - **Backend Processing**: Secure form submission with Zod validation
+- **Email Integration**: SMTP email service using Nodemailer
 - **Response Handling**: Success/error feedback with loading states
 - **Data Structure**: Name, email, subject, and message fields
+- **Email Templates**: HTML and plain text email formats
+- **Environment Configuration**: Flexible SMTP settings via environment variables
 
 ## Data Flow
 
@@ -58,9 +61,17 @@ This is a modern, professional website for West Wind Marine Electronics Ltd, a N
 2. Form validation occurs in real-time using React state
 3. On submission, data is sent to `/api/contact` endpoint
 4. Backend validates data using Zod schema
-5. Successful submissions are logged (email integration ready)
+5. Email service sends formatted email via SMTP
 6. Response sent back to frontend with success/error status
 7. User sees appropriate feedback message
+
+### Email System Flow
+1. SMTP configuration loaded from environment variables
+2. Email service initializes Nodemailer transporter
+3. Contact form data formatted into HTML and plain text
+4. Email sent to configured recipient address
+5. Sender can reply directly to form submitter's email
+6. Comprehensive error handling for connection issues
 
 ### Asset Management
 - **Images**: Stored in `/attached_assets` directory
@@ -77,6 +88,8 @@ This is a modern, professional website for West Wind Marine Electronics Ltd, a N
 - **wouter**: Lightweight React routing
 - **zod**: Runtime type validation
 - **express**: Web server framework
+- **nodemailer**: SMTP email sending service
+- **@types/nodemailer**: TypeScript definitions for Nodemailer
 
 ### UI Dependencies
 - **@radix-ui/***: Accessible UI component primitives

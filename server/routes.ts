@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { emailService, type EmailData } from "./email.js";
 import { z } from "zod";
 
 const contactFormSchema = z.object({
@@ -11,28 +12,60 @@ const contactFormSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Email configuration status endpoint
+  app.get('/api/email/status', async (req, res) => {
+    try {
+      const isConnected = await emailService.verifyConnection();
+      res.json({
+        configured: isConnected,
+        message: isConnected 
+          ? 'SMTP configuration is valid and connected'
+          : 'SMTP configuration is missing or invalid'
+      });
+    } catch (error) {
+      res.status(500).json({
+        configured: false,
+        message: 'Error checking email configuration',
+        error: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
+  });
+
   // Contact form submission endpoint
   app.post('/api/contact', async (req, res) => {
     try {
       // Validate the request body
       const validatedData = contactFormSchema.parse(req.body);
       
-      // Log the contact form submission (in a real app, you'd send an email)
+      // Log the contact form submission
       console.log('Contact form submission received:', {
         name: validatedData.name,
         email: validatedData.email,
         subject: validatedData.subject,
-        message: validatedData.message,
         timestamp: new Date().toISOString()
       });
       
-      // Simulate processing time
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      res.json({
-        success: true,
-        message: "Thank you for your message. We will get back to you within 24 hours."
+      // Send email using the email service
+      const emailResult = await emailService.sendContactEmail({
+        name: validatedData.name,
+        email: validatedData.email,
+        subject: validatedData.subject,
+        message: validatedData.message
       });
+      
+      if (emailResult.success) {
+        console.log('Email sent successfully:', emailResult.messageId);
+        res.json({
+          success: true,
+          message: emailResult.message
+        });
+      } else {
+        console.error('Email sending failed:', emailResult.message);
+        res.status(500).json({
+          success: false,
+          message: emailResult.message
+        });
+      }
       
     } catch (error) {
       console.error('Contact form error:', error);
