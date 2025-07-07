@@ -35,9 +35,33 @@ export default function Hero({
   const video2Ref = useRef<HTMLVideoElement>(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [activeVideoElement, setActiveVideoElement] = useState<1 | 2>(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const transitionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   // Use backgroundVideos if provided, otherwise fallback to single backgroundVideo
   const videoSources = backgroundVideos || (backgroundVideo ? [backgroundVideo] : []);
+  
+  // Cleanup function for component unmount
+  useEffect(() => {
+    return () => {
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
+      
+      // Stop all videos on unmount
+      const video1 = video1Ref.current;
+      const video2 = video2Ref.current;
+      
+      if (video1) {
+        video1.pause();
+        video1.currentTime = 0;
+      }
+      if (video2) {
+        video2.pause();
+        video2.currentTime = 0;
+      }
+    };
+  }, []);
   
   useEffect(() => {
     if (videoSources.length === 0) return;
@@ -49,40 +73,66 @@ export default function Hero({
     
     let transitionScheduled = false;
     
-    const handleVideoTransition = () => {
-      if (transitionScheduled) return;
+    const handleVideoTransition = async () => {
+      if (transitionScheduled || isTransitioning) return;
       transitionScheduled = true;
+      setIsTransitioning(true);
       
       const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
       
-      // Ensure next video is fully prepared
-      if (nextVideo.src !== videoSources[nextIndex]) {
-        nextVideo.src = videoSources[nextIndex];
-        nextVideo.load();
-      }
-      
-      // Reset to beginning and start immediately
-      nextVideo.currentTime = 0;
-      
-      // Switch visibility immediately for instant transition
-      setCurrentVideoIndex(nextIndex);
-      setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
-      
-      // Start next video
-      const playPromise = nextVideo.play();
-      if (playPromise) {
-        playPromise.catch(console.error);
+      try {
+        // Ensure next video is fully prepared and ready
+        if (nextVideo.src !== videoSources[nextIndex]) {
+          nextVideo.src = videoSources[nextIndex];
+          nextVideo.load();
+          
+          // Wait for next video to be ready
+          await new Promise<void>((resolve) => {
+            const handleCanPlay = () => {
+              nextVideo.removeEventListener('canplaythrough', handleCanPlay);
+              resolve();
+            };
+            nextVideo.addEventListener('canplaythrough', handleCanPlay);
+          });
+        }
+        
+        // Reset to beginning
+        nextVideo.currentTime = 0;
+        
+        // Start next video and wait for it to begin playing
+        await nextVideo.play();
+        
+        // Only switch after next video is actually playing
+        setCurrentVideoIndex(nextIndex);
+        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+        
+        // Clear transition timeout if exists
+        if (transitionTimeoutRef.current) {
+          clearTimeout(transitionTimeoutRef.current);
+        }
+        
+        // Reset transition state after a brief delay
+        transitionTimeoutRef.current = setTimeout(() => {
+          setIsTransitioning(false);
+        }, 100);
+        
+      } catch (error) {
+        console.error('Video transition error:', error);
+        // Fallback: still switch videos even if play fails
+        setCurrentVideoIndex(nextIndex);
+        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+        setIsTransitioning(false);
       }
     };
     
-    // Preload next video when current video is 30% through for better preparation
+    // Early preload when current video reaches 25%
     const handlePreload = () => {
-      if (currentVideo.duration && currentVideo.currentTime) {
+      if (currentVideo.duration && currentVideo.currentTime && !isTransitioning) {
         const progress = currentVideo.currentTime / currentVideo.duration;
         const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
         
-        // Preload next video when current is 30% complete for better preparation
-        if (progress >= 0.3 && nextVideo.src !== videoSources[nextIndex]) {
+        // Preload next video when current is 25% complete for maximum preparation time
+        if (progress >= 0.25 && nextVideo.src !== videoSources[nextIndex]) {
           nextVideo.src = videoSources[nextIndex];
           nextVideo.load();
           nextVideo.currentTime = 0;
@@ -90,34 +140,37 @@ export default function Hero({
       }
     };
     
-    // Multiple event listeners for maximum reliability
+    // Enhanced time update handler with smoother transition timing
     const handleTimeUpdate = () => {
-      if (currentVideo.duration && currentVideo.currentTime) {
+      if (currentVideo.duration && currentVideo.currentTime && !isTransitioning) {
         handlePreload();
         
         const timeRemaining = currentVideo.duration - currentVideo.currentTime;
-        // Switch 0.01 seconds before end for maximum smoothness
-        if (timeRemaining <= 0.01 && !transitionScheduled) {
+        // Switch 0.05 seconds before end for buffer time
+        if (timeRemaining <= 0.05 && !transitionScheduled) {
           handleVideoTransition();
         }
       }
     };
     
     const handleEnded = () => {
-      if (!transitionScheduled) {
+      if (!transitionScheduled && !isTransitioning) {
         handleVideoTransition();
       }
     };
     
-    // Add multiple event listeners for reliability
+    // Add event listeners with error handling
     currentVideo.addEventListener('timeupdate', handleTimeUpdate);
     currentVideo.addEventListener('ended', handleEnded);
     
     return () => {
       currentVideo.removeEventListener('timeupdate', handleTimeUpdate);
       currentVideo.removeEventListener('ended', handleEnded);
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
     };
-  }, [currentVideoIndex, activeVideoElement, videoSources]);
+  }, [currentVideoIndex, activeVideoElement, videoSources, isTransitioning]);
   
   useEffect(() => {
     if (videoSources.length === 0) return;
@@ -133,20 +186,51 @@ export default function Hero({
       video.playsInline = true;
       video.muted = true;
       video.loop = false;
-      // Disable buffering delay
+      video.controls = false;
+      // Enhanced mobile support
       video.setAttribute('webkit-playsinline', 'true');
       video.setAttribute('playsinline', 'true');
+      video.setAttribute('x-webkit-airplay', 'allow');
+      
+      // Error handling for video loading
+      video.addEventListener('error', (e) => {
+        console.warn('Video loading issue, retrying...', e.target);
+        // Retry loading the video
+        setTimeout(() => {
+          video.load();
+        }, 1000);
+      });
+      
+      // Prevent video stalling
+      video.addEventListener('stalled', () => {
+        video.load();
+      });
+      
+      // Handle buffering issues
+      video.addEventListener('waiting', () => {
+        if (video.networkState === video.NETWORK_LOADING) {
+          video.load();
+        }
+      });
     });
     
-    // Initialize first video
+    // Initialize first video with proper error handling
     video1.src = videoSources[0];
     video1.load();
     
-    // Wait for first video to be ready then start playing
-    const handleCanPlay = () => {
-      video1.currentTime = 0;
-      video1.play().catch(console.error);
-      video1.removeEventListener('canplaythrough', handleCanPlay);
+    // Wait for first video to be fully ready then start playing
+    const handleCanPlay = async () => {
+      try {
+        video1.currentTime = 0;
+        await video1.play();
+        video1.removeEventListener('canplaythrough', handleCanPlay);
+      } catch (error) {
+        console.error('Error starting first video:', error);
+        // Retry once
+        setTimeout(() => {
+          video1.play().catch(console.error);
+        }, 100);
+      }
     };
     
     video1.addEventListener('canplaythrough', handleCanPlay);
@@ -160,6 +244,13 @@ export default function Hero({
     
     return () => {
       video1.removeEventListener('canplaythrough', handleCanPlay);
+      
+      // Cleanup error handlers
+      [video1, video2].forEach(video => {
+        video.removeEventListener('error', () => {});
+        video.removeEventListener('stalled', () => {});
+        video.removeEventListener('waiting', () => {});
+      });
     };
   }, [videoSources]);
   return (
@@ -171,22 +262,32 @@ export default function Hero({
             {/* Video background - dual video elements for seamless transitions */}
             <video 
               ref={video1Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ease-in-out ${
                 activeVideoElement === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               autoPlay
               muted
               playsInline
               preload="auto"
+              style={{ 
+                willChange: 'opacity',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)'
+              }}
             />
             <video 
               ref={video2Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-0 ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ease-in-out ${
                 activeVideoElement === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               muted
               playsInline
               preload="auto"
+              style={{ 
+                willChange: 'opacity',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)'
+              }}
             />
             {/* Video overlay for better text readability */}
             <div className="absolute inset-0 bg-slate-900/70 z-20"></div>
