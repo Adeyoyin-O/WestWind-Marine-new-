@@ -114,7 +114,7 @@ class EmailService {
 
       // Create email content
       const mailOptions = {
-        from: `"${data.name}" <${process.env.EMAIL_USER}>`, // Sender address
+        from: `"Westwind Contact Form" <${process.env.EMAIL_USER}>`, // Sender address with company name
         to: recipientEmail, // Recipient address from environment variable
         replyTo: data.email, // Set reply-to as the form submitter's email
         subject: `Contact Form: ${data.subject}`, // Subject with prefix
