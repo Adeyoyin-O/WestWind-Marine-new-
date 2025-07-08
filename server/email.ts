@@ -113,14 +113,20 @@ class EmailService {
       }
 
       // Create email content
+      const fromName = "Westwind Contact Form";
+      const fromEmail = process.env.EMAIL_USER;
       const mailOptions = {
-        from: `"Westwind Contact Form" <${process.env.EMAIL_USER}>`, // Sender address with company name
+        from: `"${fromName}" <${fromEmail}>`, // Sender address with company name
+        sender: `"${fromName}" <${fromEmail}>`, // Explicitly set sender
         to: recipientEmail, // Recipient address from environment variable
         replyTo: data.email, // Set reply-to as the form submitter's email
         subject: `Contact Form: ${data.subject}`, // Subject with prefix
         html: this.generateEmailHTML(data),
         text: this.generateEmailText(data), // Fallback plain text
       };
+
+      // Log email details for debugging
+      log(`Sending email from: "${fromName}" <${fromEmail}> to: ${recipientEmail}`, 'email');
 
       // Send email
       const info = await this.transporter.sendMail(mailOptions);
