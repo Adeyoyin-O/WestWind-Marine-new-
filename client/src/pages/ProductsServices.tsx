@@ -1,5 +1,5 @@
 import { useLocation } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { 
   Compass, 
@@ -37,57 +37,106 @@ export default function ProductsServices() {
   const services = [
     {
       name: "Gyrocompass",
+      id: "gyrocompass",
       description: "Precision navigation instrument providing accurate heading reference independent of magnetic interference, essential for maritime navigation."
     },
     {
       name: "Autopilot",
+      id: "autopilot",
       description: "Automated steering system that maintains vessel course and heading, reducing crew workload and improving navigation accuracy."
     },
     {
       name: "Satellite and magnetic compasses",
+      id: "satellite-magnetic-compasses",
       description: "Advanced compass systems combining satellite technology with traditional magnetic sensing for reliable directional reference."
     },
     {
       name: "Radar",
+      id: "radar",
       description: "Marine radar systems for collision avoidance, navigation, and weather detection with advanced target tracking capabilities."
     },
     {
       name: "Consilium, AMI, Totemplus, Headway",
+      id: "consilium-ami-totemplus-headway",
       description: "Premium marine electronics brands offering voyage data recorders, navigation equipment, and integrated bridge systems."
     },
     {
       name: "EPIRB and SART",
+      id: "epirb-sart",
       description: "Emergency Position Indicating Radio Beacon and Search and Rescue Transponder for distress signaling and location identification."
     },
     {
       name: "Ballast Water Management System",
+      id: "ballast-water-management",
       description: "IMO-compliant systems for treating ballast water to prevent invasive species transfer between marine environments."
     },
     {
       name: "Electric Motors and Pumps",
+      id: "electric-motors-pumps",
       description: "Marine-grade electric motors and pumping systems for various shipboard applications including bilge, ballast, and cargo operations."
     },
     {
       name: "Contactors and Circuit Breakers",
+      id: "contactors-circuit-breakers",
       description: "Electrical protection and switching devices designed for marine environments, ensuring safe power distribution and circuit protection."
     },
     {
       name: "Low & Medium Voltage Switchgears / Switch Boards",
+      id: "switchgears-switchboards",
       description: "Complete electrical distribution panels and switchgear assemblies for marine power management and control systems."
     },
     {
       name: "GMDSS, VHF, MH/HF, Inmarsat C",
+      id: "gmdss-communication",
       description: "Global Maritime Distress and Safety System communication equipment including VHF, MF/HF radios, and satellite communication systems."
     },
     {
       name: "Marine Automation and Control",
+      id: "marine-automation-control",
       description: "Integrated automation systems for engine room monitoring, alarm management, and remote control of shipboard systems."
     },
     {
       name: "Smoke and Gas Detection Systems",
+      id: "smoke-gas-detection",
       description: "Advanced fire and gas detection systems with early warning capabilities for enhanced vessel safety and crew protection."
     }
   ];
+
+  // Handle URL hash navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); // Remove the #
+      if (hash) {
+        const serviceIndex = services.findIndex(service => service.id === hash);
+        if (serviceIndex !== -1) {
+          // Expand the service
+          setExpandedServices(prev => {
+            const newExpanded = new Set(prev);
+            newExpanded.add(serviceIndex);
+            return newExpanded;
+          });
+          
+          // Scroll to the service after a brief delay to ensure it's expanded
+          setTimeout(() => {
+            const element = document.getElementById(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 100);
+        }
+      }
+    };
+
+    // Handle initial hash on page load
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
 
   const capabilities = [
     {
@@ -186,7 +235,7 @@ export default function ProductsServices() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-x-8 gap-y-0">
               {services.map((service, index) => (
-                <div key={index} className="border-b border-gray-200 py-2">
+                <div key={index} id={service.id} className="border-b border-gray-200 py-2">
                   <button
                     onClick={() => toggleService(index)}
                     className="w-full flex items-center justify-between text-left py-2 hover:text-teal-600 transition-colors duration-200"

@@ -48,19 +48,19 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white">Our Services</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><span className="hover:text-teal-400 transition-colors">Gyrocompass</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Autopilot</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Satellite and magnetic compasses</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Radar</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Consilium, AMI, Totemplus, Headway</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">EPIRB and SART</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Ballast Water Management System</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Electric Motors and Pumps</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Contactors and Circuit Breakers</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Low & Medium Voltage Switchgears / Switch Boards</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">GMDSS, VHF, MH/HF, Inmarsat C</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Marine Automation and Control</span></li>
-              <li><span className="hover:text-teal-400 transition-colors">Smoke and Gas Detection Systems</span></li>
+              <li><Link href="/products-services#gyrocompass" className="hover:text-teal-400 transition-colors">Gyrocompass</Link></li>
+              <li><Link href="/products-services#autopilot" className="hover:text-teal-400 transition-colors">Autopilot</Link></li>
+              <li><Link href="/products-services#satellite-magnetic-compasses" className="hover:text-teal-400 transition-colors">Satellite and magnetic compasses</Link></li>
+              <li><Link href="/products-services#radar" className="hover:text-teal-400 transition-colors">Radar</Link></li>
+              <li><Link href="/products-services#consilium-ami-totemplus-headway" className="hover:text-teal-400 transition-colors">Consilium, AMI, Totemplus, Headway</Link></li>
+              <li><Link href="/products-services#epirb-sart" className="hover:text-teal-400 transition-colors">EPIRB and SART</Link></li>
+              <li><Link href="/products-services#ballast-water-management" className="hover:text-teal-400 transition-colors">Ballast Water Management System</Link></li>
+              <li><Link href="/products-services#electric-motors-pumps" className="hover:text-teal-400 transition-colors">Electric Motors and Pumps</Link></li>
+              <li><Link href="/products-services#contactors-circuit-breakers" className="hover:text-teal-400 transition-colors">Contactors and Circuit Breakers</Link></li>
+              <li><Link href="/products-services#switchgears-switchboards" className="hover:text-teal-400 transition-colors">Low & Medium Voltage Switchgears / Switch Boards</Link></li>
+              <li><Link href="/products-services#gmdss-communication" className="hover:text-teal-400 transition-colors">GMDSS, VHF, MH/HF, Inmarsat C</Link></li>
+              <li><Link href="/products-services#marine-automation-control" className="hover:text-teal-400 transition-colors">Marine Automation and Control</Link></li>
+              <li><Link href="/products-services#smoke-gas-detection" className="hover:text-teal-400 transition-colors">Smoke and Gas Detection Systems</Link></li>
             </ul>
           </div>
 
