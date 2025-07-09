@@ -81,10 +81,20 @@ export default function Footer() {
             <p className="text-sm">&copy; 2024 West Wind Marine Electronics Ltd. All rights reserved.</p>
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-110">
+            <a 
+              href="https://www.facebook.com/westwindmarineelectronics" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
+            >
               <FaFacebook className="h-5 w-5" />
             </a>
-            <a href="#" className="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-110">
+            <a 
+              href="https://wa.me/2348060417377" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
+            >
               <FaWhatsapp className="h-5 w-5" />
             </a>
           </div>
