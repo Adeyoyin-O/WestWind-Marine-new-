@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useState, useEffect } from "react";
+import { ReactNode, useRef, useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
@@ -36,142 +36,83 @@ export default function Hero({
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [activeVideoElement, setActiveVideoElement] = useState<1 | 2>(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const transitionTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  
+  const [videosLoaded, setVideosLoaded] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
   // Use backgroundVideos if provided, otherwise fallback to single backgroundVideo
   const videoSources = backgroundVideos || (backgroundVideo ? [backgroundVideo] : []);
-  
-  // Cleanup function for component unmount
-  useEffect(() => {
-    return () => {
-      if (transitionTimeoutRef.current) {
-        clearTimeout(transitionTimeoutRef.current);
-      }
-      
-      // Stop all videos on unmount
-      const video1 = video1Ref.current;
-      const video2 = video2Ref.current;
-      
-      if (video1) {
-        video1.pause();
-        video1.currentTime = 0;
-      }
-      if (video2) {
-        video2.pause();
-        video2.currentTime = 0;
-      }
-    };
+
+  // Cleanup function
+  const cleanup = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
   }, []);
-  
-  useEffect(() => {
-    if (videoSources.length === 0) return;
+
+  // Video transition handler
+  const handleVideoTransition = useCallback(async () => {
+    if (isTransitioning || videoSources.length <= 1) return;
     
+    setIsTransitioning(true);
+    
+    const nextIndex = (currentVideoIndex + 1) % videoSources.length;
     const currentVideo = activeVideoElement === 1 ? video1Ref.current : video2Ref.current;
     const nextVideo = activeVideoElement === 1 ? video2Ref.current : video1Ref.current;
     
-    if (!currentVideo || !nextVideo) return;
-    
-    let transitionScheduled = false;
-    
-    const handleVideoTransition = async () => {
-      if (transitionScheduled || isTransitioning) return;
-      transitionScheduled = true;
-      setIsTransitioning(true);
+    if (!nextVideo || !currentVideo) {
+      setIsTransitioning(false);
+      return;
+    }
+
+    try {
+      // Prepare next video
+      nextVideo.src = videoSources[nextIndex];
+      nextVideo.currentTime = 0;
       
-      const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
+      // Wait for next video to be ready
+      await new Promise<void>((resolve, reject) => {
+        const timeout = setTimeout(() => {
+          nextVideo.removeEventListener('canplaythrough', handleCanPlay);
+          reject(new Error('Video load timeout'));
+        }, 3000);
+
+        const handleCanPlay = () => {
+          clearTimeout(timeout);
+          nextVideo.removeEventListener('canplaythrough', handleCanPlay);
+          resolve();
+        };
+
+        nextVideo.addEventListener('canplaythrough', handleCanPlay);
+        nextVideo.load();
+      });
+
+      // Start next video
+      await nextVideo.play();
       
-      try {
-        // Ensure next video is fully prepared and ready
-        if (nextVideo.src !== videoSources[nextIndex]) {
-          nextVideo.src = videoSources[nextIndex];
-          nextVideo.load();
-          
-          // Wait for next video to be ready
-          await new Promise<void>((resolve) => {
-            const handleCanPlay = () => {
-              nextVideo.removeEventListener('canplaythrough', handleCanPlay);
-              resolve();
-            };
-            nextVideo.addEventListener('canplaythrough', handleCanPlay);
-          });
-        }
-        
-        // Reset to beginning
-        nextVideo.currentTime = 0;
-        
-        // Start next video and wait for it to begin playing
-        await nextVideo.play();
-        
-        // Only switch after next video is actually playing
-        setCurrentVideoIndex(nextIndex);
-        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
-        
-        // Clear transition timeout if exists
-        if (transitionTimeoutRef.current) {
-          clearTimeout(transitionTimeoutRef.current);
-        }
-        
-        // Reset transition state after a brief delay
-        transitionTimeoutRef.current = setTimeout(() => {
-          setIsTransitioning(false);
-        }, 100);
-        
-      } catch (error) {
-        console.error('Video transition error:', error);
-        // Fallback: still switch videos even if play fails
-        setCurrentVideoIndex(nextIndex);
-        setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
-        setIsTransitioning(false);
-      }
-    };
-    
-    // Early preload when current video reaches 25%
-    const handlePreload = () => {
-      if (currentVideo.duration && currentVideo.currentTime && !isTransitioning) {
-        const progress = currentVideo.currentTime / currentVideo.duration;
-        const nextIndex = currentVideoIndex === videoSources.length - 1 ? 0 : currentVideoIndex + 1;
-        
-        // Preload next video when current is 25% complete for maximum preparation time
-        if (progress >= 0.25 && nextVideo.src !== videoSources[nextIndex]) {
-          nextVideo.src = videoSources[nextIndex];
-          nextVideo.load();
-          nextVideo.currentTime = 0;
-        }
-      }
-    };
-    
-    // Enhanced time update handler with smoother transition timing
-    const handleTimeUpdate = () => {
-      if (currentVideo.duration && currentVideo.currentTime && !isTransitioning) {
-        handlePreload();
-        
-        const timeRemaining = currentVideo.duration - currentVideo.currentTime;
-        // Switch 0.05 seconds before end for buffer time
-        if (timeRemaining <= 0.05 && !transitionScheduled) {
-          handleVideoTransition();
-        }
-      }
-    };
-    
-    const handleEnded = () => {
-      if (!transitionScheduled && !isTransitioning) {
-        handleVideoTransition();
-      }
-    };
-    
-    // Add event listeners with error handling
-    currentVideo.addEventListener('timeupdate', handleTimeUpdate);
-    currentVideo.addEventListener('ended', handleEnded);
-    
-    return () => {
-      currentVideo.removeEventListener('timeupdate', handleTimeUpdate);
-      currentVideo.removeEventListener('ended', handleEnded);
-      if (transitionTimeoutRef.current) {
-        clearTimeout(transitionTimeoutRef.current);
-      }
-    };
+      // Switch active video
+      setCurrentVideoIndex(nextIndex);
+      setActiveVideoElement(activeVideoElement === 1 ? 2 : 1);
+      
+      // Pause current video after transition
+      timeoutRef.current = setTimeout(() => {
+        currentVideo.pause();
+        currentVideo.currentTime = 0;
+      }, 500);
+      
+    } catch (error) {
+      console.error('Video transition error:', error);
+    } finally {
+      setIsTransitioning(false);
+    }
   }, [currentVideoIndex, activeVideoElement, videoSources, isTransitioning]);
-  
+
+  // Initialize video system
   useEffect(() => {
     if (videoSources.length === 0) return;
     
@@ -179,80 +120,114 @@ export default function Hero({
     const video2 = video2Ref.current;
     
     if (!video1 || !video2) return;
-    
-    // Configure video properties for seamless playback
+
+    // Configure video properties
     [video1, video2].forEach(video => {
       video.preload = 'auto';
       video.playsInline = true;
       video.muted = true;
       video.loop = false;
       video.controls = false;
-      // Enhanced mobile support
       video.setAttribute('webkit-playsinline', 'true');
       video.setAttribute('playsinline', 'true');
-      video.setAttribute('x-webkit-airplay', 'allow');
       
-      // Error handling for video loading
+      // Add error handling
       video.addEventListener('error', (e) => {
-        console.warn('Video loading issue, retrying...', e.target);
-        // Retry loading the video
-        setTimeout(() => {
-          video.load();
-        }, 1000);
-      });
-      
-      // Prevent video stalling
-      video.addEventListener('stalled', () => {
+        console.warn('Video error:', e);
         video.load();
       });
       
-      // Handle buffering issues
-      video.addEventListener('waiting', () => {
-        if (video.networkState === video.NETWORK_LOADING) {
-          video.load();
-        }
+      video.addEventListener('stalled', () => {
+        video.load();
       });
     });
-    
-    // Initialize first video with proper error handling
-    video1.src = videoSources[0];
-    video1.load();
-    
-    // Wait for first video to be fully ready then start playing
-    const handleCanPlay = async () => {
+
+    // Initialize first video
+    const initializeVideo = async () => {
       try {
-        video1.currentTime = 0;
+        video1.src = videoSources[0];
+        video1.load();
+        
+        await new Promise<void>((resolve, reject) => {
+          const timeout = setTimeout(() => {
+            video1.removeEventListener('canplaythrough', handleCanPlay);
+            reject(new Error('First video load timeout'));
+          }, 5000);
+
+          const handleCanPlay = () => {
+            clearTimeout(timeout);
+            video1.removeEventListener('canplaythrough', handleCanPlay);
+            resolve();
+          };
+
+          video1.addEventListener('canplaythrough', handleCanPlay);
+        });
+
         await video1.play();
-        video1.removeEventListener('canplaythrough', handleCanPlay);
+        setVideosLoaded(true);
+        
+        // Preload second video if available
+        if (videoSources.length > 1) {
+          video2.src = videoSources[1];
+          video2.load();
+        }
+        
       } catch (error) {
-        console.error('Error starting first video:', error);
+        console.error('Error initializing video:', error);
         // Retry once
         setTimeout(() => {
           video1.play().catch(console.error);
-        }, 100);
+        }, 1000);
       }
     };
+
+    initializeVideo();
     
-    video1.addEventListener('canplaythrough', handleCanPlay);
+    return cleanup;
+  }, [videoSources, cleanup]);
+
+  // Monitor video progress and handle transitions
+  useEffect(() => {
+    if (!videosLoaded || videoSources.length <= 1) return;
     
-    // Preload second video immediately if available
-    if (videoSources.length > 1) {
-      video2.src = videoSources[1];
-      video2.load();
-      video2.currentTime = 0;
-    }
-    
-    return () => {
-      video1.removeEventListener('canplaythrough', handleCanPlay);
-      
-      // Cleanup error handlers
-      [video1, video2].forEach(video => {
-        video.removeEventListener('error', () => {});
-        video.removeEventListener('stalled', () => {});
-        video.removeEventListener('waiting', () => {});
-      });
+    const currentVideo = activeVideoElement === 1 ? video1Ref.current : video2Ref.current;
+    if (!currentVideo) return;
+
+    const checkProgress = () => {
+      if (currentVideo.duration && currentVideo.currentTime) {
+        const timeRemaining = currentVideo.duration - currentVideo.currentTime;
+        
+        // Transition 0.3 seconds before the end
+        if (timeRemaining <= 0.3 && !isTransitioning) {
+          handleVideoTransition();
+        }
+      }
     };
-  }, [videoSources]);
+
+    const handleEnded = () => {
+      if (!isTransitioning) {
+        handleVideoTransition();
+      }
+    };
+
+    // Check progress every 100ms for smooth transitions
+    intervalRef.current = setInterval(checkProgress, 100);
+    currentVideo.addEventListener('ended', handleEnded);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+      currentVideo.removeEventListener('ended', handleEnded);
+    };
+  }, [activeVideoElement, videosLoaded, videoSources.length, isTransitioning, handleVideoTransition]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return cleanup;
+  }, [cleanup]);
+
   return (
     <section className="relative bg-slate-900 text-white py-24 lg:py-40 overflow-hidden">
       {/* Background - Video or Animated geometric background */}
@@ -262,7 +237,7 @@ export default function Hero({
             {/* Video background - dual video elements for seamless transitions */}
             <video 
               ref={video1Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ease-in-out ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
                 activeVideoElement === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               autoPlay
@@ -277,7 +252,7 @@ export default function Hero({
             />
             <video 
               ref={video2Ref}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-200 ease-in-out ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out ${
                 activeVideoElement === 2 ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
               muted
@@ -332,46 +307,46 @@ export default function Hero({
           </>
         )}
       </div>
-      
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 z-30">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
+
+      {/* Main content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             {title}
           </h1>
+          
           {subtitle && (
-            <p className="text-lg lg:text-xl mb-12 text-blue-100 leading-relaxed max-w-4xl mx-auto font-normal">
+            <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
               {subtitle}
             </p>
           )}
+          
           {description && (
-            <p className="text-lg text-blue-100 mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
               {description}
             </p>
           )}
           
+          {children}
+          
           {showButtons && (
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8">
+            <div className="flex flex-wrap gap-4 justify-center mt-8">
               <Button 
-                size="lg"
-                className="blue-gradient hover:opacity-90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-base w-full sm:w-48 flex items-center justify-center gap-2"
                 onClick={onPrimaryClick}
+                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105"
               >
                 {primaryButtonText}
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 ml-2" />
               </Button>
               <Button 
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:text-black font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-base backdrop-blur-sm bg-transparent w-full sm:w-48 flex items-center justify-center gap-2"
                 onClick={onSecondaryClick}
+                variant="outline"
+                className="border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105"
               >
-                Get a Quote
-                <ArrowUpRight className="w-4 h-4" />
+                {secondaryButtonText}
               </Button>
             </div>
           )}
-          
-          {children}
         </div>
       </div>
     </section>
