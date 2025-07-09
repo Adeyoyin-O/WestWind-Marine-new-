@@ -62,7 +62,7 @@ export default function Header() {
             <div className="flex items-center space-x-4 ml-4">
               <div className="w-px h-6 bg-gray-300"></div>
               <a 
-                href="https://www.facebook.com/westwindmarineelectronics" 
+                href="https://www.facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-[var(--medium-gray)] hover:text-[var(--cyan-accent)] transition-colors"
@@ -119,7 +119,7 @@ export default function Header() {
               {/* Mobile Social Media Links */}
               <div className="flex justify-center space-x-6 mt-8 pt-6 border-t border-gray-200">
                 <a 
-                  href="https://www.facebook.com/westwindmarineelectronics" 
+                  href="https://www.facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[var(--medium-gray)] hover:text-[var(--cyan-accent)] transition-colors"

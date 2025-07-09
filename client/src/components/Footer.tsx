@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
           <div className="flex space-x-6">
             <a 
-              href="https://www.facebook.com/westwindmarineelectronics" 
+              href="https://www.facebook.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-teal-400 transition-all duration-300 transform hover:scale-110"
