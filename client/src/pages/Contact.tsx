@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { 
   Building2, 
   PhoneCall, 
   MailOpen
 } from "lucide-react";
+import { setupHashNavigation } from "@/lib/hashNavigation";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,6 +14,12 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+
+  // Setup hash navigation for any potential hash links
+  useEffect(() => {
+    const cleanup = setupHashNavigation(undefined, 100);
+    return cleanup;
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

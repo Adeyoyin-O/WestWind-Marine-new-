@@ -1,4 +1,13 @@
+import { useEffect } from "react";
+import { setupHashNavigation } from "@/lib/hashNavigation";
+
 export default function Partnerships() {
+  // Setup hash navigation for any potential hash links
+  useEffect(() => {
+    const cleanup = setupHashNavigation(undefined, 100);
+    return cleanup;
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}

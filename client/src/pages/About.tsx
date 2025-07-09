@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Compass, Award, MonitorSpeaker, Zap, Building, Factory, Globe, Settings, Heart, Trophy, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { setupHashNavigation } from "@/lib/hashNavigation";
 import aboutHeroImage from "@assets/alexander-kovalev-mIG_NqkYBoI-unsplash_1749906855750.jpg";
 import communicationStation from "@assets/picture1 (1)_1751545685776.png";
 import vdrEquipment from "@assets/picture4_1751545786694.png";
@@ -10,6 +12,12 @@ import safetyEquipment from "@assets/picture2_1751545792279.png";
 import portOperations from "@assets/picture3 (1)_1751545692156.png";
 
 export default function About() {
+  // Setup hash navigation for any potential hash links
+  useEffect(() => {
+    const cleanup = setupHashNavigation(undefined, 100);
+    return cleanup;
+  }, []);
+
   return (
     <div className="page-transition">
       {/* Header Section */}

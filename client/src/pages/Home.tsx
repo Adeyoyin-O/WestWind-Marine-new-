@@ -1,9 +1,17 @@
+import { useEffect } from "react";
 import Hero from "@/components/Hero";
+import { setupHashNavigation } from "@/lib/hashNavigation";
 import video2 from "@assets/3_1751881468957.mp4";
 import video3 from "@assets/4_1751881474134.mp4";
 
 export default function Home() {
   const videoPlaylist = [video2, video3];
+  
+  // Setup hash navigation for any potential hash links
+  useEffect(() => {
+    const cleanup = setupHashNavigation(undefined, 100);
+    return cleanup;
+  }, []);
   
   return (
     <div className="page-transition bg-slate-900 min-h-screen text-white">
