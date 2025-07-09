@@ -106,35 +106,49 @@ export default function ProductsServices() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1); // Remove the #
+      console.log('Hash changed to:', hash);
       if (hash) {
         const serviceIndex = services.findIndex(service => service.id === hash);
+        console.log('Service index found:', serviceIndex);
         if (serviceIndex !== -1) {
           // Expand the service
           setExpandedServices(prev => {
             const newExpanded = new Set(prev);
             newExpanded.add(serviceIndex);
+            console.log('Expanded services:', newExpanded);
             return newExpanded;
           });
           
           // Scroll to the service after a brief delay to ensure it's expanded
           setTimeout(() => {
             const element = document.getElementById(hash);
+            console.log('Scrolling to element:', element);
             if (element) {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-          }, 100);
+          }, 200);
         }
       }
     };
 
-    // Handle initial hash on page load
-    handleHashChange();
+    // Handle initial hash on page load and navigation
+    setTimeout(() => {
+      const initialHash = window.location.hash.substring(1);
+      console.log('Initial hash:', initialHash);
+      if (initialHash) {
+        handleHashChange();
+      }
+    }, 100);
 
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
 
+    // Also listen for popstate events (back/forward navigation)
+    window.addEventListener('popstate', handleHashChange);
+
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
     };
   }, []);
 
