@@ -60,13 +60,7 @@ export default function Contact() {
     
     try {
       console.log('Submitting contact form...'); // Debug log
-      
-      // Use the current window location to ensure we're using the correct port
-      const baseUrl = window.location.protocol + '//' + window.location.host;
-      const apiUrl = baseUrl + '/api/contact';
-      console.log('API URL:', apiUrl); // Debug log
-      
-      const response = await fetch(apiUrl, {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
