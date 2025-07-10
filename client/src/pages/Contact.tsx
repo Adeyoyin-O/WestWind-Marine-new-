@@ -59,6 +59,7 @@ export default function Contact() {
     setSubmitStatus("idle");
     
     try {
+      console.log('Submitting contact form...'); // Debug log
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -72,7 +73,10 @@ export default function Contact() {
         }),
       });
 
+      console.log('Response status:', response.status); // Debug log
+      
       const result = await response.json();
+      console.log('Response data:', result); // Debug log
 
       if (response.ok && result.success) {
         setSubmitStatus("success");
@@ -87,6 +91,7 @@ export default function Contact() {
         setStatusMessage(result.message || "Failed to send message. Please try again.");
       }
     } catch (error) {
+      console.error('Network error:', error); // Debug log
       setSubmitStatus("error");
       setStatusMessage("Network error. Please check your connection and try again.");
     } finally {
