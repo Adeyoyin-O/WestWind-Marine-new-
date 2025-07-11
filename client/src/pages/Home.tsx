@@ -164,30 +164,7 @@ export default function Home() {
             
             
             
-            {/* Automation Solutions */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Automation</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Advanced automation systems for improved operational efficiency and safety.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Control Systems</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">IoT Solutions</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Remote Monitoring</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             
             
           </div>
