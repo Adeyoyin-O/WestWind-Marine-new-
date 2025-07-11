@@ -50,6 +50,98 @@ export default function Home() {
         </div>
       </Hero>
 
+      {/* Main Content - Diagonal Split Design */}
+      <section className="relative bg-white">
+        {/* Diagonal separator */}
+        <div className="absolute inset-0">
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path d="M0,0 L1000,100 L1000,1000 L0,900 Z" fill="rgb(15,23,42)" />
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="py-20 grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Dark section */}
+            <div className="text-white space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                    Marine Electronics Excellence
+                  </span>
+                </h2>
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-8 h-8 bg-teal-500/20 border border-teal-400/30 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                  </div>
+                  <span className="text-teal-300 font-medium">Precision engineering for marine environments</span>
+                </div>
+                <p className="text-slate-300 leading-relaxed text-lg">
+                  We specialize in advanced marine electronics, navigation systems, and electrical engineering solutions designed to meet the demanding requirements of maritime operations.
+                </p>
+              </div>
+              
+              {/* Feature highlights */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-teal-400 mb-2">6+</div>
+                  <div className="text-sm text-slate-300">Years Experience</div>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-sm text-slate-300">Technical Support</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side - Light section */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900">Core Services</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Navigation Systems</h4>
+                      <p className="text-slate-600 text-sm">Voyage Data Recorders, Gyrocompass, VHF and MFHF, Ship steering systems, Retrofit of Nav&Com, Radars, AIS, SAT C, Speedlog, Echo sounder</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Power Systems</h4>
+                      <p className="text-slate-600 text-sm">Marine electrical distribution and control panels</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">Automation</h4>
+                      <p className="text-slate-600 text-sm">Integrated control systems and IoT solutions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Services Section - Modern Grid Layout */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -87,90 +179,73 @@ export default function Home() {
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">VHF Communication</span>
+                    <span className="text-sm text-slate-700">VHF and MF/HF Communication</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">AIS Systems</span>
+                    <span className="text-sm text-slate-700">AIS Transponders</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Voyage Data Recorders</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Gyrocompass</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Ship Steering Systems</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Retrofit Navigation & Communication</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">SAT-C Satellite Communication</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Speed Log</span>
+                  </div>
+                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+                    <span className="text-sm text-slate-700">Echo Sounder</span>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Electrical Systems */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-full -translate-y-8 translate-x-8"></div>
+            {/* Specialties Sidebar */}
+            <div className="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -translate-x-12 translate-y-12"></div>
               <div className="relative">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Electrical Systems</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Complete electrical solutions for marine applications including power distribution and control systems.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Power Distribution</span>
+                <h3 className="text-xl font-bold mb-6">Specializations</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Retrofits of navigation and communication equipment</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Control Panels</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">System installation and integration</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Marine Wiring</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Marine electrical installations</span>
                   </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Automation Solutions */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-8 translate-x-8"></div>
-              <div className="relative">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Automation</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Advanced automation systems for improved operational efficiency and safety.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Control Systems</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Periodical surveys</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">IoT Solutions</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Flag and name change</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Remote Monitoring</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Engineering Services */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Engineering & Consulting</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  Professional engineering services with certified expertise in marine systems design, installation, and maintenance.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">System Design</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Installation</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Maintenance</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Technical Support</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Annual services of navigation equipment</span>
                   </div>
                 </div>
               </div>
