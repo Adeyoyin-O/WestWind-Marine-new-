@@ -142,34 +142,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Services Section - Modern Grid Layout */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-700 rounded-full text-sm font-medium mb-6 border border-teal-200">
-              <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 animate-pulse"></div>
-              Professional Services
-            </div>
-            <h2 className="text-5xl font-bold text-slate-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700">Marine</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500"> Solutions</span>
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Comprehensive marine electronics services from design to implementation and maintenance
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            
-            
-            
-            
-            
-            
-            
-          </div>
-        </div>
-      </section>
+      
       
       {/* Services Section - Modern Grid Layout */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
