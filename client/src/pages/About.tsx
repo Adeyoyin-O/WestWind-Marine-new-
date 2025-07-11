@@ -134,9 +134,7 @@ export default function About() {
               <p>
                 West Wind Marine Electronics Ltd is a customer and solution-oriented company. We are determined to grow organically into knowledge-based organization and a pace setter in marine navigation and communication around the Gulf of Guinea.
               </p>
-              <p>
-                West Wind Marine Electronics, as a progressive company, we have just concluded our ABS service supplier audit and now an approved ABS service supplier in radio communication and Voyage Data Recorders.
-              </p>
+              <p>West Wind Marine Electronics, as a progressive company, has just added ABS approval to its list of IACS approvals for both Lagos and Dakar offices.</p>
               <p>
                 With the just gotten approval, our service supplier approval under IACS has risen to four, namely ABS, DNV, LR, and BV.
               </p>
