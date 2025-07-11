@@ -136,7 +136,7 @@ export default function About() {
               </p>
               <p>West Wind Marine Electronics, as a progressive company, has just added ABS approval to its list of IACS approvals for both Lagos and Dakar offices.</p>
               <p>
-                With the just gotten approval, our service supplier approval under IACS has risen to four, namely ABS, DNV, LR, and BV.
+                Currently, we are ABS, DNV, LR, and BV approved. Effort is in place to have ClassNK added to the list
               </p>
             </div>
           </div>
