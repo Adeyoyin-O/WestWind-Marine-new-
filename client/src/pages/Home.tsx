@@ -49,7 +49,6 @@ export default function Home() {
           </div>
         </div>
       </Hero>
-
       {/* Main Content - Diagonal Split Design */}
       <section className="relative bg-white">
         {/* Diagonal separator */}
@@ -141,9 +140,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      
-      
       {/* Services Section - Modern Grid Layout */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +197,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Retrofit Navigation & Communication</span>
+                    <span className="text-sm text-slate-700">Retrofit of Navigation & Communication Equipment</span>
                   </div>
                   <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                     <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
@@ -255,7 +251,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Capabilities - Modern Card Grid */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-[var(--primary-dark)] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
