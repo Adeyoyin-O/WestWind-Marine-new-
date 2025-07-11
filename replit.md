@@ -135,7 +135,6 @@ Changelog:
   - Completely rewrote Hero component video system for seamless playback
   - Added enhanced error handling and recovery for video transitions
   - Updated Senegal office address to Cité Keur Gorgui, Immeuble UNIPAX
-  - Removed duplicate Services Section from Home page for cleaner layout
 - July 07, 2025. Complete SMTP email system implementation
   - Built comprehensive email service with Nodemailer
   - Added Gmail SMTP configuration with TLS support
