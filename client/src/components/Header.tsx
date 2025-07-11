@@ -13,6 +13,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "Products & Services", href: "/products-services" },
   { name: "Partnerships", href: "/partnerships" },
+  { name: "West Wind Electric", href: "https://westwindelectricpower.ng/" },
 ];
 
 export default function Header() {
@@ -38,20 +39,36 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={cn(
-                  "px-5 py-3 font-semibold text-sm transition-all duration-300 rounded-xl",
-                  location === item.href
-                    ? "text-[var(--marine-blue)] nav-link active bg-gradient-to-r from-teal-50 to-cyan-50"
-                    : "text-[var(--medium-gray)] hover:text-[var(--marine-blue)] hover:bg-gray-50"
-                )}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isExternal = item.href.startsWith('http');
+              if (isExternal) {
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3 font-semibold text-sm transition-all duration-300 rounded-xl text-[var(--medium-gray)] hover:text-[var(--marine-blue)] hover:bg-gray-50"
+                  >
+                    {item.name}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "px-5 py-3 font-semibold text-sm transition-all duration-300 rounded-xl",
+                    location === item.href
+                      ? "text-[var(--marine-blue)] nav-link active bg-gradient-to-r from-teal-50 to-cyan-50"
+                      : "text-[var(--medium-gray)] hover:text-[var(--marine-blue)] hover:bg-gray-50"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <Link href="/contact">
               <Button 
                 className="ml-4 blue-gradient text-white hover:opacity-90 shadow-lg px-6 py-2 text-sm font-bold rounded-lg"
@@ -95,21 +112,38 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden modern-glass border-t border-gray-100">
             <div className="p-6 space-y-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "block py-4 px-6 font-semibold rounded-xl transition-all duration-300",
-                    location === item.href
-                      ? "text-[var(--marine-blue)] bg-gradient-to-r from-teal-50 to-cyan-50"
-                      : "text-[var(--medium-gray)] hover:bg-gray-50"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) => {
+                const isExternal = item.href.startsWith('http');
+                if (isExternal) {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block py-4 px-6 font-semibold rounded-xl transition-all duration-300 text-[var(--medium-gray)] hover:bg-gray-50"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  );
+                }
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      "block py-4 px-6 font-semibold rounded-xl transition-all duration-300",
+                      location === item.href
+                        ? "text-[var(--marine-blue)] bg-gradient-to-r from-teal-50 to-cyan-50"
+                        : "text-[var(--medium-gray)] hover:bg-gray-50"
+                    )}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
               <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full mt-6 blue-gradient text-white py-4 text-lg font-bold rounded-xl">
                   Contact Us
