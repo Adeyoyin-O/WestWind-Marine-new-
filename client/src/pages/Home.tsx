@@ -160,34 +160,7 @@ export default function Home() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Navigation Systems */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Navigation & Communication</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  State-of-the-art navigation systems including GPS, AIS, radar installations, and VHF communication equipment designed for optimal maritime safety and efficiency.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">GPS Navigation</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Radar Systems</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">VHF Communication</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">AIS Systems</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             
             {/* Electrical Systems */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
@@ -239,34 +212,7 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Engineering Services */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-50 to-teal-50 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="relative">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Engineering & Consulting</h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  Professional engineering services with certified expertise in marine systems design, installation, and maintenance.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">System Design</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Installation</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Maintenance</span>
-                  </div>
-                  <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                    <span className="text-sm text-slate-700">Technical Support</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
