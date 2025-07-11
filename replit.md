@@ -128,6 +128,13 @@ This is a modern, professional website for West Wind Marine Electronics Ltd, a N
 
 ```
 Changelog:
+- July 11, 2025. Hash navigation and video system improvements
+  - Created global hash navigation utility for consistent behavior across all pages
+  - Fixed footer service links to use proper anchor tags for hash navigation
+  - Improved scroll positioning to show services just below header
+  - Completely rewrote Hero component video system for seamless playback
+  - Added enhanced error handling and recovery for video transitions
+  - Updated Senegal office address to Cité Keur Gorgui, Immeuble UNIPAX
 - July 07, 2025. Complete SMTP email system implementation
   - Built comprehensive email service with Nodemailer
   - Added Gmail SMTP configuration with TLS support
