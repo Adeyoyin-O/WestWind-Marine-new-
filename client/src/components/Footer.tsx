@@ -29,7 +29,7 @@ export default function Footer() {
                   <p>Lekki Phase 1, Lagos</p>
                 </div>
                 <div>
-                  <p className="leading-relaxed">No 7, Rue 6, Cite Keur Damel</p>
+                  <p className="leading-relaxed">Cité Keur Gorgui,  Immeuble UNIPAX BP: 25 916 </p>
                   <p>Dakar, Senegal</p>
                 </div>
               </div>
