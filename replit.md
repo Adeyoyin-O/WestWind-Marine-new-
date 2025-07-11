@@ -124,51 +124,10 @@ This is a modern, professional website for West Wind Marine Electronics Ltd, a N
 - **Environment Variables**: DATABASE_URL required for database connection
 - **Static Serving**: Express serves built React app and API endpoints
 
-## Apache Webserver Configuration
-
-### Production Deployment Files
-- **apache-config.conf**: Complete Apache virtual host configuration
-- **ecosystem.config.js**: PM2 process manager configuration
-- **.htaccess**: Apache shared hosting configuration
-- **APACHE_DEPLOYMENT.md**: Comprehensive deployment guide
-- **deploy.sh**: Automated deployment script
-
-### Environment Configuration
-- **Production Email Setup**: Domain-based SMTP configuration
-- **Security Headers**: Comprehensive security configuration
-- **SSL/TLS**: HTTPS configuration with Let's Encrypt support
-- **Process Management**: PM2 for reliable application lifecycle
-
-### Key Features
-- **Proxy Configuration**: Apache proxies API requests to Node.js
-- **Static File Serving**: Optimized static asset delivery
-- **Security**: File protection, headers, and access control
-- **Caching**: Browser caching and compression configuration
-- **Logging**: Comprehensive logging and monitoring
-
 ## Changelog
 
 ```
 Changelog:
-- July 09, 2025. Apache webserver deployment configuration
-  - Created comprehensive Apache virtual host configuration
-  - Implemented PM2 ecosystem for process management
-  - Added .htaccess for shared hosting environments
-  - Created detailed deployment guide and automation script
-  - Configured domain-based SMTP email settings
-  - Added security headers and SSL configuration
-  - Implemented static file optimization and caching
-- July 09, 2025. Enhanced video playlist system
-  - Completely rewrote Hero component with robust video management
-  - Implemented seamless video transitions without interruptions
-  - Added comprehensive error handling and retry mechanisms
-  - Optimized video preloading and buffering
-  - Fixed mobile compatibility issues
-- July 09, 2025. Hash navigation system improvements
-  - Created global hash navigation utility for all pages
-  - Implemented proper scroll positioning (100px offset)
-  - Fixed footer service links to use anchor tags
-  - Added consistent hash navigation across all pages
 - July 07, 2025. Complete SMTP email system implementation
   - Built comprehensive email service with Nodemailer
   - Added Gmail SMTP configuration with TLS support
