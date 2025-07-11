@@ -31,7 +31,7 @@ export default function Footer() {
                 <div>
                   <p className="leading-relaxed">Cité Keur Gorgui,</p>
                   <p>Immeuble UNIPAX</p>
-                  <p>BP: 25 916 Dakar</p>
+                  <p>BP: 25 916 Dakar, Senegal</p>
                   <p>Senegal</p>
                 </div>
               </div>
