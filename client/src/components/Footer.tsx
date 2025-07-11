@@ -26,7 +26,8 @@ export default function Footer() {
                 <p className="font-bold text-white mb-1">Office Addresses</p>
                 <div className="mb-3">
                   <p className="leading-relaxed">Plot 8, The Providence Street</p>
-                  <p>Lekki Phase 1, Lagos</p>
+                  <p>Lekki Phase 1, Lagos 
+                  Nigeria</p>
                 </div>
                 <div>
                   <p className="leading-relaxed">Cité Keur Gorgui,</p>
