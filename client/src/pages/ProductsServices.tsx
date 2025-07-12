@@ -57,7 +57,7 @@ export default function ProductsServices() {
       description: "Marine radar systems for collision avoidance, navigation, and weather detection with advanced target tracking capabilities."
     },
     {
-      name: "Consilium, AMI, Totemplus, Headway",
+      name: "Voyage Data Recorders (Consilium, SAL Navigation, AMI, Headway, Totemplus, and BSKY)",
       id: "consilium-ami-totemplus-headway",
       description: "Premium marine electronics brands offering voyage data recorders, navigation equipment, and integrated bridge systems."
     },
