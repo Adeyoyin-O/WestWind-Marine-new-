@@ -100,6 +100,11 @@ export default function ProductsServices() {
       name: "Smoke and Gas Detection Systems",
       id: "smoke-gas-detection",
       description: "Advanced fire and gas detection systems with early warning capabilities for enhanced vessel safety and crew protection."
+    },
+    {
+      name: "Navigation and Communication Equipment",
+      id: "navigation-communication-equipment",
+      description: "Complete range of marine navigation and communication systems including GPS, chart plotters, AIS, and integrated bridge systems for enhanced maritime operations."
     }
   ];
 
