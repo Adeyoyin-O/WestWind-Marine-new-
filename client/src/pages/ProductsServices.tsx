@@ -104,7 +104,7 @@ export default function ProductsServices() {
     {
       name: "Navigation and Communication Equipment",
       id: "navigation-communication-equipment",
-      description: "Complete range of marine navigation and communication systems including GPS, chart plotters, AIS, and integrated bridge systems for enhanced maritime operations."
+      description: "Cutting-edge navigation and communication solutions to enhance safety, coordination, and efficiency offshore."
     }
   ];
 
