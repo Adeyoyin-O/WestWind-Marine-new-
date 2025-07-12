@@ -79,7 +79,7 @@ export default function Hero({
         {videoSource ? (
           <video
             ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
             playsInline
             muted
             loop
@@ -117,10 +117,13 @@ export default function Hero({
             </p>
           )}
           
-          {children}
+          {/* Overlay Content - Positioned above video */}
+          <div className="relative z-20">
+            {children}
+          </div>
           
           {showButtons && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 relative z-20">
               <Button
                 onClick={onPrimaryClick}
                 className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
