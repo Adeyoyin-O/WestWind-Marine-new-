@@ -146,7 +146,7 @@ export default function ProductsServices() {
     },
     {
       title: "Class Approvals",
-      description: "As a growing company, we currently have certified class approval for LR, DNV, and BV classification societies, demonstrating our commitment to IACS regulations and standards.",
+      description: "As a growing company, we currently have certified class approval for LR, DNV, ABS and BV classification societies, demonstrating our commitment to IACS regulations and standards.",
       icon: <Shield className="w-12 h-12" />
     }
   ];
@@ -290,7 +290,7 @@ export default function ProductsServices() {
               <div className="relative text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   Ready to Upgrade Your <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Marine Nav & Com Electronics?</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Marine Navigation and Communication Equipment?</span>
                 </h2>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
                   Contact our expert team for customized solutions tailored to your vessel's specific requirements. We provide comprehensive consultation and professional installation services.
