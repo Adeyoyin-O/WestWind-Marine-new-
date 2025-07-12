@@ -102,7 +102,7 @@ export default function ProductsServices() {
       description: "Advanced fire and gas detection systems with early warning capabilities for enhanced vessel safety and crew protection."
     },
     {
-      name: "Navigation and Communication Equipment",
+      name: "Retrofits of Navigation and Communication Equipment",
       id: "navigation-communication-equipment",
       description: "Cutting-edge navigation and communication solutions to enhance safety, coordination, and efficiency offshore."
     }
