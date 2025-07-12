@@ -209,7 +209,6 @@ export default function ProductsServices() {
           </div>
         </div>
       </section>
-
       {/* Our Services */}
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,7 +251,6 @@ export default function ProductsServices() {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,9 +278,6 @@ export default function ProductsServices() {
           </div>
         </div>
       </section>
-
-
-
       {/* Call to Action */}
       <section className="py-16 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -295,9 +290,7 @@ export default function ProductsServices() {
               <div className="relative text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   Ready to Upgrade Your <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">
-                    Marine Electronics?
-                  </span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-600">Marine Nav & Com Electronics?</span>
                 </h2>
                 <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
                   Contact our expert team for customized solutions tailored to your vessel's specific requirements. We provide comprehensive consultation and professional installation services.
