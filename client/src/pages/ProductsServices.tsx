@@ -57,7 +57,7 @@ export default function ProductsServices() {
       description: "Marine radar systems for collision avoidance, navigation, and weather detection with advanced target tracking capabilities."
     },
     {
-      name: "Voyage Data Recorders (Consilium, SAL Navigation, AMI, Headway, Totemplus, and BSKY)",
+      name: "Voyage Data Recorders (Consilium, SAL Navigation,  AMI, Headway, Totemplus, and BSKY)",
       id: "consilium-ami-totemplus-headway",
       description: "Premium marine electronics brands offering voyage data recorders, navigation equipment, and integrated bridge systems."
     },
@@ -141,7 +141,7 @@ export default function ProductsServices() {
     },
     {
       title: "Class Approvals",
-      description: "As a growing company, we currently have certified class approval for LR, DNV, and BV classification societies, demonstrating our commitment to industry standards.",
+      description: "As a growing company, we currently have certified class approval for LR, DNV, and BV classification societies, demonstrating our commitment to IACS regulations and standards.",
       icon: <Shield className="w-12 h-12" />
     }
   ];
