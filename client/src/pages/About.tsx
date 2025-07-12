@@ -70,9 +70,7 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Us
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
-              Excellence in Marine Electronics and Navigation Systems since 2011
-            </p>
+            <p className="text-xl text-slate-300 leading-relaxed">Excellence in Marine Electronics and Navigation Systems since 2019</p>
           </div>
         </div>
       </section>
